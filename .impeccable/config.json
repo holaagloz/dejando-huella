@@ -35,6 +35,15 @@
         ],
         "createdAt": "2026-11-11T22:34:35.257Z",
         "reason": "Claude: display headlines (Shantell Sans 800, 2-5rem) set at 0.98-1.0 by design; body text is 1.6"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "propuesta/index.html"
+        ],
+        "createdAt": "2026-11-11T22:36:45.146Z",
+        "reason": "Claude: same display-headline leading (0.98-1.0 on Shantell Sans 800 titles) evaluated through index.html; body text is 1.6"
       }
     ]
   }
