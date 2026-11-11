@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="es-CR" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dejando Huella · Dirección de arte</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0D1A3C">
+<link rel="preload" href="fonts/shantell-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/nunito-var.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+<style>
+@font-face{font-family:"Shantell Sans";src:url(fonts/shantell-sans-var.woff2) format("woff2");font-weight:300 800;font-display:swap}
+@font-face{font-family:"Nunito";src:url(fonts/nunito-var.woff2) format("woff2");font-weight:400 800;font-display:swap}
+@font-face{font-family:"Montserrat";src:url(fonts/montserrat-var.woff2) format("woff2");font-weight:400 800;font-display:swap}
+
+:root{
+  /* Color: identidad de Dejando Huella (leído del logo) */
+  --ink:#0D1A3C;          /* azul marino del logo: texto y fondo de mezclilla */
+  --ink-soft:#3B4664;     /* texto secundario sobre manta */
+  --manta:#FBF7EF;        /* retazo de lectura */
+  --coral:#E38F83;  --coral-deep:#C96F62;  --coral-texto:#A84E42;  --coral-soft:#F5CFC8;
+  --mostaza:#DCA74C; --mostaza-deep:#B9862E; --mostaza-soft:#F1DDB0;
+  --salvia:#A6B3A6; --salvia-deep:#7D8E7D; --salvia-soft:#DCE3DA;
+  --chambray:#91A8CB; --chambray-deep:#6C86AF; --chambray-soft:#D9E2F0;
+  --cta:var(--coral); --cta-ink:var(--ink);
+  --puntada:var(--coral-deep);
+  --gloz:#024AA9;
+  /* Tipografía */
+  --font-mano:"Shantell Sans","Comic Sans MS",system-ui,sans-serif;
+  --font-texto:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  /* Forma: esquinas de tela, apenas suaves */
+  --r-retazo:6px; --r-parche:16px;
+  /* Movimiento: cálido y de juego */
+  --ease:cubic-bezier(.33,1,.68,1);
+  --ease-io:cubic-bezier(.65,0,.35,1);
+  --ease-pop:cubic-bezier(.34,1.5,.64,1);
+  --dur:1s; --dist:26px; --t-hover:.35s;
+  /* Espacio */
+  --gutter:clamp(16px,4vw,40px);
+  --maxw:1240px;
+  --costura:9px;          /* separación entre retazos */
+  /* Texturas de tela (SVG ligero) */
+  --grano:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .05 0 0 0 0 .1 0 0 0 0 .24 0 0 0 .16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;color-scheme:light}
+body{margin:0;background:var(--ink);color:var(--ink);font:400 1.0625rem/1.6 var(--font-texto);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.18em;text-decoration-thickness:.08em}
+::selection{background:var(--mostaza);color:var(--ink)}
+:focus-visible{outline:3px solid var(--mostaza);outline-offset:3px;border-radius:4px}
+html{scrollbar-color:var(--chambray) var(--ink)}
+input,textarea{caret-color:var(--coral-deep)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Telas ---------- */
+.tela{position:relative;isolation:isolate;border-radius:var(--r-retazo)}
+.tela::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--grano);opacity:.9;pointer-events:none;mix-blend-mode:multiply}
+.t-manta{background:var(--manta)}
+.t-mezclilla{background:
+  repeating-linear-gradient(135deg,rgb(145 168 203 / 13%) 0 1px,transparent 1px 4px),
+  var(--ink);color:var(--manta)}
+.t-mezclilla::before{opacity:.55;mix-blend-mode:screen}
+.t-cuadrille{background:
+  linear-gradient(90deg,rgb(227 143 131 / 62%) 50%,transparent 0) 0 0/24px 24px,
+  linear-gradient(rgb(227 143 131 / 62%) 50%,transparent 0) 0 0/24px 24px,
+  var(--coral-soft)}
+.t-rayas{background:repeating-linear-gradient(90deg,var(--mostaza) 0 13px,#E8C47F 13px 17px,var(--mostaza) 17px 22px,#F2DCA8 22px 24px)}
+.t-fieltro{background:var(--salvia)}
+.t-fieltro::before{opacity:1}
+.t-chambray{background:
+  repeating-linear-gradient(45deg,rgb(255 255 255 / 10%) 0 1px,transparent 1px 3px),
+  repeating-linear-gradient(-45deg,rgb(13 26 60 / 7%) 0 1px,transparent 1px 3px),
+  var(--chambray)}
+.t-lunares{background:
+  radial-gradient(circle,var(--chambray-deep) 3.2px,transparent 3.6px) 0 0/20px 20px,
+  radial-gradient(circle,var(--chambray-deep) 3.2px,transparent 3.6px) 10px 10px/20px 20px,
+  var(--chambray-soft)}
+.t-coral{background:var(--coral)}
+.t-mostaza{background:var(--mostaza)}
+
+/* Costura: respaldo en CSS (se ve aunque no haya JS) */
+.retazo{position:relative}
+.retazo:not(.cosido){outline:2px dashed var(--puntada);outline-offset:calc(var(--costura) * -1)}
+.t-mezclilla.retazo:not(.cosido),.t-fieltro.retazo:not(.cosido),.t-chambray.retazo:not(.cosido){outline-color:var(--manta)}
+/* Costura dibujada (la crea el JS: puntadas redondas) */
+.costura{position:absolute!important;inset:0;width:100%!important;height:100%!important;max-width:none;pointer-events:none;overflow:visible;z-index:2}
+.costura rect{fill:none;stroke:var(--puntada);stroke-width:2.4;stroke-linecap:round;stroke-dasharray:4.5 5.5}
+.t-mezclilla>.costura rect,.t-fieltro>.costura rect,.t-chambray>.costura rect{stroke:var(--manta)}
+.parche.cosido::after{display:none}
+.parche>.costura rect{stroke:var(--ink);stroke-width:2;opacity:.6}
+.costura mask rect{stroke:#fff!important;stroke-width:8!important;stroke-dasharray:1 1!important;opacity:1!important}
+
+/* Etiqueta de tela escrita a mano */
+.etiqueta{display:inline-flex;align-items:center;gap:.45em;padding:.55em 1em .58em;background:var(--manta);color:var(--ink);
+  font:500 .8125rem/1.2 var(--font-mano);font-variation-settings:"INFM" 100,"BNCE" 40;border-radius:3px;
+  box-shadow:0 1px 0 rgb(13 26 60 / 18%);position:relative}
+.etiqueta::before{content:"";position:absolute;inset:3px;border:1.5px dashed var(--puntada);border-radius:2px;pointer-events:none}
+.etiqueta--ejemplo{background:#FFF3C9}
+
+/* Parche bordado: el botón principal */
+.parche{--lift:0px;display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:56px;padding:.85em 1.5em;
+  background:var(--cta);color:var(--cta-ink);border-radius:var(--r-parche);text-decoration:none;
+  font:700 1.0625rem/1.15 var(--font-mano);font-variation-settings:"INFM" 30,"BNCE" 0;letter-spacing:.005em;
+  position:relative;isolation:isolate;
+  box-shadow:0 0 0 3px var(--coral-deep),0 calc(6px + var(--lift)) 18px -10px rgb(13 26 60 / 55%);
+  transform:translateY(calc(var(--lift) * -1));transition:transform var(--t-hover) var(--ease),box-shadow var(--t-hover) var(--ease),background-color var(--t-hover) var(--ease)}
+.parche::after{content:"";position:absolute;inset:5px;border:2px dashed var(--ink);border-radius:calc(var(--r-parche) - 5px);opacity:.55;pointer-events:none}
+.parche svg{width:1.25em;height:1.25em;flex:none}
+.parche:hover{--lift:3px;background:#E99D92}
+.parche:active{transform:translateY(0) scale(.97);transition-duration:.12s}
+.parche--manta{--cta:var(--manta);box-shadow:0 0 0 3px var(--ink),0 calc(6px + var(--lift)) 18px -10px rgb(13 26 60 / 55%)}
+.parche--manta:hover{background:#fff}
+
+.boton-texto{appearance:none;border:0;background:none;padding:.5em .2em;min-height:44px;display:inline-flex;align-items:center;color:inherit;font:600 .9375rem var(--font-mano);cursor:pointer;
+  text-decoration:underline;text-decoration-style:dashed;text-underline-offset:.3em;text-decoration-color:var(--coral)}
+.boton-texto:hover{text-decoration-style:solid}
+
+/* ---------- Franja de muestra (Gloz) ---------- */
+.muestra-franja{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px var(--gutter);
+  background:var(--gloz);color:#fff;font:600 .75rem/1.3 "Montserrat",system-ui,sans-serif;letter-spacing:.02em}
+.muestra-franja b{font-weight:800}
+.gloz-logo{height:16px;width:calc(16px * 211 / 73);fill:#fff;flex:none}
+
+/* ---------- Portada (la real) ---------- */
+.portada{padding:var(--costura) var(--costura) calc(var(--costura) * 2);background:
+  repeating-linear-gradient(135deg,rgb(145 168 203 / 12%) 0 1px,transparent 1px 4px),var(--ink);position:relative}
+.barra{display:flex;align-items:center;justify-content:space-between;gap:var(--costura);margin-bottom:var(--costura)}
+.barra__logo{display:flex;align-items:center;padding:8px 16px;min-height:64px}
+.barra__logo img{width:132px;height:auto}
+.barra__nav{display:none}
+.barra__wa{display:grid;place-items:center;width:64px;min-height:64px;color:var(--ink);text-decoration:none}
+.barra__wa svg{width:26px;height:26px}
+
+.colcha{display:grid;gap:var(--costura);grid-template-columns:repeat(6,1fr)}
+.r-titulo{grid-column:1/-1;padding:28px 22px 30px}
+.r-titulo h1{margin:0 0 .45em;font:800 clamp(2.45rem,10.4vw,4.6rem)/.98 var(--font-mano);font-variation-settings:"INFM" 100,"BNCE" 20,"SPAC" 0;letter-spacing:-.02em;text-wrap:balance}
+.r-titulo h1 .acento{color:var(--coral-texto);white-space:nowrap}
+.r-titulo p{margin:0 0 1.4em;max-width:34ch;color:var(--ink-soft);font-size:1.0625rem}
+.r-titulo .acciones{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px}
+.r-foto{grid-column:1/5;min-height:220px;padding:var(--costura);background:var(--manta)}
+.r-foto figure{margin:0;height:100%;position:relative;border-radius:3px;overflow:hidden}
+.r-foto img{width:100%;height:100%;object-fit:cover}
+.r-foto .etiqueta{position:absolute;left:10px;bottom:10px}
+.r-huella{grid-column:5/7;display:grid;place-items:center;padding:14px}
+.r-huella svg{width:min(82%,120px);height:auto}
+.r-dato{grid-column:span 3;padding:18px 16px 20px;display:flex;flex-direction:column;gap:6px;justify-content:flex-end;min-height:132px}
+.r-dato strong{display:block;font:800 1.3rem/1.1 var(--font-mano);font-variation-settings:"INFM" 80}
+.r-dato span{font-size:.9375rem;line-height:1.35}
+.r-dato .etiqueta{align-self:flex-start;margin-bottom:auto}
+.r-edades{display:none}
+
+.muestra__controles{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:14px var(--gutter);color:var(--manta);font-size:.875rem}
+.muestra__controles .boton-texto{color:var(--manta)}
+.muestra__aviso{max-width:52ch;opacity:.9}
+
+/* Huella que deja el toque */
+.huella-toque{position:fixed;left:0;top:0;width:44px;height:48px;pointer-events:none;z-index:50;translate:-50% -55%}
+
+/* ---------- Hoja de muestra: secciones ---------- */
+.hoja{background:var(--manta);position:relative}
+.hoja::before{content:"";position:absolute;inset:0;background:var(--grano);opacity:.5;pointer-events:none}
+.bloque{position:relative;max-width:var(--maxw);margin:0 auto;padding:clamp(56px,9vw,104px) var(--gutter) 0}
+.bloque:last-of-type{padding-bottom:clamp(56px,9vw,104px)}
+.bloque h2{margin:0 0 .35em;font:800 clamp(1.9rem,6.4vw,3rem)/1.02 var(--font-mano);font-variation-settings:"INFM" 100,"BNCE" 15;letter-spacing:-.015em;text-wrap:balance}
+.bloque>p{margin:0 0 1.6em;max-width:60ch;color:var(--ink-soft)}
+.idea{font:500 clamp(1.25rem,4.2vw,1.75rem)/1.35 var(--font-mano);font-variation-settings:"INFM" 60;color:var(--ink);max-width:30ch;margin:0}
+
+.telas{display:grid;gap:var(--costura);grid-template-columns:repeat(2,1fr)}
+.muestra-tela{display:flex;flex-direction:column;min-height:168px}
+.muestra-tela__pano{flex:1;min-height:96px;border-radius:var(--r-retazo) var(--r-retazo) 0 0}
+.muestra-tela__nota{background:var(--manta);padding:12px 14px 14px;border:1px solid rgb(13 26 60 / 12%);border-top:0;border-radius:0 0 var(--r-retazo) var(--r-retazo);font-size:.875rem;line-height:1.4}
+.muestra-tela__nota b{display:block;font:700 1rem/1.2 var(--font-mano);margin-bottom:2px}
+.muestra-tela__nota code{font:600 .8125rem var(--font-texto);color:var(--ink-soft)}
+
+.letras{display:grid;gap:var(--costura)}
+.letra{padding:24px 22px 26px}
+.letra__mano{margin:0;font:800 clamp(2rem,8vw,3.6rem)/1 var(--font-mano);font-variation-settings:"INFM" 100,"BNCE" 20;letter-spacing:-.02em}
+.letra__etiqueta{margin:.6em 0 0;font:500 1.25rem/1.3 var(--font-mano);font-variation-settings:"INFM" 100,"BNCE" 60}
+.letra__texto{margin:0;max-width:62ch}
+.letra__nombre{display:block;margin-top:1.2em;font-size:.8125rem;color:var(--ink-soft)}
+
+.elementos{display:grid;gap:var(--costura);grid-template-columns:1fr}
+.elemento{display:grid;grid-template-rows:auto 1fr;min-height:220px}
+.elemento__escena{display:grid;place-items:center;min-height:150px;padding:20px;position:relative;overflow:hidden}
+.elemento__texto{background:var(--manta);padding:14px 16px 16px;border:1px solid rgb(13 26 60 / 12%);border-top:0;border-radius:0 0 var(--r-retazo) var(--r-retazo);font-size:.9375rem;line-height:1.45}
+.elemento__texto b{display:block;font:700 1.0625rem/1.2 var(--font-mano);margin-bottom:3px}
+.elemento__escena.tela{border-radius:var(--r-retazo) var(--r-retazo) 0 0}
+.mini-colcha{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;width:min(100%,260px)}
+.mini-colcha>span{aspect-ratio:1;border-radius:4px}
+.escena-costura{width:min(100%,260px);height:96px}
+.escena-huella svg{width:92px;height:auto}
+
+.componentes{display:grid;gap:var(--costura)}
+.comp{padding:26px 22px 28px;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.tarjeta-dia{width:100%;max-width:420px;padding:22px 20px 22px}
+.tarjeta-dia h3{margin:0 0 12px;font:800 1.5rem/1.05 var(--font-mano);font-variation-settings:"INFM" 100}
+.tarjeta-dia ol{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:10px}
+.tarjeta-dia li{display:grid;grid-template-columns:4.9em 1fr;gap:10px;align-items:baseline;font-size:.9688rem;line-height:1.35}
+.tarjeta-dia time{font:700 .9375rem var(--font-mano);font-variant-numeric:tabular-nums}
+
+.pie-muestra{background:var(--ink);color:var(--manta);padding:28px var(--gutter);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;font:500 .8125rem/1.4 "Montserrat",system-ui,sans-serif}
+.pie-muestra .gloz-logo{height:22px;width:calc(22px * 211 / 73)}
+
+/* ---------- Escritorio ---------- */
+@media (min-width:760px){
+  .telas{grid-template-columns:repeat(3,1fr)}
+  .elementos{grid-template-columns:repeat(2,1fr)}
+  .letras{grid-template-columns:1.1fr 1fr}
+  .componentes{grid-template-columns:1fr 1fr}
+}
+@media (min-width:1024px){
+  .portada{padding:12px 12px 24px;--costura:12px}
+  .barra__logo{padding:10px 22px;min-height:76px}
+  .barra__logo img{width:150px}
+  .barra__nav{display:flex;flex:1;align-items:center;justify-content:flex-end;gap:6px;padding:0 10px;min-height:76px}
+  .barra__lema{margin-right:auto;padding-left:18px;font:500 1.0625rem/1.2 var(--font-mano);font-variation-settings:"INFM" 100,"BNCE" 50;color:var(--ink-soft)}
+  .barra__nav a{padding:10px 14px;font:600 1rem var(--font-mano);text-decoration:none;border-radius:4px}
+  .barra__nav a:hover{background:rgb(13 26 60 / 8%)}
+  .barra__nav .parche{min-height:48px;padding:.6em 1.1em;margin-left:8px;font-size:.98rem}
+  .barra__wa{display:none}
+  .colcha{grid-template-columns:repeat(12,1fr);grid-template-rows:auto auto auto}
+  .r-titulo{grid-column:1/6;grid-row:1/3;padding:clamp(36px,4vw,60px) clamp(28px,3vw,48px);display:flex;flex-direction:column;justify-content:center}
+  .r-titulo h1{font-size:clamp(3.4rem,5.4vw,5.6rem)}
+  .r-titulo p{font-size:1.1875rem}
+  .r-foto{grid-column:6/13;grid-row:1/3;min-height:clamp(420px,46vw,600px)}
+  .r-huella{grid-column:1/3;grid-row:3}
+  .r-dato{grid-column:auto/span 3;grid-row:3}
+  .r-horario{grid-column:3/7}
+  .r-lugar{grid-column:7/10}
+  .r-edades{display:flex;grid-column:10/13}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth iframe{pointer-events:none}
+</style>
+</head>
+<body>
+
+<!-- Símbolos reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="gloz" viewBox="4.5 -71.5 211 73"><path d="M32.50 1.50Q24.90 1.50 18.50-2.80Q12.10-7.10 8.30-15.35Q4.50-23.60 4.50-35L4.50-35Q4.50-46.50 8.45-54.75Q12.40-63 19.55-67.25Q26.70-71.50 36.10-71.50L36.10-71.50Q41.80-71.50 47.60-68.20L47.60-68.20Q49.80-67 52-65L52-65Q53.70-67.60 55.50-69.10L55.50-69.10Q57.30-70.40 57.50-70.50L57.50-70.50L60-70.50L60-51.50L56-51.50Q54.70-56.30 52.10-60.20L52.10-60.20Q49.70-64 46.15-66.50Q42.60-69 38-69L38-69Q31.10-69 26.55-61Q22-53 22-35L22-35Q22-17 26.05-9.50Q30.10-2 36.50-2L36.50-2Q40.20-2 43.20-6L43.20-6Q44.30-7.50 45.50-10L45.50-10L45.50-33L39.50-34.50L39.50-36L68-36L68-34.50L62-33L62 0.50L60.50 0.50Q53.20 0.50 49.40-3.50L49.40-3.50Q47.70-5.30 47-7.50L47-7.50Q45.60-5 43.70-3L43.70-3Q39.20 1.50 32.50 1.50L32.50 1.50Z"/><path d="M74 0L74-1.50L80-3L80-67L74-68.50L74-70L87-70Q96-70 96-61L96-61L96-3L102-1.50L102 0L74 0Z"/><path d="M134.50 1.50Q122.10 1.50 115.05-5.55Q108-12.60 108-25L108-25Q108-37.40 115.05-44.45Q122.10-51.50 134.50-51.50L134.50-51.50Q146.90-51.50 153.95-44.45Q161-37.40 161-25L161-25Q161-12.60 153.95-5.55Q146.90 1.50 134.50 1.50L134.50 1.50ZM134.50-0.50Q138.50-0.50 141.25-6.10Q144-11.70 144-25L144-25Q144-38.30 141.25-43.90Q138.50-49.50 134.50-49.50L134.50-49.50Q130.50-49.50 127.75-43.90Q125-38.30 125-25L125-25Q125-11.70 127.75-6.10Q130.50-0.50 134.50-0.50L134.50-0.50Z"/><path d="M169 0L169-2.50L197.50-47.50L179.50-47.50Q179.50-42 176.20-36.40L176.20-36.40Q174.90-34.30 173-32.50L173-32.50L170-32.50L170-50L215.50-50L215.50-47.50L187-2.50L206-2.50Q206-8.20 209.20-13.60L209.20-13.60Q210.60-15.90 212.50-17.50L212.50-17.50L215.50-17.50L215.50 0L169 0Z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4.2 19.8l1.1-3.6A8.2 8.2 0 1 1 8 18.9z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9.2 8.6c.2-.5.5-.6.8-.6h.5c.2 0 .4.1.5.4l.6 1.4c.1.3 0 .5-.1.7l-.4.5c-.1.2-.1.4 0 .5.5.9 1.3 1.7 2.2 2.2.2.1.4.1.5 0l.5-.4c.2-.2.5-.2.7-.1l1.4.6c.3.1.4.3.4.5v.5c0 .3-.2.6-.6.8-.6.3-1.6.4-3-.3a8.3 8.3 0 0 1-3.6-3.6c-.6-1.4-.6-2.4-.4-3.1z"/></symbol>
+    <symbol id="huella" viewBox="0 0 100 104">
+      <path d="M29 63c-1-12 7-19 21-19s22 7 21 19c-1 16-8 31-21 33-13-2-20-17-21-33z"/>
+      <rect x="20" y="33" width="12" height="25" rx="6" transform="rotate(-24 26 45.5)"/>
+      <rect x="32.5" y="16" width="12.5" height="31" rx="6.25" transform="rotate(-9 38.75 31.5)"/>
+      <rect x="45.5" y="10" width="12.5" height="35" rx="6.25" transform="rotate(2 51.75 27.5)"/>
+      <rect x="58.5" y="16" width="12" height="31" rx="6" transform="rotate(13 64.5 31.5)"/>
+      <rect x="71" y="49" width="12" height="27" rx="6" transform="rotate(50 77 62.5)"/>
+    </symbol>
+    <symbol id="corazon" viewBox="0 0 100 104"><path fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M50 80c-8-6-11-10.5-9.5-14.2 1.6-3.6 6.4-4 9.5-.4 3.1-3.6 7.9-3.2 9.5.4C61 69.5 58 74 50 80z"/></symbol>
+  </defs>
+</svg>
+
+<div class="muestra-franja">
+  <svg class="gloz-logo" viewBox="0 0 211 73" role="img" aria-label="Gloz Studio"><use href="#gloz"/></svg>
+  <span>Hoja de muestra · <b>no se publica</b></span>
+</div>
+
+<!-- ===== INICIO Portada ===== -->
+<header class="portada" data-portada>
+  <div class="barra">
+    <a class="barra__logo tela t-manta retazo" href="#" data-retazo data-pieza aria-label="Dejando Huella, inicio">
+      <img src="img/logo-dejando-huella.webp" width="640" height="303" alt="Dejando Huella">
+    </a>
+    <nav class="barra__nav tela t-manta retazo" data-retazo data-pieza aria-label="Principal">
+      <span class="barra__lema">Centro infantil · Ciudad Quesada, San Carlos</span>
+      <a href="#">Un día aquí</a><a href="#">Programas</a><a href="#">Instalaciones</a><a href="#">Preguntas</a>
+      <a class="parche" href="https://wa.me/50664781319?text=Hola%2C%20quisiera%20agendar%20una%20visita%20al%20Centro%20Infantil%20Dejando%20Huella." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Agenda una visita</a>
+    </nav>
+    <a class="barra__wa tela t-cuadrille retazo" href="https://wa.me/50664781319?text=Hola%2C%20quisiera%20agendar%20una%20visita%20al%20Centro%20Infantil%20Dejando%20Huella." target="_blank" rel="noopener" data-retazo data-pieza aria-label="Escribir por WhatsApp">
+      <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    </a>
+  </div>
+
+  <div class="colcha">
+    <div class="r-titulo tela t-manta retazo" data-retazo data-pieza>
+      <h1 data-titular>Donde cada pequeño <span class="acento">paso cuenta</span></h1>
+      <p>Un lugar seguro, cálido y lleno de juego para que tu hijo crezca a su ritmo, en Barrio San Martín, Ciudad Quesada.</p>
+      <div class="acciones">
+        <a class="parche" data-cta href="https://wa.me/50664781319?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quisiera%20agendar%20una%20visita%20al%20Centro%20Infantil%20Dejando%20Huella." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Agenda una visita</a>
+        <a class="boton-texto" href="#">Así es un día aquí</a>
+      </div>
+    </div>
+
+    <div class="r-foto tela retazo" data-retazo data-pieza>
+      <figure>
+        <img src="img/stock-pintando-caja.webp" width="1600" height="1067" alt="Niñas y niños pintando juntos una caja de cartón con su maestra" fetchpriority="high">
+        <figcaption class="etiqueta">foto ilustrativa</figcaption>
+      </figure>
+    </div>
+
+    <div class="r-huella tela t-cuadrille retazo" data-retazo data-pieza>
+      <svg viewBox="0 0 100 104" aria-hidden="true" data-sello><use href="#huella" fill="#0D1A3C"/><use href="#corazon" stroke="#FBF7EF"/></svg>
+    </div>
+
+    <div class="r-dato r-horario tela t-rayas retazo" data-retazo data-pieza>
+      <span class="etiqueta etiqueta--ejemplo">dato de ejemplo</span>
+      <strong>7:00 a. m. – 6:00 p. m.</strong>
+      <span>Lunes a viernes</span>
+    </div>
+
+    <div class="r-dato r-lugar tela t-fieltro retazo" data-retazo data-pieza>
+      <strong>Barrio San Martín</strong>
+      <span>50 m este y 75 m sur de la Universidad de San José, Ciudad Quesada</span>
+    </div>
+
+    <div class="r-dato r-edades tela t-lunares retazo" data-retazo data-pieza>
+      <span class="etiqueta etiqueta--ejemplo">dato de ejemplo</span>
+      <strong>De 1 a 5 años</strong>
+      <span>Grupos pequeños por edad</span>
+    </div>
+  </div>
+</header>
+<p class="muestra__controles" style="background:var(--ink);margin:0">
+  <button type="button" class="boton-texto" data-ver-de-nuevo>Ver de nuevo</button>
+  <span>Toca cualquier parte de la portada: deja tu huella.</span>
+  <span class="muestra__aviso" data-aviso-rm hidden>Tienes activado «Reducir movimiento»: aquí ves una versión sin desplazamientos. Apágalo para ver la animación completa.</span>
+</p>
+<!-- ===== FIN Portada ===== -->
+
+<main class="hoja">
+
+  <section class="bloque" aria-labelledby="t-idea">
+    <h2 id="t-idea">Cada niño deja su retazo</h2>
+    <p class="idea">La página es una colcha cosida a mano: cada retazo responde algo que una mamá o un papá pregunta antes de llamar. Los colores salen de su logo; la puntada coral los une.</p>
+  </section>
+
+  <section class="bloque" aria-labelledby="t-colores">
+    <h2 id="t-colores">Sus colores, hechos tela</h2>
+    <p>Los mismos seis colores del logo, ahora como telas: cuadrillé, rayas, fieltro, mezclilla, lunares y manta. El azul marino es la letra de todo, porque se lee bien sobre cualquier color.</p>
+    <div class="telas">
+      <div class="muestra-tela"><div class="muestra-tela__pano tela t-mezclilla"></div><div class="muestra-tela__nota"><b>Mezclilla marino</b>El fondo de la colcha y la letra de toda la página. <code>#0D1A3C</code></div></div>
+      <div class="muestra-tela"><div class="muestra-tela__pano tela t-cuadrille"></div><div class="muestra-tela__nota"><b>Cuadrillé coral</b>El botón de WhatsApp, la puntada y los detalles con cariño. <code>#E38F83</code></div></div>
+      <div class="muestra-tela"><div class="muestra-tela__pano tela t-rayas"></div><div class="muestra-tela__nota"><b>Rayas mostaza</b>Los datos prácticos: horario, edades, costos. <code>#DCA74C</code></div></div>
+      <div class="muestra-tela"><div class="muestra-tela__pano tela t-fieltro"></div><div class="muestra-tela__nota"><b>Fieltro salvia</b>Ubicación, naturaleza y calma. <code>#A6B3A6</code></div></div>
+      <div class="muestra-tela"><div class="muestra-tela__pano tela t-chambray"></div><div class="muestra-tela__nota"><b>Chambray azul</b>Metodología y aprendizaje. <code>#91A8CB</code></div></div>
+      <div class="muestra-tela"><div class="muestra-tela__pano tela t-manta" style="box-shadow:inset 0 0 0 1px rgb(13 26 60 / 14%)"></div><div class="muestra-tela__nota"><b>Manta</b>Los retazos donde se lee: títulos y textos largos. <code>#FBF7EF</code></div></div>
+    </div>
+  </section>
+
+  <section class="bloque" aria-labelledby="t-letras">
+    <h2 id="t-letras">Letra de mano y letra para leer</h2>
+    <p>Una letra que parece escrita con marcador, como la de su logo, para títulos y etiquetas; y una letra redonda y muy clara para los textos que leen las familias.</p>
+    <div class="letras">
+      <div class="letra tela t-manta retazo" data-retazo>
+        <p class="letra__mano">Un día en Dejando Huella</p>
+        <p class="letra__etiqueta">Llegada, juego, merienda y siesta</p>
+        <span class="letra__nombre">Letra de mano: títulos y etiquetas de tela</span>
+      </div>
+      <div class="letra tela t-manta retazo" data-retazo>
+        <p class="letra__texto">Acompañamos cada etapa con experiencias pensadas para su edad: juego libre, arte, música y momentos al aire libre, en un entorno seguro y de confianza que favorece su bienestar y su participación.</p>
+        <span class="letra__nombre">Letra para leer: párrafos, horarios y preguntas</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque" aria-labelledby="t-elementos">
+    <h2 id="t-elementos">Lo que hace única su página</h2>
+    <p>Cuatro piezas que salen de su marca y de sus salones. Ninguna viene de una plantilla.</p>
+    <div class="elementos">
+      <div class="elemento">
+        <div class="elemento__escena tela t-manta">
+          <svg class="escena-costura" viewBox="0 0 260 96" aria-hidden="true" data-demo-costura>
+            <path d="M8 70 C 60 10, 110 10, 140 48 S 220 90, 252 26" fill="none" stroke="#C96F62" stroke-width="3" stroke-linecap="round" stroke-dasharray=".1 9"/>
+          </svg>
+        </div>
+        <div class="elemento__texto"><b>La puntada coral</b>Une los retazos y se cose sola cuando la sección aparece. Termina siempre en el botón de WhatsApp. <button type="button" class="boton-texto" data-demo="costura">Ver cómo se mueve</button></div>
+      </div>
+      <div class="elemento">
+        <div class="elemento__escena tela t-mezclilla">
+          <div class="mini-colcha" data-demo-colcha>
+            <span class="tela t-cuadrille"></span><span class="tela t-rayas"></span><span class="tela t-chambray"></span>
+            <span class="tela t-fieltro"></span><span class="tela t-manta"></span><span class="tela t-lunares"></span>
+          </div>
+        </div>
+        <div class="elemento__texto"><b>Los retazos</b>Cada sección es un retazo de distinto tamaño: lo más importante ocupa más cuadros, no letra más grande. <button type="button" class="boton-texto" data-demo="colcha">Ver cómo se mueve</button></div>
+      </div>
+      <div class="elemento">
+        <div class="elemento__escena tela t-chambray">
+          <span class="etiqueta" style="font-size:1rem">Sala de bebés · 1 a 2 años</span>
+        </div>
+        <div class="elemento__texto"><b>La etiqueta de tela</b>Nombres de salas, horarios y avisos van escritos a mano en una etiqueta cosida, como la ropa de los niños.</div>
+      </div>
+      <div class="elemento">
+        <div class="elemento__escena tela t-cuadrille escena-huella" data-demo-huella-escena>
+          <svg viewBox="0 0 100 104" aria-hidden="true" data-demo-huella><use href="#huella" fill="#0D1A3C"/><use href="#corazon" stroke="#FBF7EF"/></svg>
+        </div>
+        <div class="elemento__texto"><b>La huella</b>La manita de su logo se estampa en la portada, y donde toques la pantalla queda una huellita que se desvanece. <button type="button" class="boton-texto" data-demo="huella">Ver cómo se mueve</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque" aria-labelledby="t-comp">
+    <h2 id="t-comp">El botón y un retazo de contenido</h2>
+    <p>El botón es un parche bordado: al pasar el mouse se levanta y al tocarlo se hunde. Los retazos de contenido llevan su etiqueta y su puntada.</p>
+    <div class="componentes">
+      <div class="comp tela t-mezclilla retazo" data-retazo>
+        <a class="parche" href="https://wa.me/50664781319?text=Hola%2C%20quisiera%20agendar%20una%20visita." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Agenda una visita</a>
+        <a class="parche parche--manta" href="#">Ver preguntas frecuentes</a>
+      </div>
+      <div class="comp tela t-rayas retazo" data-retazo>
+        <article class="tarjeta-dia tela t-manta retazo" data-retazo>
+          <h3>Un día aquí</h3>
+          <ol>
+            <li><time>7:00</time><span>Llegada y bienvenida con abrazo</span></li>
+            <li><time>9:00</time><span>Merienda nutritiva</span></li>
+            <li><time>10:00</time><span>Arte, música o juego al aire libre</span></li>
+            <li><time>12:30</time><span>Almuerzo y siesta</span></li>
+          </ol>
+          <span class="etiqueta etiqueta--ejemplo">horario de ejemplo</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie-muestra">
+  <span>Propuesta de diseño para Centro Infantil Dejando Huella</span>
+  <svg class="gloz-logo" viewBox="0 0 211 73" role="img" aria-label="Gloz Studio"><use href="#gloz"/></svg>
+</footer>
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/SplitText.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script src="js/muestra.js?v=20261111a" defer></script>
+</body>
+</html>

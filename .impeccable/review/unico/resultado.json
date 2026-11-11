@@ -1,0 +1,241 @@
+{
+  "revisado": "2026-11-11T22:32:29.169Z",
+  "sitio": "file:///C:/Users/Usiario/Desktop/Projects/dejando-huellas/propuesta/dist/Dejando-Huella-Propuesta-Gloz.html",
+  "navegador": "Chrome/157.0.8103.50 (C:/Users/Usiario/.agent-browser/browsers/chrome-157.0.8103.50/chrome.exe)",
+  "resumen": {
+    "todoBien": false,
+    "revisar": [
+      "Celular: 1 elementos se quedaron ocultos: input.comparador__rango \"Deslizar para comparar la página actual con la nue\", transparente (opacity 0)",
+      "Escritorio: 1 elementos se quedaron ocultos: input.comparador__rango \"Deslizar para comparar la página actual con la nue\", transparente (opacity 0)",
+      "Celular con Reducir movimiento: 1 elementos se quedaron ocultos: input.comparador__rango \"Deslizar para comparar la página actual con la nue\", transparente (opacity 0)",
+      "Celular sin JavaScript: 1 elementos se quedaron ocultos: input.comparador__rango \"Deslizar para comparar la página actual con la nue\", transparente (opacity 0)"
+    ],
+    "nota": "La página mide 13,774 px en celular. La captura completa va a 1x para que no se repita; para leerla de cerca usa las capturas de la carpeta tramos."
+  },
+  "vistas": {
+    "celular": {
+      "tamaño": "375 x 812",
+      "capaQueTapa": null,
+      "capturas": {
+        "primeraPantalla": "celular-primera-pantalla.png",
+        "completa": "celular-completa.png",
+        "escalaCompleta": 1
+      },
+      "botonesEnPrimeraPantalla": [
+        {
+          "texto": "Ver la nueva página",
+          "destino": "#inicio",
+          "alto": 52
+        },
+        {
+          "texto": "Ver notas de la propuesta",
+          "destino": "(botón)",
+          "alto": 44
+        }
+      ],
+      "altoPagina": 13774,
+      "anchoDocumento": 375,
+      "anchoVentana": 375,
+      "elementosFuera": [],
+      "cortadosEnElBorde": [],
+      "contenidoOculto": [
+        {
+          "elemento": "input.comparador__rango \"Deslizar para comparar la página actual con la nue\"",
+          "motivo": "transparente (opacity 0)"
+        }
+      ],
+      "totalOcultos": 1,
+      "imagenesRotas": [],
+      "fuentes": {
+        "cargadas": [
+          "Shantell Sans",
+          "Nunito",
+          "Montserrat",
+          "Yeseva One"
+        ],
+        "noCargaron": []
+      },
+      "librerias": {
+        "gsap": "3.13.0",
+        "ScrollTrigger": true,
+        "SplitText": true,
+        "Lenis": true,
+        "lenisActivo": true
+      },
+      "titulo": "Centro Infantil Dejando Huella · Guardería en Ciudad Quesada, San Carlos",
+      "h1": [
+        "Donde cada pequeño paso cuenta"
+      ],
+      "erroresConsola": [],
+      "avisosConsola": [],
+      "archivosQueNoCargaron": []
+    },
+    "escritorio": {
+      "tamaño": "1440 x 900",
+      "capaQueTapa": null,
+      "capturas": {
+        "primeraPantalla": "escritorio-primera-pantalla.png",
+        "completa": "escritorio-completa.png",
+        "escalaCompleta": 0.6
+      },
+      "botonesEnPrimeraPantalla": [
+        {
+          "texto": "Ver la nueva página",
+          "destino": "#inicio",
+          "alto": 52
+        },
+        {
+          "texto": "Ver notas de la propuesta",
+          "destino": "(botón)",
+          "alto": 44
+        }
+      ],
+      "altoPagina": 10035,
+      "anchoDocumento": 1440,
+      "anchoVentana": 1440,
+      "elementosFuera": [],
+      "cortadosEnElBorde": [],
+      "contenidoOculto": [
+        {
+          "elemento": "input.comparador__rango \"Deslizar para comparar la página actual con la nue\"",
+          "motivo": "transparente (opacity 0)"
+        }
+      ],
+      "totalOcultos": 1,
+      "imagenesRotas": [],
+      "fuentes": {
+        "cargadas": [
+          "Shantell Sans",
+          "Nunito",
+          "Montserrat",
+          "Yeseva One"
+        ],
+        "noCargaron": []
+      },
+      "librerias": {
+        "gsap": "3.13.0",
+        "ScrollTrigger": true,
+        "SplitText": true,
+        "Lenis": true,
+        "lenisActivo": true
+      },
+      "titulo": "Centro Infantil Dejando Huella · Guardería en Ciudad Quesada, San Carlos",
+      "h1": [
+        "Donde cada pequeño paso cuenta"
+      ],
+      "erroresConsola": [],
+      "avisosConsola": [],
+      "archivosQueNoCargaron": []
+    },
+    "celular-reducir-movimiento": {
+      "tamaño": "375 x 812",
+      "capaQueTapa": null,
+      "capturas": {
+        "primeraPantalla": "celular-reducir-movimiento-primera-pantalla.png"
+      },
+      "botonesEnPrimeraPantalla": [
+        {
+          "texto": "Ver la nueva página",
+          "destino": "#inicio",
+          "alto": 52
+        },
+        {
+          "texto": "Ver notas de la propuesta",
+          "destino": "(botón)",
+          "alto": 44
+        }
+      ],
+      "altoPagina": 13739,
+      "anchoDocumento": 375,
+      "anchoVentana": 375,
+      "elementosFuera": [],
+      "cortadosEnElBorde": [],
+      "contenidoOculto": [
+        {
+          "elemento": "input.comparador__rango \"Deslizar para comparar la página actual con la nue\"",
+          "motivo": "transparente (opacity 0)"
+        }
+      ],
+      "totalOcultos": 1,
+      "imagenesRotas": [],
+      "fuentes": {
+        "cargadas": [
+          "Shantell Sans",
+          "Nunito",
+          "Montserrat",
+          "Yeseva One"
+        ],
+        "noCargaron": []
+      },
+      "librerias": {
+        "gsap": "3.13.0",
+        "ScrollTrigger": true,
+        "SplitText": true,
+        "Lenis": true,
+        "lenisActivo": false
+      },
+      "titulo": "Centro Infantil Dejando Huella · Guardería en Ciudad Quesada, San Carlos",
+      "h1": [
+        "Donde cada pequeño paso cuenta"
+      ],
+      "erroresConsola": [],
+      "avisosConsola": [],
+      "archivosQueNoCargaron": []
+    },
+    "celular-sin-javascript": {
+      "tamaño": "375 x 812",
+      "capaQueTapa": null,
+      "capturas": {
+        "primeraPantalla": "celular-sin-javascript-primera-pantalla.png"
+      },
+      "botonesEnPrimeraPantalla": [
+        {
+          "texto": "Ver la nueva página",
+          "destino": "#inicio",
+          "alto": 52
+        },
+        {
+          "texto": "Ver notas de la propuesta",
+          "destino": "(botón)",
+          "alto": 44
+        }
+      ],
+      "altoPagina": 13737,
+      "anchoDocumento": 375,
+      "anchoVentana": 375,
+      "elementosFuera": [],
+      "cortadosEnElBorde": [],
+      "contenidoOculto": [
+        {
+          "elemento": "input.comparador__rango \"Deslizar para comparar la página actual con la nue\"",
+          "motivo": "transparente (opacity 0)"
+        }
+      ],
+      "totalOcultos": 1,
+      "imagenesRotas": [],
+      "fuentes": {
+        "cargadas": [
+          "Shantell Sans",
+          "Nunito",
+          "Montserrat",
+          "Yeseva One"
+        ],
+        "noCargaron": []
+      },
+      "librerias": {
+        "gsap": false,
+        "ScrollTrigger": false,
+        "SplitText": false,
+        "Lenis": false,
+        "lenisActivo": false
+      },
+      "titulo": "Centro Infantil Dejando Huella · Guardería en Ciudad Quesada, San Carlos",
+      "h1": [
+        "Donde cada pequeño paso cuenta"
+      ],
+      "erroresConsola": [],
+      "avisosConsola": [],
+      "archivosQueNoCargaron": []
+    }
+  }
+}
