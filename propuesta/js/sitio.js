@@ -36,7 +36,9 @@
     svg.innerHTML = `<defs><mask id="${id}" maskUnits="userSpaceOnUse"><rect fill="none" pathLength="1" stroke-dashoffset="0"/></mask></defs><rect mask="url(#${id})"/>`;
     el.appendChild(svg);
     el.classList.add('cosido');
-    const [mask, rect] = $$('rect', svg);
+    const [mask, rect] = $('rect', svg);
+    const largo = 4 + Math.random() * 1.6;
+    rect.style.strokeDasharray = `${largo.toFixed(2)} ${(10 - largo + Math.random()).toFixed(2)}`;
     const medir = () => {
       const w = el.clientWidth, h = el.clientHeight;
       if (!w || !h) return;
@@ -59,6 +61,62 @@
       costuras.forEach((_, el) => ro.observe(el));
     }
   });
+
+  const trazarHiloFirma = () => {
+    const portada = $('[data-portada]');
+    const sello = $('[data-sello]');
+    const cta = $('[data-cta]');
+    if (!portada || !sello || !cta) return null;
+    let svg = $('.hilo-firma', portada);
+    if (!svg) {
+      svg = d.createElementNS(SVGNS, 'svg');
+      svg.setAttribute('class', 'hilo-firma');
+      svg.setAttribute('aria-hidden', 'true');
+      svg.innerHTML = '<path/>';
+      portada.appendChild(svg);
+    }
+    // El hilo sigue las costuras reales de la portada: entra y sale de la costura que separa
+    // la foto de los retazos de datos, sube por la costura de la huella y termina en el botón.
+    const r = portada.getBoundingClientRect();
+    const h = (sello.closest('[data-retazo]') || sello).getBoundingClientRect();
+    const b = cta.getBoundingClientRect();
+    const datos = $$('.r-dato', portada).filter((el) => el.offsetParent !== null).map((el) => el.getBoundingClientRect());
+    if (!datos.length) return null;
+    svg.setAttribute('viewBox', `0 0 ${r.width} ${r.height}`);
+    const X = (v) => +(v - r.left).toFixed(1);
+    const Y = (v) => +(v - r.top).toFixed(1);
+    const costuraY = Y(Math.min(...datos.map((x) => x.top)));
+    const paso = 26, amp = 5;
+    const onda = (a, bb, fijo, horizontal) => {   // puntada que entra y sale de la costura
+      let s = '';
+      const dir = bb > a ? 1 : -1;
+      const n = Math.max(1, Math.round(Math.abs(bb - a) / paso));
+      const l = (bb - a) / n;
+      for (let i = 0; i < n; i++) {
+        const m = a + l * (i + 0.5), f = a + l * (i + 1), o = (i % 2 ? amp : -amp) * dir;
+        s += horizontal ? ` Q${m.toFixed(1)},${fijo + o} ${f.toFixed(1)},${fijo}` : ` Q${fijo + o},${m.toFixed(1)} ${fijo},${f.toFixed(1)}`;
+      }
+      return s;
+    };
+    const x2 = X(b.right) + 2, y2 = Y(b.top + b.height / 2);
+    const conector = (px, py) => ` C${px},${(py - (py - y2) * 0.5).toFixed(1)} ${x2 + 60},${y2 + 30} ${x2},${y2}`;
+    let dH;
+    if (Y(h.top) >= costuraY - 2) {
+      // Escritorio: la huella está en la fila de datos. Desde el borde derecho, a lo largo de la costura, hasta la huella.
+      const xIni = X(r.right) - 16, hx = X(h.left + h.width / 2);
+      dH = `M${xIni},${costuraY}` + onda(xIni, hx, costuraY, true) + conector(hx, costuraY);
+    } else {
+      // Celular: la huella está junto a la foto. Costura horizontal desde la izquierda, sube por la costura foto-huella.
+      const xIni = X(r.left) + 16, vx = X(h.left);
+      dH = `M${xIni},${costuraY}` + onda(xIni, vx, costuraY, true) + onda(costuraY, Y(h.top), vx, false) + conector(vx, Y(h.top));
+    }
+    const p = svg.querySelector(':scope > path');
+    p.setAttribute('d', dH);
+    const mp = svg.querySelector('mask path');
+    if (mp) mp.setAttribute('d', dH);
+    return p;
+  };
+  safe(trazarHiloFirma);
 
   // Hilo que une los tres pasos de inscripción (se calcula con las posiciones reales)
   const trazarHiloPasos = () => {
@@ -94,7 +152,7 @@
     if (innerWidth === anchoPrevio) return;
     anchoPrevio = innerWidth;
     clearTimeout(trazarHiloPasos.t);
-    trazarHiloPasos.t = setTimeout(() => safe(trazarHiloPasos), 200);
+    trazarHiloPasos.t = setTimeout(() => { safe(trazarHiloPasos); safe(trazarHiloFirma); }, 200);
   });
 
   // Lenis (se crea más abajo si hay GSAP)
@@ -159,7 +217,14 @@
       }
       y0 = y;
     }, { passive: true });
-    const medirPortada = () => { if (portada) { pasoPortada = portada.getBoundingClientRect().bottom < 0; actualizarFija(); } };
+    const propuesta = $('#propuesta');
+    const pastilla = $('[data-notas]');
+    const medirPortada = () => {
+      const enLanding = !propuesta || propuesta.getBoundingClientRect().bottom < 80;
+      if (portada) pasoPortada = enLanding && portada.getBoundingClientRect().bottom < 0;
+      if (pastilla) pastilla.toggleAttribute('data-visible', enLanding);
+      actualizarFija();
+    };
     addEventListener('scroll', medirPortada, { passive: true });
     medirPortada();
     if ('IntersectionObserver' in window) {
@@ -223,6 +288,22 @@
       add('Horario preferido para la visita', f.horario.value);
       add('Comentario', f.mensaje.value.trim());
       window.open(`https://wa.me/${WA}?text=${encodeURIComponent(lineas.join('\n'))}`, '_blank', 'noopener');
+    });
+  });
+
+  safe(() => {
+    const mapa = $('[data-mapa]');
+    const b = $('[data-cargar-mapa]');
+    if (!mapa || !b) return;
+    b.addEventListener('click', () => {
+      const f = d.createElement('iframe');
+      f.title = 'Mapa: ubicación del Centro Infantil Dejando Huella en Ciudad Quesada';
+      f.src = mapa.dataset.src;
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      f.setAttribute('data-lenis-prevent', '');
+      mapa.appendChild(f);
+      mapa.setAttribute('data-cargado', '');
+      f.focus();
     });
   });
 
@@ -323,6 +404,20 @@
         { y: 0, rotation: 0, autoAlpha: 1, duration: M.dur * 0.8, ease: M.pop, stagger: 0.07, clearProps: 'transform' }, 0)
       .fromTo(mascaras, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.95, ease: 'power1.inOut', stagger: 0.05 }, 0.55);
     if (lineas.length) tl.fromTo(lineas, { yPercent: 105 }, { yPercent: 0, duration: M.dur, stagger: M.stagger }, 0.45);
+    const hiloFirma = $('.hilo-firma > path'); // medido antes de mover las piezas
+    if (hiloFirma) {
+      const svgH = hiloFirma.ownerSVGElement;
+      const idH = `cm${uid++}`;
+      const defsH = d.createElementNS(SVGNS, 'defs');
+      defsH.innerHTML = `<mask id="${idH}" maskUnits="userSpaceOnUse"><path fill="none" stroke="#fff" stroke-width="14" pathLength="1" stroke-dasharray="1 1"/></mask>`;
+      svgH.prepend(defsH);
+      const mH = $('path', defsH);
+      mH.setAttribute('d', hiloFirma.getAttribute('d'));
+      hiloFirma.setAttribute('mask', `url(#${idH})`);
+      tl.call(() => hiloFirma.setAttribute('mask', `url(#${idH})`), null, 0);
+      tl.fromTo(mH, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.8, ease: 'power1.inOut' }, 1.0);
+      tl.call(() => hiloFirma.removeAttribute('mask'), null, 1.85); // en reposo, el hilo queda completo y sin máscara
+    }
     if (cta) {
       tl.fromTo(cta, { scale: 0.92, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.5, ease: M.pop, clearProps: 'transform' }, 1.2);
       if (mascaraCta) tl.fromTo(mascaraCta, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.7, ease: 'power1.inOut' }, 1.35);
@@ -343,6 +438,7 @@
   // Arranque: espera las fuentes (con tope) para medir bien las líneas
   Promise.race([d.fonts ? d.fonts.ready : Promise.resolve(), new Promise((r) => setTimeout(r, 1200))])
     .then(() => {
+      safe(trazarHiloFirma);
       safe(firmaPortada);
       safe(efectosDeScroll);
       ScrollTrigger.refresh();
@@ -426,5 +522,5 @@
     if (pista) gsap.to(pista, { xPercent: -50, duration: 46, ease: 'none', repeat: -1 });
   }
 
-  addEventListener('load', () => { safe(trazarHiloPasos); ScrollTrigger.refresh(); });
+  addEventListener('load', () => { safe(trazarHiloPasos); safe(trazarHiloFirma); ScrollTrigger.refresh(); });
 })();

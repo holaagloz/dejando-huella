@@ -1,0 +1,554 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-12T00:19:49.047Z",
+  "title": "Design System: Dejando Huella",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Azul marino del logo",
+        "canonical": "#0D1A3C",
+        "tonalRamp": [
+          "#040812",
+          "#070D1E",
+          "#09122A",
+          "#0B1735",
+          "#0D1A3C",
+          "#626A80",
+          "#9EA3B1",
+          "#DBDDE2"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Tinta suave",
+        "canonical": "#3B4664",
+        "tonalRamp": [
+          "#12151E",
+          "#1E2332",
+          "#293146",
+          "#343E58",
+          "#3B4664",
+          "#80879A",
+          "#B1B5C1",
+          "#E2E3E8"
+        ]
+      },
+      "manta": {
+        "role": "neutral",
+        "displayName": "Manta",
+        "canonical": "#FBF7EF",
+        "tonalRamp": [
+          "#4B4A48",
+          "#7E7C78",
+          "#B0ADA7",
+          "#DDD9D2",
+          "#FBF7EF",
+          "#FCFAF5",
+          "#FDFCF9",
+          "#FEFEFD"
+        ]
+      },
+      "coral": {
+        "role": "primary",
+        "displayName": "Coral de cuadrillé",
+        "canonical": "#E38F83",
+        "tonalRamp": [
+          "#442B27",
+          "#724842",
+          "#9F645C",
+          "#C87E73",
+          "#E38F83",
+          "#EDB6AE",
+          "#F4D2CD",
+          "#FBEEEC"
+        ]
+      },
+      "coral-deep": {
+        "role": "primary",
+        "displayName": "Coral de hilo",
+        "canonical": "#C96F62",
+        "tonalRamp": [
+          "#3C211D",
+          "#653831",
+          "#8D4E45",
+          "#B16256",
+          "#C96F62",
+          "#DCA199",
+          "#E9C5C0",
+          "#F7E9E7"
+        ]
+      },
+      "coral-soft": {
+        "role": "primary",
+        "displayName": "Coral pálido",
+        "canonical": "#F5CFC8",
+        "tonalRamp": [
+          "#4A3E3C",
+          "#7B6864",
+          "#AC918C",
+          "#D8B6B0",
+          "#F5CFC8",
+          "#F9E0DB",
+          "#FBECE9",
+          "#FEF8F7"
+        ]
+      },
+      "coral-texto": {
+        "role": "primary",
+        "displayName": "Coral para texto",
+        "canonical": "#A84E42",
+        "tonalRamp": [
+          "#321714",
+          "#542721",
+          "#76372E",
+          "#94453A",
+          "#A84E42",
+          "#C68C84",
+          "#DCB8B3",
+          "#F2E4E3"
+        ]
+      },
+      "mostaza": {
+        "role": "secondary",
+        "displayName": "Raya mostaza",
+        "canonical": "#DCA74C",
+        "tonalRamp": [
+          "#423217",
+          "#6E5426",
+          "#9A7535",
+          "#C29343",
+          "#DCA74C",
+          "#E8C68B",
+          "#F1DCB7",
+          "#FAF2E4"
+        ]
+      },
+      "mostaza-deep": {
+        "role": "secondary",
+        "displayName": "Mostaza oscura",
+        "canonical": "#B9862E",
+        "tonalRamp": [
+          "#38280E",
+          "#5D4317",
+          "#825E20",
+          "#A37628",
+          "#B9862E",
+          "#D2B077",
+          "#E3CFAB",
+          "#F5EDE0"
+        ]
+      },
+      "mostaza-soft": {
+        "role": "secondary",
+        "displayName": "Mostaza pálida",
+        "canonical": "#F1DDB0",
+        "tonalRamp": [
+          "#484235",
+          "#796F58",
+          "#A99B7B",
+          "#D4C29B",
+          "#F1DDB0",
+          "#F6E9CC",
+          "#F9F1DF",
+          "#FDFAF3"
+        ]
+      },
+      "salvia": {
+        "role": "tertiary",
+        "displayName": "Fieltro salvia",
+        "canonical": "#A6B3A6",
+        "tonalRamp": [
+          "#323632",
+          "#535A53",
+          "#747D74",
+          "#929E92",
+          "#A6B3A6",
+          "#C5CEC5",
+          "#DBE1DB",
+          "#F2F4F2"
+        ]
+      },
+      "salvia-deep": {
+        "role": "tertiary",
+        "displayName": "Salvia oscura",
+        "canonical": "#7D8E7D",
+        "tonalRamp": [
+          "#262B26",
+          "#3F473F",
+          "#586358",
+          "#6E7D6E",
+          "#7D8E7D",
+          "#ABB6AB",
+          "#CBD2CB",
+          "#ECEEEC"
+        ]
+      },
+      "salvia-soft": {
+        "role": "tertiary",
+        "displayName": "Salvia pálida",
+        "canonical": "#DCE3DA",
+        "tonalRamp": [
+          "#424441",
+          "#6E726D",
+          "#9A9F99",
+          "#C2C8C0",
+          "#DCE3DA",
+          "#E8EDE7",
+          "#F1F4F0",
+          "#FAFBF9"
+        ]
+      },
+      "chambray": {
+        "role": "tertiary",
+        "displayName": "Chambray",
+        "canonical": "#91A8CB",
+        "tonalRamp": [
+          "#2C323D",
+          "#495466",
+          "#66768E",
+          "#8094B3",
+          "#91A8CB",
+          "#B8C6DD",
+          "#D3DCEA",
+          "#EFF2F7"
+        ]
+      },
+      "chambray-deep": {
+        "role": "tertiary",
+        "displayName": "Chambray oscuro",
+        "canonical": "#6C86AF",
+        "tonalRamp": [
+          "#202835",
+          "#364358",
+          "#4C5E7A",
+          "#5F769A",
+          "#6C86AF",
+          "#9FB0CB",
+          "#C4CFDF",
+          "#E9EDF3"
+        ]
+      },
+      "chambray-soft": {
+        "role": "tertiary",
+        "displayName": "Chambray pálido",
+        "canonical": "#D9E2F0",
+        "tonalRamp": [
+          "#414448",
+          "#6D7178",
+          "#989EA8",
+          "#BFC7D3",
+          "#D9E2F0",
+          "#E6ECF5",
+          "#F0F3F9",
+          "#F9FBFD"
+        ]
+      },
+      "mezclilla": {
+        "role": "neutral",
+        "displayName": "Mezclilla",
+        "canonical": "#13234A",
+        "tonalRamp": [
+          "#060B16",
+          "#0A1225",
+          "#0D1934",
+          "#111F41",
+          "#13234A",
+          "#667089",
+          "#A1A7B7",
+          "#DCDEE4"
+        ]
+      },
+      "ejemplo": {
+        "role": "neutral",
+        "displayName": "Papel de ejemplo",
+        "canonical": "#FFF3C9",
+        "tonalRamp": [
+          "#4D493C",
+          "#807A65",
+          "#B3AA8D",
+          "#E0D6B1",
+          "#FFF3C9",
+          "#FFF7DC",
+          "#FFFAE9",
+          "#FFFDF7"
+        ]
+      },
+      "gloz": {
+        "role": "neutral",
+        "displayName": "Azul Gloz (solo propuesta)",
+        "canonical": "#024AA9",
+        "tonalRamp": [
+          "#011633",
+          "#012555",
+          "#013476",
+          "#024195",
+          "#024AA9",
+          "#5B89C7",
+          "#9AB7DD",
+          "#D9E4F2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Titular de portada",
+        "purpose": "Solo el h1 de la portada; Shantell Sans 800 con ejes INFM/BNCE."
+      },
+      "headline": {
+        "displayName": "Titular de sección",
+        "purpose": "Titulares de sección y citas grandes."
+      },
+      "title": {
+        "displayName": "Sello",
+        "purpose": "Big Shoulders Display en mayúsculas: rótulos de retazo, pasos, horas, contacto y mapa."
+      },
+      "body": {
+        "displayName": "Lectura",
+        "purpose": "Nunito para todo texto corrido; bajadas de 58ch como máximo."
+      },
+      "label": {
+        "displayName": "Etiqueta de tela",
+        "purpose": "Etiquetas escritas a mano (ejemplo, real, foto ilustrativa)."
+      },
+      "cover-display": {
+        "displayName": "Portada Gloz",
+        "purpose": "Solo la portada de la propuesta (Montserrat 800 en mayúsculas)."
+      },
+      "cover-accent": {
+        "displayName": "Acento Gloz",
+        "purpose": "Solo el énfasis del título de la portada de la propuesta (Yeseva One)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "relieve-parche",
+        "value": "0 0 0 3px #C96F62, 0 calc(6px + var(--lift)) 18px -10px rgb(13 26 60 / 55%)",
+        "purpose": "Parche bordado; --lift sube a 3px al pasar el cursor."
+      },
+      {
+        "name": "borde-etiqueta",
+        "value": "0 1px 0 rgb(13 26 60 / 18%)",
+        "purpose": "Canto de la etiqueta de tela."
+      },
+      {
+        "name": "canto-globo",
+        "value": "0 2px 0 rgb(13 26 60 / 12%)",
+        "purpose": "Globos de chat."
+      },
+      {
+        "name": "tarjeta-mapa",
+        "value": "0 10px 24px -14px rgb(13 26 60 / 60%)",
+        "purpose": "Nota apoyada sobre el mapa dibujado."
+      },
+      {
+        "name": "grano",
+        "value": "SVG feTurbulence fractalNoise .85, 2 octavas, alfa .16 teñido de azul marino; multiply (screen sobre mezclilla)",
+        "purpose": "Relieve de tela en cada .tela::before."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.33,1,.68,1)",
+        "purpose": "Transiciones CSS por defecto (hover, barra)."
+      },
+      {
+        "name": "ease-io",
+        "value": "cubic-bezier(.65,0,.35,1)",
+        "purpose": "Entradas y salidas simétricas."
+      },
+      {
+        "name": "ease-pop",
+        "value": "cubic-bezier(.34,1.5,.64,1)",
+        "purpose": "Rebote de juego."
+      },
+      {
+        "name": "t-hover",
+        "value": ".35s",
+        "purpose": "Duración de los estados hover."
+      },
+      {
+        "name": "M.ease",
+        "value": "power2.out",
+        "purpose": "Entradas GSAP por defecto."
+      },
+      {
+        "name": "M.easeIO",
+        "value": "power2.inOut",
+        "purpose": "Aparición de fotos con clip-path."
+      },
+      {
+        "name": "M.pop",
+        "value": "back.out(1.4)",
+        "purpose": "Retazos que llegan a la colcha, pasos y menú."
+      },
+      {
+        "name": "M.dur",
+        "value": "1s",
+        "purpose": "Duración base."
+      },
+      {
+        "name": "M.stagger",
+        "value": "0.09s",
+        "purpose": "Escalonado de líneas de titular."
+      },
+      {
+        "name": "M.dist",
+        "value": "26px",
+        "purpose": "Distancia de entrada."
+      },
+      {
+        "name": "M.lerp",
+        "value": "0.1",
+        "purpose": "Suavizado de Lenis."
+      },
+      {
+        "name": "costura-cosida",
+        "value": "strokeDashoffset 1 a 0, 1.1s, power1.inOut",
+        "purpose": "La costura de cada retazo se cose al entrar en pantalla."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "sin Lenis ni animaciones de entrada; transiciones de .001ms",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "760px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1200px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Parche bordado (principal)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "La única acción principal: WhatsApp para agendar una visita.",
+      "html": "<a class=\"ds-parche\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3L3 21z\"/></svg>Agenda una visita</a>",
+      "css": ".ds-parche{--lift:0px;display:inline-flex;align-items:center;gap:.6em;min-height:56px;padding:.85em 1.5em;background:#E38F83;color:#0D1A3C;border-radius:16px;text-decoration:none;font:700 1.0625rem/1.15 \"Shantell Sans\",\"Comic Sans MS\",sans-serif;font-variation-settings:\"INFM\" 30;position:relative;box-shadow:0 0 0 3px #C96F62,0 calc(6px + var(--lift)) 18px -10px rgb(13 26 60 / 55%);transform:translateY(calc(var(--lift) * -1));transition:transform .35s cubic-bezier(.33,1,.68,1),box-shadow .35s cubic-bezier(.33,1,.68,1),background-color .35s}.ds-parche::after{content:\"\";position:absolute;inset:5px;border:2px dashed #0D1A3C;border-radius:11px;opacity:.55;pointer-events:none}.ds-parche:hover{--lift:3px;background:#E99D92}.ds-parche:active{transform:translateY(0) scale(.97)}.ds-parche:focus-visible{outline:3px solid #DCA74C;outline-offset:3px}"
+    },
+    {
+      "name": "Parche de manta",
+      "kind": "button",
+      "refersTo": "button-manta",
+      "description": "Parche sobre telas coral o chambray, o para acciones secundarias con peso.",
+      "html": "<a class=\"ds-parche-manta\" href=\"#\">Hacer una pregunta</a>",
+      "css": ".ds-parche-manta{--lift:0px;display:inline-flex;align-items:center;min-height:48px;padding:.6em 1.1em;background:#FBF7EF;color:#0D1A3C;border-radius:16px;text-decoration:none;font:700 .98rem/1.15 \"Shantell Sans\",sans-serif;position:relative;box-shadow:0 0 0 3px #0D1A3C,0 calc(6px + var(--lift)) 18px -10px rgb(13 26 60 / 55%);transform:translateY(calc(var(--lift) * -1));transition:transform .35s cubic-bezier(.33,1,.68,1),background-color .35s}.ds-parche-manta::after{content:\"\";position:absolute;inset:5px;border:2px dashed #0D1A3C;border-radius:11px;opacity:.55;pointer-events:none}.ds-parche-manta:hover{--lift:3px;background:#fff}.ds-parche-manta:focus-visible{outline:3px solid #DCA74C;outline-offset:3px}"
+    },
+    {
+      "name": "Enlace a mano",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción secundaria junto al parche.",
+      "html": "<a class=\"ds-enlace-mano\" href=\"#\">Así es un día aquí</a>",
+      "css": ".ds-enlace-mano{display:inline-flex;align-items:center;min-height:44px;font:600 1rem \"Shantell Sans\",sans-serif;font-variation-settings:\"INFM\" 80;color:#0D1A3C;text-decoration:underline dashed #C96F62;text-underline-offset:.3em}.ds-enlace-mano:hover{text-decoration-style:solid}.ds-enlace-mano:focus-visible{outline:3px solid #DCA74C;outline-offset:3px;border-radius:4px}"
+    },
+    {
+      "name": "Etiquetas de tela",
+      "kind": "chip",
+      "refersTo": "label-cloth",
+      "description": "Normal (foto ilustrativa / sala), de ejemplo (dato de prueba) y real (comprobado).",
+      "html": "<div class=\"ds-fila\"><span class=\"ds-etiqueta\">foto ilustrativa</span><span class=\"ds-etiqueta ds-etiqueta--ejemplo\">dato de ejemplo</span><span class=\"ds-etiqueta ds-etiqueta--real\">fotos reales del centro</span></div>",
+      "css": ".ds-fila{display:flex;flex-wrap:wrap;gap:12px;padding:16px;background:#0D1A3C}.ds-etiqueta{display:inline-flex;align-items:center;padding:.55em 1em .58em;background:#FBF7EF;color:#0D1A3C;font:500 .8125rem/1.2 \"Shantell Sans\",sans-serif;font-variation-settings:\"INFM\" 100,\"BNCE\" 40;border-radius:3px;box-shadow:0 1px 0 rgb(13 26 60 / 18%);position:relative;white-space:nowrap}.ds-etiqueta::before{content:\"\";position:absolute;inset:3px;border:1.5px dashed #C96F62;border-radius:2px;pointer-events:none}.ds-etiqueta--ejemplo{background:#FFF3C9;rotate:1.2deg}.ds-etiqueta--real{background:#DCE3DA}"
+    },
+    {
+      "name": "Bloque de colcha",
+      "kind": "card",
+      "refersTo": "patch-reading",
+      "description": "Retazos borde con borde: manta para leer, telas para datos; la costura en cada uno.",
+      "html": "<div class=\"ds-fondo\"><div class=\"ds-colcha\"><div class=\"ds-retazo ds-manta\"><h3 class=\"ds-tit\">Lo que te da tranquilidad</h3><p>Te contamos cómo lo cuidamos cada día.</p></div><div class=\"ds-retazo ds-cuadrille\"></div><div class=\"ds-retazo ds-rayas\"><strong class=\"ds-sello\">7:00 a. m. – 6:00 p. m.</strong></div><div class=\"ds-retazo ds-chambray\"><strong class=\"ds-sello\">1 a 5 años</strong></div></div></div>",
+      "css": ".ds-fondo{padding:9px;background:repeating-linear-gradient(135deg,rgb(145 168 203 / 12%) 0 1px,transparent 1px 4px),#0D1A3C}.ds-colcha{display:grid;grid-template-columns:2fr 1fr;gap:0;border-radius:6px;overflow:clip}.ds-retazo{position:relative;padding:22px;min-height:110px;color:#0D1A3C;font:400 1rem/1.5 Nunito,system-ui,sans-serif}.ds-retazo p{margin:0}.ds-retazo::after{content:\"\";position:absolute;inset:7px;border:2.4px dashed #C96F62;border-radius:3px;pointer-events:none}.ds-chambray::after{border-color:#FBF7EF}.ds-manta{background:#FBF7EF}.ds-cuadrille{background:linear-gradient(90deg,rgb(227 143 131 / 62%) 50%,transparent 0) 0 0/24px 24px,linear-gradient(rgb(227 143 131 / 62%) 50%,transparent 0) 0 0/24px 24px,#F5CFC8}.ds-rayas{background:repeating-linear-gradient(90deg,#DCA74C 0 13px,#E8C47F 13px 17px,#DCA74C 17px 22px,#F2DCA8 22px 24px)}.ds-chambray{background:repeating-linear-gradient(45deg,rgb(255 255 255 / 10%) 0 1px,transparent 1px 3px),#91A8CB}.ds-tit{margin:0 0 6px;font:800 1.8rem/1 \"Shantell Sans\",sans-serif;font-variation-settings:\"INFM\" 100,\"BNCE\" 15}.ds-sello{font:800 1.6rem/1 \"Big Shoulders Display\",\"Arial Narrow\",sans-serif;text-transform:uppercase;letter-spacing:.025em}"
+    },
+    {
+      "name": "Campo de formulario",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Campo del formulario que arma el mensaje de WhatsApp.",
+      "html": "<label class=\"ds-campo\"><span>Nombre de tu hijo o hija</span><input placeholder=\"Ej.: Sofía\"></label>",
+      "css": ".ds-campo{display:grid;gap:6px;padding:16px;background:#FBF7EF;color:#0D1A3C}.ds-campo span{font:700 1rem/1.2 \"Shantell Sans\",sans-serif;font-variation-settings:\"INFM\" 60}.ds-campo input{min-height:52px;padding:12px 14px;border:2px solid #0D1A3C;border-radius:8px;background:#fff;color:#0D1A3C;font:400 1rem/1.4 Nunito,sans-serif;caret-color:#C96F62;transition:border-color .35s,box-shadow .35s}.ds-campo input::placeholder{color:#6B7490}.ds-campo input:focus-visible{outline:none;border-color:#C96F62;box-shadow:0 0 0 4px rgb(227 143 131 / 40%)}"
+    },
+    {
+      "name": "Barra de retazos",
+      "kind": "nav",
+      "refersTo": "button-small",
+      "description": "Barra fija: retazo del logo y retazo de navegación que termina en un parche chico.",
+      "html": "<nav class=\"ds-barra\"><div class=\"ds-b ds-logo\">Dejando Huella</div><div class=\"ds-b ds-nav\"><a href=\"#\">Un día</a><a href=\"#\">Salas</a><a href=\"#\">Preguntas</a><a class=\"ds-mini\" href=\"#\">Agenda una visita</a></div></nav>",
+      "css": ".ds-barra{display:flex;gap:9px;padding:9px;background:#0D1A3C}.ds-b{background:#FBF7EF;border-radius:6px;min-height:64px;display:flex;align-items:center;padding:0 16px;position:relative;color:#0D1A3C}.ds-b::after{content:\"\";position:absolute;inset:7px;border:2.4px dashed #C96F62;border-radius:3px;pointer-events:none}.ds-logo{font:800 1.1rem \"Shantell Sans\",sans-serif}.ds-nav{flex:1;justify-content:flex-end;gap:4px}.ds-nav a{position:relative;z-index:1;padding:10px 12px;font:600 1rem \"Shantell Sans\",sans-serif;color:#0D1A3C;text-decoration:none;border-radius:4px}.ds-nav a:not(.ds-mini):hover{background:rgb(13 26 60 / 8%)}.ds-nav a:focus-visible{outline:3px solid #DCA74C;outline-offset:3px}.ds-mini{margin-left:8px;background:#E38F83;border-radius:16px;box-shadow:0 0 0 3px #C96F62;font-weight:700}.ds-mini:hover{background:#E99D92}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La colcha de retazos",
+    "overview": "Cada página es una sola colcha cosida a mano. Los retazos se colocan borde con borde sobre un respaldo de mezclilla azul marino (el azul del logo), y ese azul solo asoma en la costura entre bloques. Las telas son los colores del logo convertidos en tejidos limpios hechos con CSS: cuadrillé coral, chambray, raya mostaza, fieltro salvia, mezclilla y manta. La manta queda reservada para los retazos de lectura. Cada retazo lleva una costura de puntada corrida que el JS dibuja en SVG. Las fotos se cosen como un retazo más, los rótulos son etiquetas de tela escritas a mano y los botones son parches bordados.\n\nLa densidad es de colcha y no de folleto: los bloques llenan su celda y no flotan sobre un fondo vacío. La jerarquía sale del tamaño de cada retazo y de su tela, no de tarjetas iguales repetidas. La tinta azul marino se usa sobre todos los colores. La profundidad existe solo como el leve relieve de una tela. El movimiento es cálido y de juego: los retazos llegan con un pequeño rebote, las costuras se cosen solas a medida que aparecen y un toque deja una huella que se desvanece.\n\nLa identidad de Gloz Studio (azul real, Montserrat, Yeseva One) vive solo en la portada de la propuesta, en las notas de propuesta que se pueden mostrar u ocultar y en la firma del pie. Nunca entra en la colcha.",
+    "keyCharacteristics": [
+      "Retazos borde con borde (separación 0 dentro de cada bloque); el azul marino se ve solo entre bloques, con el ancho de una costura.",
+      "Costura de puntada corrida en cada retazo: coral oscuro sobre telas claras, manta sobre mezclilla, fieltro y chambray.",
+      "La manta es la tela de lectura; las telas con estampado se aclaran donde llevan texto.",
+      "Tinta azul marino sobre toda tela clara.",
+      "Shantell Sans escrita a mano para la voz, Big Shoulders Display en mayúsculas de sello para los rótulos, Nunito para leer.",
+      "Etiquetas de tela que distinguen lo real («fotos reales del centro»), lo ilustrativo («foto ilustrativa») y lo que es de ejemplo («dato de ejemplo»)."
+    ],
+    "rules": [
+      {
+        "name": "The Tinta Marina Rule",
+        "body": "El texto sobre toda tela clara es azul marino (ink) o tinta suave. El coral solo puede ser texto en su versión `coral-texto`. Solo la mezclilla invierte a manta.",
+        "section": "colors"
+      },
+      {
+        "name": "The Manta para Leer Rule",
+        "body": "Los párrafos largos van sobre manta. Si una tela con estampado lleva texto, el estampado baja de intensidad (en el cuadrillé, del 62% al 34%).",
+        "section": "colors"
+      },
+      {
+        "name": "The Papel de Ejemplo Rule",
+        "body": "El amarillo `ejemplo` significa «esto es un dato de prueba» y no se usa para nada más.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mano y Sello Rule",
+        "body": "Shantell habla y Big Shoulders rotula. Nunito se usa solo para leer. Big Shoulders siempre va en mayúsculas y con espaciado positivo.",
+        "section": "typography"
+      },
+      {
+        "name": "The Línea con Aire Rule",
+        "body": "Las líneas de titular que suben al animarse llevan un relleno de 0.14em arriba y 0.12em a los lados, compensado con un margen negativo, para que no se recorten las colitas ni los acentos.",
+        "section": "typography"
+      },
+      {
+        "name": "The Relieve de Tela Rule",
+        "body": "No hay tarjetas flotantes ni sombras de elevación sobre los retazos. Solo se eleva lo que está cosido encima de la colcha, y siempre con una sombra difusa y teñida de azul marino.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do colocar los retazos borde con borde dentro de cada bloque (`gap: 0`) y separar los bloques con una costura (9px/12px) por la que asome la mezclilla.",
+      "Do dar a cada retazo nuevo `data-retazo` para que reciba su costura dibujada, con el `outline` punteado como respaldo sin JS.",
+      "Do escribir con tinta azul marino sobre toda tela clara y poner los párrafos largos sobre manta.",
+      "Do marcar cada dato no confirmado con la etiqueta de ejemplo, y cada foto de banco con «foto ilustrativa».",
+      "Do reservar el parche coral para la acción de WhatsApp. Las acciones secundarias van como enlace a mano o como parche de manta.",
+      "Do usar Big Shoulders en mayúsculas para rotular y Shantell para hablar."
+    ],
+    "donts": [
+      "Don't separar los retazos con huecos de fondo, como si fueran una fila de tarjetas redondeadas del mismo tamaño.",
+      "Don't usar coral claro, mostaza, salvia o chambray como color de texto. Para texto coral está `coral-texto`.",
+      "Don't usar el amarillo `ejemplo` para resaltar algo que no sea un dato de prueba.",
+      "Don't llevar el azul Gloz, Montserrat ni Yeseva One dentro de la colcha. Son solo de la portada de la propuesta, las notas y la firma.",
+      "Don't agregar sombras de elevación a los retazos. La profundidad es grano, trama y el relieve de lo que va cosido encima.",
+      "Don't reemplazar la puntada dibujada por bordes continuos."
+    ]
+  }
+}

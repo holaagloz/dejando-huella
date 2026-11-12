@@ -16,7 +16,7 @@
         "rule": "overused-font",
         "value": "montserrat",
         "createdAt": "2026-11-11T22:33:56.883Z",
-        "reason": "Claude: Montserrat is the Gloz Studio brand face (studiogloz.com tokens), used only on the proposal cover; brand commitment in PRODUCT.md"
+        "reason": "Claude: Gloz Studio brand face (studiogloz.com tokens), proposal cover only; brand commitment in PRODUCT.md"
       },
       {
         "rule": "cramped-padding",

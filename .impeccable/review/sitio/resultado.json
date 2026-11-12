@@ -1,5 +1,5 @@
 {
-  "revisado": "2026-11-11T22:28:23.133Z",
+  "revisado": "2026-11-11T22:44:50.468Z",
   "sitio": "file:///C:/Users/Usiario/Desktop/Projects/dejando-huellas/propuesta/index.html",
   "navegador": "Chrome/157.0.8103.50 (C:/Users/Usiario/.agent-browser/browsers/chrome-157.0.8103.50/chrome.exe)",
   "resumen": {
@@ -10,7 +10,7 @@
       "Celular con Reducir movimiento: 1 elementos se quedaron ocultos: input.comparador__rango \"Deslizar para comparar la página actual con la nue\", transparente (opacity 0)",
       "Celular sin JavaScript: 1 elementos se quedaron ocultos: input.comparador__rango \"Deslizar para comparar la página actual con la nue\", transparente (opacity 0)"
     ],
-    "nota": "La página mide 14,278 px en celular. La captura completa va a 1x para que no se repita; para leerla de cerca usa las capturas de la carpeta tramos."
+    "nota": "La página mide 14,127 px en celular. La captura completa va a 1x para que no se repita; para leerla de cerca usa las capturas de la carpeta tramos."
   },
   "vistas": {
     "celular": {
@@ -64,7 +64,7 @@
           {
             "archivo": "tramos/celular-09.png",
             "desde": 12992,
-            "hasta": 14278
+            "hasta": 14127
           }
         ]
       },
@@ -73,14 +73,9 @@
           "texto": "Ver la nueva página",
           "destino": "#inicio",
           "alto": 52
-        },
-        {
-          "texto": "Ver notas de la propuesta",
-          "destino": "(botón)",
-          "alto": 44
         }
       ],
-      "altoPagina": 14278,
+      "altoPagina": 14127,
       "anchoDocumento": 375,
       "anchoVentana": 375,
       "elementosFuera": [],
@@ -98,6 +93,7 @@
           "Shantell Sans",
           "Nunito",
           "Montserrat",
+          "Big Shoulders Display",
           "Yeseva One"
         ],
         "noCargaron": []
@@ -111,11 +107,13 @@
       },
       "titulo": "Centro Infantil Dejando Huella · Guardería en Ciudad Quesada, San Carlos",
       "h1": [
-        "UNA NUEVA PÁGINA para Dejando Huella",
         "Donde cada pequeño paso cuenta"
       ],
       "erroresConsola": [],
-      "avisosConsola": [],
+      "avisosConsola": [
+        "[sitio] TypeError: $ is not a function or its return value is not iterable\n    at crearCostura (file:///C:/Users/Usiario/Desktop/Projects/dejando-huellas/propuesta/js/sitio.js?v=20261111a:39:26)\n    a",
+        "GSAP target  not found. https://gsap.com"
+      ],
       "archivosQueNoCargaron": []
     },
     "escritorio": {
@@ -154,7 +152,7 @@
           {
             "archivo": "tramos/escritorio-06.png",
             "desde": 9000,
-            "hasta": 10035
+            "hasta": 10407
           }
         ]
       },
@@ -163,14 +161,9 @@
           "texto": "Ver la nueva página",
           "destino": "#inicio",
           "alto": 52
-        },
-        {
-          "texto": "Ver notas de la propuesta",
-          "destino": "(botón)",
-          "alto": 44
         }
       ],
-      "altoPagina": 10035,
+      "altoPagina": 10407,
       "anchoDocumento": 1440,
       "anchoVentana": 1440,
       "elementosFuera": [],
@@ -188,6 +181,7 @@
           "Shantell Sans",
           "Nunito",
           "Montserrat",
+          "Big Shoulders Display",
           "Yeseva One"
         ],
         "noCargaron": []
@@ -201,11 +195,13 @@
       },
       "titulo": "Centro Infantil Dejando Huella · Guardería en Ciudad Quesada, San Carlos",
       "h1": [
-        "UNA NUEVA PÁGINA para Dejando Huella",
         "Donde cada pequeño paso cuenta"
       ],
       "erroresConsola": [],
-      "avisosConsola": [],
+      "avisosConsola": [
+        "[sitio] TypeError: $ is not a function or its return value is not iterable\n    at crearCostura (file:///C:/Users/Usiario/Desktop/Projects/dejando-huellas/propuesta/js/sitio.js?v=20261111a:39:26)\n    a",
+        "GSAP target  not found. https://gsap.com"
+      ],
       "archivosQueNoCargaron": []
     },
     "celular-reducir-movimiento": {
@@ -219,14 +215,9 @@
           "texto": "Ver la nueva página",
           "destino": "#inicio",
           "alto": 52
-        },
-        {
-          "texto": "Ver notas de la propuesta",
-          "destino": "(botón)",
-          "alto": 44
         }
       ],
-      "altoPagina": 14243,
+      "altoPagina": 14091,
       "anchoDocumento": 375,
       "anchoVentana": 375,
       "elementosFuera": [],
@@ -244,6 +235,7 @@
           "Shantell Sans",
           "Nunito",
           "Montserrat",
+          "Big Shoulders Display",
           "Yeseva One"
         ],
         "noCargaron": []
@@ -257,11 +249,12 @@
       },
       "titulo": "Centro Infantil Dejando Huella · Guardería en Ciudad Quesada, San Carlos",
       "h1": [
-        "UNA NUEVA PÁGINA para Dejando Huella",
         "Donde cada pequeño paso cuenta"
       ],
       "erroresConsola": [],
-      "avisosConsola": [],
+      "avisosConsola": [
+        "[sitio] TypeError: $ is not a function or its return value is not iterable\n    at crearCostura (file:///C:/Users/Usiario/Desktop/Projects/dejando-huellas/propuesta/js/sitio.js?v=20261111a:39:26)\n    a"
+      ],
       "archivosQueNoCargaron": []
     },
     "celular-sin-javascript": {
@@ -275,14 +268,9 @@
           "texto": "Ver la nueva página",
           "destino": "#inicio",
           "alto": 52
-        },
-        {
-          "texto": "Ver notas de la propuesta",
-          "destino": "(botón)",
-          "alto": 44
         }
       ],
-      "altoPagina": 14241,
+      "altoPagina": 14091,
       "anchoDocumento": 375,
       "anchoVentana": 375,
       "elementosFuera": [],
@@ -300,6 +288,7 @@
           "Shantell Sans",
           "Nunito",
           "Montserrat",
+          "Big Shoulders Display",
           "Yeseva One"
         ],
         "noCargaron": []
@@ -313,7 +302,6 @@
       },
       "titulo": "Centro Infantil Dejando Huella · Guardería en Ciudad Quesada, San Carlos",
       "h1": [
-        "UNA NUEVA PÁGINA para Dejando Huella",
         "Donde cada pequeño paso cuenta"
       ],
       "erroresConsola": [],
