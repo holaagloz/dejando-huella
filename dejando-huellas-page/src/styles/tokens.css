@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Tokens de Dejando Huella · Dirección de arte «Colcha de retazos» (ver DESIGN.md)
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Shantell Sans';
+  src: url('/fonts/shantell-sans-var.woff2') format('woff2');
+  font-weight: 500 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/nunito-var.woff2') format('woff2');
+  font-weight: 400 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Big Shoulders Display';
+  src: url('/fonts/big-shoulders-display-var.woff2') format('woff2');
+  font-weight: 700 900;
+  font-display: swap;
+}
+
+:root {
+  /* Color: identidad de Dejando Huella (leída del logo) */
+  --ink: #0d1a3c; /* azul marino del logo: la tinta de todo el texto */
+  --ink-soft: #3b4664; /* texto secundario sobre manta (8.7:1) */
+  --manta: #fbf7ef; /* retazo de lectura */
+  --coral: #e38f83;
+  --coral-deep: #c96f62;
+  --coral-soft: #f5cfc8;
+  --coral-texto: #a84e42; /* único coral permitido como texto sobre manta (5.1:1) */
+  --mostaza: #dca74c;
+  --mostaza-deep: #b9862e;
+  --mostaza-soft: #f1ddb0;
+  --salvia: #a6b3a6;
+  --salvia-deep: #7d8e7d;
+  --salvia-soft: #dce3da;
+  --chambray: #91a8cb;
+  --chambray-deep: #6c86af;
+  --chambray-soft: #d9e2f0;
+  /* Respaldo de la colcha: azul polvo (el azul de la paleta del centro) con trama de lino y los hilos
+     ondulados de su material impreso. Da vida sin ser azul marino, que se reserva para el texto. */
+  --respaldo: #8aa0c3;
+  --respaldo-hondo: #6f87ae;
+  /* Lavanda de la paleta del centro: la tela que reemplaza al chambray, que ahora sería igual al fondo */
+  --lavanda: #bdb3da;
+  --lavanda-deep: #9a8fc4;
+  /* Dos mosaicos de tamaños distintos superpuestos: el patrón casi no vuelve a alinearse */
+  --fondo-lino:
+    url('/textura/hilos.svg') center top / 740px 820px,
+    url('/textura/lino.svg') 0 0 / 520px 600px,
+    var(--respaldo);
+  --cta: var(--coral);
+  --cta-ink: var(--ink);
+  --puntada: var(--coral-deep);
+  /* Studio Gloz: solo en la etiqueta de la firma del pie, nunca en la colcha */
+  --gloz: #024aa9;
+
+  /* Tipografía */
+  --font-mano: 'Shantell Sans', 'Comic Sans MS', system-ui, sans-serif;
+  --font-sello: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --font-texto: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Forma */
+  --r-retazo: 6px;
+  --r-parche: 16px;
+
+  /* Movimiento: cálido y de juego */
+  --ease: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-pop: cubic-bezier(0.34, 1.5, 0.64, 1);
+  --t-hover: 0.35s;
+
+  /* Espacio */
+  --costura: 9px;
+  --maxw: 1320px;
+  --grano: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .05 0 0 0 0 .1 0 0 0 0 .24 0 0 0 .16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --costura: 12px;
+  }
+}

@@ -1,0 +1,48 @@
+<section class="colcha-seccion" id="matricula" aria-labelledby="t-matricula">
+  <div #caja class="r-pasos tela t-rayas" appRetazo>
+    <svg #hilo class="hilo-svg hilo-pasos" aria-hidden="true" focusable="false">
+      <defs>
+        <mask id="mascara-hilo-pasos" maskUnits="userSpaceOnUse">
+          <path fill="none" stroke="#fff" stroke-width="14" pathLength="1" stroke-dasharray="1 1" />
+        </mask>
+      </defs>
+      <path />
+    </svg>
+    <div class="r-pasos__titulo tela t-manta">
+      <h2 class="titular" id="t-matricula">{{ m.titulo }}</h2>
+    </div>
+    <ol #lista class="pasos">
+      @for (paso of m.pasos; track paso.titulo; let i = $index) {
+        <li #paso class="paso tela t-manta" appRetazo>
+          <span #numero class="paso__num" aria-hidden="true">{{ i + 1 }}</span>
+          <h3>{{ paso.titulo }}</h3>
+          <p>{{ paso.texto }}</p>
+        </li>
+      }
+    </ol>
+    <app-boton-whatsapp
+      ubicacion="matricula"
+      [mensaje]="m.mensajeWhatsapp"
+      texto="Empezar la matrícula"
+    />
+  </div>
+
+  <div class="r-requisitos tela t-manta" appRetazo>
+    <details>
+      <summary>
+        <svg appIcono="documento"></svg>
+        <span
+          >{{ m.requisitos.titulo }}
+          <span class="r-requisitos__conteo">({{ m.requisitos.items.length }})</span></span
+        >
+        <span class="mas" aria-hidden="true"><svg appIcono="mas"></svg></span>
+      </summary>
+      <p>{{ m.requisitos.intro }}</p>
+      <ul class="lista-cosida">
+        @for (item of m.requisitos.items; track item) {
+          <li>{{ item }}</li>
+        }
+      </ul>
+    </details>
+  </div>
+</section>

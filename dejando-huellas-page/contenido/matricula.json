@@ -1,0 +1,25 @@
+{
+  "titulo": "Matricular a tu hijo, en tres pasos",
+  "pasos": [
+    { "titulo": "Escríbenos", "texto": "Cuéntanos la edad de tu hijo y te respondemos con horarios y espacios disponibles." },
+    { "titulo": "Entrevista y visita", "texto": "Conoce el centro y a las maestras en una entrevista familiar, y resuelve tus dudas en persona." },
+    { "titulo": "Documentos y reserva", "texto": "Completas el formulario de admisión, firmas el contrato y reservas el espacio con la matrícula." }
+  ],
+  "requisitos": {
+    "titulo": "Requisitos de matrícula",
+    "intro": "Para completar la matrícula vas a necesitar:",
+    "items": [
+      "Entrevista familiar",
+      "Formulario de admisión completo y firmado",
+      "Certificado de nacimiento",
+      "Cédula de ambos padres",
+      "Fotografía tamaño pasaporte del niño o la niña",
+      "Copia de la tarjeta de vacunas actualizada",
+      "Copia de la cédula de las personas autorizadas para entregarlo o recogerlo",
+      "Copia de la póliza estudiantil vigente del INS",
+      "Contrato de servicios firmado por los padres o encargados",
+      "Pago de la matrícula 2027 para reservar el espacio"
+    ]
+  },
+  "mensajeWhatsapp": "Hola, quisiera empezar el proceso de matrícula 2027. ¿Cuándo puedo visitar el centro?"
+}

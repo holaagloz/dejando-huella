@@ -1,0 +1,99 @@
+.r-descuento,
+.r-matricula {
+  grid-column: span 3;
+  padding: 22px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.r-descuento__valor,
+.r-matricula__monto {
+  font: 800 clamp(1.7rem, 6vw, 2.4rem) / 1 var(--font-mano);
+  font-variation-settings:
+    'INFM' 100,
+    'BNCE' 30;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.r-modalidad {
+  padding: 22px 20px 24px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+caption {
+  text-align: left;
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+  padding-bottom: 14px;
+}
+.r-modalidad__horario {
+  display: inline-block;
+  padding: 0.35em 0.8em;
+  background: var(--manta);
+  border-radius: 999px;
+  font: 700 0.9375rem/1.2 var(--font-mano);
+}
+tbody tr + tr {
+  border-top: 2px dashed rgb(13 26 60 / 28%);
+}
+tbody th,
+tbody td {
+  padding: 10px 0;
+  font: 700 1.0625rem/1.2 var(--font-mano);
+}
+tbody th {
+  text-align: left;
+}
+tbody td {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-size: 1.25rem;
+}
+
+.r-nota {
+  padding: 20px 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 24px;
+}
+.r-nota p {
+  max-width: 64ch;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 760px) {
+  .r-modalidad {
+    grid-column: span 4;
+  }
+  .r-descuento,
+  .r-matricula {
+    grid-column: span 6;
+  }
+}
+@media (min-width: 1024px) {
+  .r-cabeza {
+    grid-column: 1 / 7;
+  }
+  .r-descuento {
+    grid-column: 7 / 10;
+  }
+  .r-matricula {
+    grid-column: 10 / 13;
+  }
+  .r-modalidad {
+    padding: 30px 30px 32px;
+  }
+  caption .titular-chico {
+    min-height: 2em; /* alinea las tablas aunque un nombre ocupe una línea y otro dos */
+  }
+  .r-nota {
+    padding: 22px 34px;
+  }
+}

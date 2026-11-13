@@ -1,0 +1,147 @@
+<section class="colcha-seccion" id="visitanos" aria-labelledby="t-visitanos">
+  <div class="r-cabeza tela t-cuadrille t-cuadrille--suave" appRetazo>
+    <h2 class="titular" id="t-visitanos">{{ v.titulo }}</h2>
+    <p class="bajada">{{ v.bajada }}</p>
+  </div>
+
+  <div class="r-form tela t-manta" appRetazo>
+    <h3 class="titular-chico">Agenda tu visita</h3>
+    <form class="formulario" novalidate (submit)="enviar($event)">
+      <div class="campo">
+        <label for="f-nombre">Tu nombre</label>
+        <input
+          id="f-nombre"
+          type="text"
+          autocomplete="name"
+          placeholder="Ej.: Ana Rodríguez…"
+          [formField]="formulario.nombre"
+          [attr.aria-invalid]="errorNombre()"
+          [attr.aria-describedby]="errorNombre() ? 'f-aviso' : null"
+        />
+      </div>
+      <div class="campo">
+        <label for="f-edad">Edad de tu hijo o hija</label>
+        <select
+          id="f-edad"
+          [formField]="formulario.edad"
+          [attr.aria-invalid]="errorEdad()"
+          [attr.aria-describedby]="errorEdad() ? 'f-aviso' : null"
+        >
+          <option value="">Elige una opción</option>
+          @for (edad of edades; track edad) {
+            <option [value]="edad">{{ edad }}</option>
+          }
+        </select>
+      </div>
+      <div class="campo">
+        <label for="f-horario"
+          >¿Cuándo te queda mejor la visita? <span class="ayuda">(opcional)</span></label
+        >
+        <select id="f-horario" [formField]="formulario.horario">
+          <option value="">Sin preferencia</option>
+          <option value="Entre semana en la mañana">Entre semana en la mañana</option>
+          <option value="Entre semana en la tarde">Entre semana en la tarde</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="f-mensaje"
+          >¿Algo que debamos saber? <span class="ayuda">(opcional)</span></label
+        >
+        <textarea
+          id="f-mensaje"
+          autocomplete="off"
+          placeholder="Ej.: buscamos tiempo completo desde enero…"
+          [formField]="formulario.mensaje"
+        ></textarea>
+      </div>
+      <p class="aviso" id="f-aviso" role="alert">{{ aviso() }}</p>
+      <button class="parche parche--ancho" type="submit">
+        <svg appIcono="whatsapp"></svg>Enviar por WhatsApp
+      </button>
+      <p class="nota">
+        Se abre WhatsApp con tu mensaje listo. Tú decides si lo envías: no guardamos tus datos.
+      </p>
+    </form>
+  </div>
+
+  <div class="r-info tela t-fieltro" appRetazo>
+    <h3 class="titular-chico">Dónde estamos</h3>
+    <ul class="contacto">
+      <li>
+        <svg appIcono="pin"></svg>
+        <span>
+          <strong>{{ direccion.barrio }}, {{ direccion.ciudad }}</strong>
+          {{ direccion.senas }}, {{ direccion.canton }}.<br />
+          <a
+            [href]="mapaExterno"
+            target="_blank"
+            rel="noopener"
+            appRegistrarEvento="clic_mapa"
+            ubicacion="visitanos"
+            >Abrir en Google Maps<span class="vh"> (abre en otra pestaña)</span></a
+          >
+        </span>
+      </li>
+      <li>
+        <svg appIcono="telefono"></svg>
+        <span>
+          <strong>Teléfono y WhatsApp</strong>
+          <a [href]="telefono" appRegistrarEvento="clic_telefono" ubicacion="visitanos">{{
+            contacto.telefonoVisible
+          }}</a>
+          ·
+          <a
+            [href]="whatsapp"
+            target="_blank"
+            rel="noopener"
+            appRegistrarEvento="clic_whatsapp"
+            ubicacion="visitanos-contacto"
+            >Escribir por WhatsApp<span class="vh"> (se abre WhatsApp)</span></a
+          >
+        </span>
+      </li>
+      <li>
+        <svg appIcono="correo"></svg>
+        <span>
+          <strong>Correo</strong>
+          <a
+            [href]="'mailto:' + contacto.correo"
+            appRegistrarEvento="clic_correo"
+            ubicacion="visitanos"
+            >{{ contacto.correo }}</a
+          >
+        </span>
+      </li>
+      <li>
+        <svg appIcono="instagram"></svg>
+        <span>
+          <strong>Instagram</strong>
+          <a
+            [href]="instagram"
+            target="_blank"
+            rel="noopener"
+            appRegistrarEvento="clic_instagram"
+            ubicacion="visitanos"
+            >&#64;{{ contacto.instagram }}<span class="vh"> (abre en otra pestaña)</span></a
+          >
+        </span>
+      </li>
+      <li>
+        <svg appIcono="reloj"></svg>
+        <span><strong>Horario</strong>{{ horario }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="r-mapa tela t-manta" appRetazo>
+    <app-mapa
+      [nombre]="c.sitio.nombreCorto"
+      [senas]="direccion.senas + ', ' + direccion.barrio"
+      [latitud]="direccion.latitud"
+      [longitud]="direccion.longitud"
+      [enlaceExterno]="mapaExterno"
+    />
+  </div>
+
+  <p class="r-cierre tela t-mostaza-suave" appRetazo>{{ v.cierre }}</p>
+</section>

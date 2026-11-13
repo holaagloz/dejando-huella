@@ -1,0 +1,18 @@
+{
+  "titulo": "Comer bien, con cariño",
+  "bajada": "La alimentación está incluida y se prepara en el centro, con higiene, calidad y mucho cariño.",
+  "tiempos": ["Desayuno", "Merienda de la mañana", "Almuerzo", "Merienda de la tarde"],
+  "puntos": [
+    {
+      "titulo": "Menú de nutricionista",
+      "texto": "Los menús los elabora y supervisa una nutricionista en pediatría, para que cada niño coma variado, equilibrado y según su etapa.",
+      "icono": "manzana"
+    },
+    {
+      "titulo": "Cocina con formación de chef",
+      "texto": "Nuestra cocinera tiene formación como chef profesional y amplia experiencia: preparaciones cuidadosas, variadas y hechas con dedicación.",
+      "icono": "cubiertos"
+    }
+  ],
+  "video": { "nombre": "cocina", "descripcion": "La cocinera del centro preparando el almuerzo de los niños" }
+}

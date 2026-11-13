@@ -1,0 +1,48 @@
+<section class="colcha-seccion" id="tranquilidad" aria-labelledby="t-tranquilidad">
+  <div class="r-cabeza tela t-manta" appRetazo>
+    <h2 class="titular" id="t-tranquilidad" appTitularAnimado>{{ t.titulo }}</h2>
+    <p class="bajada">{{ t.bajada }}</p>
+  </div>
+  <div class="r-foto-sola r-tq-foto tela t-manta" appRetazo appAparecer>
+    <figure class="foto">
+      <app-foto [foto]="t.foto" sizes="(min-width: 1024px) 56vw, 100vw" />
+    </figure>
+  </div>
+
+  <div class="r-tq-seguridad tela t-fieltro" appRetazo appAparecer="caer" [orden]="0">
+    <svg appIcono="escudo" class="icono--grande"></svg>
+    <h3 class="titular-chico">{{ t.seguridad.titulo }}</h3>
+    <p>{{ t.seguridad.texto }}</p>
+    <ul class="lista-cosida">
+      @for (punto of t.seguridad.puntos; track punto) {
+        <li>{{ punto }}</li>
+      }
+    </ul>
+  </div>
+  <div class="r-tq-cifra tela t-lavanda" appRetazo appAparecer="caer" [orden]="1">
+    <p class="cifra" aria-hidden="true">{{ t.cifra.numero }}</p>
+    <h3 class="titular-chico">
+      <span class="vh">{{ t.cifra.numero }} </span>{{ t.cifra.titulo }}
+    </h3>
+    <p>{{ t.cifra.texto }}</p>
+  </div>
+  <div
+    class="r-tq-equipo tela t-cuadrille t-cuadrille--suave"
+    appRetazo
+    appAparecer="caer"
+    [orden]="2"
+  >
+    <svg appIcono="birrete" class="icono--grande"></svg>
+    <h3 class="titular-chico">{{ t.equipo.titulo }}</h3>
+    <p>{{ t.equipo.texto }}</p>
+    <ul class="formaciones">
+      @for (f of t.equipo.formaciones; track f) {
+        <li class="etiqueta">{{ f }}</li>
+      }
+    </ul>
+  </div>
+  <div class="r-tq-ritmo tela t-mostaza-suave" appRetazo appAparecer="caer" [orden]="3">
+    <h3 class="titular-chico">{{ t.ritmo.titulo }}</h3>
+    <p>{{ t.ritmo.texto }}</p>
+  </div>
+</section>

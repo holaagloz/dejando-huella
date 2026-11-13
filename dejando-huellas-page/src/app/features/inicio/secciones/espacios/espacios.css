@@ -1,0 +1,120 @@
+.r-cabeza {
+  justify-content: center;
+}
+.r-espacio {
+  grid-column: span 3;
+  padding: var(--costura);
+  min-height: 200px;
+}
+.r-espacio--grande {
+  grid-column: 1 / -1;
+  min-height: 260px;
+}
+.ampliar {
+  all: unset;
+  display: block;
+  position: absolute;
+  inset: 0;
+  cursor: zoom-in;
+}
+.ampliar:focus-visible {
+  outline: 3px solid var(--mostaza);
+  outline-offset: -3px;
+}
+.ampliar img {
+  transition: transform 0.8s var(--ease);
+}
+.ampliar:hover img {
+  transform: scale(1.035);
+}
+.lupa {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--manta);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+}
+.lupa .icono {
+  width: 20px;
+  height: 20px;
+}
+.foto > figcaption {
+  pointer-events: none;
+}
+
+.visor {
+  width: min(1100px, 94vw);
+  max-height: 92vh;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: var(--manta);
+  color: var(--ink);
+  overflow: hidden;
+}
+.visor::backdrop {
+  background: rgb(13 26 60 / 82%);
+}
+.visor img {
+  width: 100%;
+  height: auto;
+  max-height: 78vh;
+  object-fit: contain;
+  background: var(--ink);
+}
+.visor__pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  font: 600 1rem var(--font-mano);
+}
+.visor__pie button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: none;
+  cursor: pointer;
+  font: 700 0.9375rem var(--font-mano);
+}
+
+@media (min-width: 760px) {
+  .r-espacio {
+    grid-column: span 4;
+    min-height: 260px;
+  }
+  .r-espacio--grande {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 1024px) {
+  .r-cabeza {
+    grid-column: 1 / 5;
+    grid-row: 1;
+  }
+  .r-espacio--grande {
+    grid-column: 5 / 13;
+    grid-row: 1;
+    min-height: 440px;
+  }
+  .r-espacio {
+    min-height: 320px;
+  }
+  /* Última fila: un retrato angosto y dos más anchos, para romper la repetición */
+  .r-espacio:nth-last-child(3) {
+    grid-column: span 3;
+  }
+  .r-espacio:nth-last-child(2) {
+    grid-column: span 5;
+  }
+}

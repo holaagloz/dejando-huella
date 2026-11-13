@@ -1,0 +1,52 @@
+<footer class="pie" id="pie">
+  <div class="r-pie-marca tela t-manta" appRetazo>
+    <img ngSrc="logo-dejando-huella" width="180" height="85" alt="Centro Infantil Dejando Huella" />
+    <p class="pie__lema">{{ c.sitio.lema }}.</p>
+    <app-boton-whatsapp ubicacion="pie" />
+  </div>
+
+  <div class="r-pie-links tela t-fieltro" appRetazo>
+    <nav aria-label="Secciones">
+      <ul>
+        @for (s of secciones; track s.ancla) {
+          <li>
+            <a [href]="'#' + s.ancla">{{ s.textoCorto ?? s.texto }}</a>
+          </li>
+        }
+        <li><a href="#inicio">Volver arriba</a></li>
+      </ul>
+    </nav>
+    <div class="pie__cierre">
+      <a
+        class="pie__instagram"
+        [href]="instagram"
+        target="_blank"
+        rel="noopener"
+        appRegistrarEvento="clic_instagram"
+        ubicacion="pie"
+      >
+        <svg appIcono="instagram"></svg>&#64;{{ c.sitio.contacto.instagram
+        }}<span class="vh"> en Instagram (abre en otra pestaña)</span>
+      </a>
+      <div class="huellitas" aria-hidden="true">
+        @for (color of colores; track color) {
+          <span #huellita><svg appHuella [color]="color"></svg></span>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="r-pie-legal tela t-manta" appRetazo>
+    <span
+      >© {{ anio }} {{ c.sitio.nombre }} · {{ c.sitio.direccion.ciudad }},
+      {{ c.sitio.direccion.canton }}</span
+    >
+    <a class="firma" href="https://www.studiogloz.com/" target="_blank" rel="noopener">
+      <span class="firma__texto">Página creada por · Studio</span>
+      <svg class="firma__logo" viewBox="0 0 211 73" aria-hidden="true" focusable="false">
+        <use href="#gloz" />
+      </svg>
+      <span class="vh">Gloz (abre en otra pestaña)</span>
+    </a>
+  </div>
+</footer>

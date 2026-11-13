@@ -1,6 +1,6 @@
 ---
 name: Dejando Huella
-description: Colcha de retazos cosida a mano sobre mezclilla azul marino; cada retazo responde una pregunta de las familias.
+description: Colcha de retazos cosida a mano sobre un respaldo azul polvo con trama de lino e hilos de colores; cada retazo responde una pregunta de las familias.
 colors:
   ink: "#0D1A3C"
   ink-soft: "#3B4664"
@@ -18,7 +18,10 @@ colors:
   chambray: "#91A8CB"
   chambray-deep: "#6C86AF"
   chambray-soft: "#D9E2F0"
-  mezclilla: "#13234A"
+  respaldo: "#8AA0C3"
+  respaldo-hondo: "#6F87AE"
+  lavanda: "#BDB3DA"
+  lavanda-deep: "#9A8FC4"
   ejemplo: "#FFF3C9"
   gloz: "#024AA9"
 typography:
@@ -136,15 +139,15 @@ components:
 
 **Creative North Star: "La colcha de retazos"**
 
-Cada página es una sola colcha cosida a mano. Los retazos se colocan borde con borde sobre un respaldo de mezclilla azul marino (el azul del logo), y ese azul solo asoma en la costura entre bloques. Las telas son los colores del logo convertidos en tejidos limpios hechos con CSS: cuadrillé coral, chambray, raya mostaza, fieltro salvia, mezclilla y manta. La manta queda reservada para los retazos de lectura. Cada retazo lleva una costura de puntada corrida que el JS dibuja en SVG. Las fotos se cosen como un retazo más, los rótulos son etiquetas de tela escritas a mano y los botones son parches bordados.
+Cada página es una sola colcha cosida a mano. Los retazos se colocan borde con borde sobre un respaldo azul polvo con trama de lino, cruzado por los hilos ondulados (manta, coral, mostaza y salvia claro) que el centro usa en su propio material impreso; ese respaldo solo asoma en la costura entre bloques y en los márgenes. Las telas son los colores del logo convertidos en tejidos limpios hechos con CSS: cuadrillé coral, pana lavanda, raya mostaza, fieltro salvia, lunares y manta. La manta queda reservada para los retazos de lectura. Cada retazo lleva una costura de puntada corrida que el JS dibuja en SVG. Las fotos se cosen como un retazo más, los rótulos son etiquetas de tela escritas a mano y los botones son parches bordados.
 
 La densidad es de colcha y no de folleto: los bloques llenan su celda y no flotan sobre un fondo vacío. La jerarquía sale del tamaño de cada retazo y de su tela, no de tarjetas iguales repetidas. La tinta azul marino se usa sobre todos los colores. La profundidad existe solo como el leve relieve de una tela. El movimiento es cálido y de juego: los retazos llegan con un pequeño rebote, las costuras se cosen solas a medida que aparecen y un toque deja una huella que se desvanece.
 
-La identidad de Gloz Studio (azul real, Montserrat, Yeseva One) vive solo en la portada de la propuesta, en las notas de propuesta que se pueden mostrar u ocultar y en la firma del pie. Nunca entra en la colcha.
+El sitio es del centro, no del estudio. La identidad de Gloz Studio vive solo en la etiqueta tejida de la firma, en el pie (y, en la propuesta archivada, en su portada y sus notas). Ni su azul ni su tinta entran en la colcha: por eso el respaldo dejó de ser azul marino, que se leía como la tinta de Gloz, y pasó a un azul polvo más claro, elegido por el estudio con el cliente para darle vida.
 
 **Key Characteristics:**
 - Retazos borde con borde (separación 0 dentro de cada bloque); el azul marino se ve solo entre bloques, con el ancho de una costura.
-- Costura de puntada corrida en cada retazo: coral oscuro sobre telas claras, manta sobre mezclilla, fieltro y chambray.
+- Costura de puntada corrida en cada retazo: coral oscuro sobre telas claras, manta sobre fieltro y lavanda.
 - La manta es la tela de lectura; las telas con estampado se aclaran donde llevan texto.
 - Tinta azul marino sobre toda tela clara.
 - Shantell Sans escrita a mano para la voz, Big Shoulders Display en mayúsculas de sello para los rótulos, Nunito para leer.
@@ -152,7 +155,7 @@ La identidad de Gloz Studio (azul real, Montserrat, Yeseva One) vive solo en la 
 
 ## Colors
 
-Los colores del logo convertidos en telas, cosidos sobre mezclilla azul marino.
+Los colores del logo convertidos en telas, cosidos sobre un respaldo azul polvo.
 
 ### Primary
 - **Coral de cuadrillé** (coral): la tela del parche bordado (la acción principal) y la base del cuadrillé. También es el relleno de la marca abierta de las preguntas frecuentes.
@@ -161,25 +164,27 @@ Los colores del logo convertidos en telas, cosidos sobre mezclilla azul marino.
 - **Coral pálido** (coral-soft): el fondo del cuadrillé y de los círculos de las preguntas.
 
 ### Secondary
-- **Raya mostaza** (mostaza): la tela de rayas (con dos hilos intermedios, `#E8C47F` y `#F2DCA8`), el hilo de la línea de tiempo del día, el anillo de foco y la selección de texto.
+- **Raya mostaza** (mostaza): la tela de rayas (con dos hilos intermedios, `#E8C47F` y `#F2DCA8`), el hilo de la línea de tiempo del día, el halo del foco y la selección de texto.
 - **Mostaza oscura y pálida** (mostaza-deep, mostaza-soft): huellas de la cinta y fondo de la cinta de oficios y de los retazos suaves.
 
 ### Tertiary
-- **Chambray** (chambray): tela de chambray con trama cruzada a 45°; también es el color de la barra de desplazamiento.
+- **Chambray** (chambray): el azul de la paleta. Ya no es una tela de retazo: su versión con trama es el respaldo de la página.
 - **Chambray oscuro y pálido** (chambray-deep, chambray-soft): los lunares sobre fondo pálido y el fondo de las fotos mientras cargan.
 - **Fieltro salvia** (salvia): fieltro liso con grano completo.
 - **Salvia oscura y pálida** (salvia-deep, salvia-soft): huellas de la cinta, retazo suave y fondo de la etiqueta «real».
 
 ### Neutral
-- **Azul marino del logo** (ink): respaldo de mezclilla de toda la página (con una trama de 135°) y tinta de todo el texto sobre telas claras.
+- **Azul marino del logo** (ink): la tinta de todo el texto sobre telas claras, el anillo de foco y los círculos numerados. Nunca es una superficie grande.
 - **Tinta suave** (ink-soft): bajadas, ayudas de campo y respuestas sobre manta (8.7:1).
-- **Mezclilla** (mezclilla): retazo de mezclilla con trama; lleva texto en manta y bajada en `#D3DCEB`.
+- **Azul polvo** (respaldo): el respaldo de toda la página (`#8AA0C3`, el chambray con su trama), con trama fina de lino y los hilos ondulados en dos mosaicos SVG de tamaños distintos (520×600 y 740×820) para que el patrón no se repita a la vista. También es el fondo del menú del celular, el degradado de la barra y el `theme-color`. Como el respaldo ya es azul polvo, ningún retazo usa chambray: se perdería contra el fondo.
+- **Azul polvo hondo** (respaldo-hondo): reservado para bordes sobre el respaldo.
+- **Pana lavanda** (lavanda, lavanda-deep): tela de canales verticales finos que reemplaza al chambray en los retazos. Lleva tinta azul marino y costura en manta.
 - **Manta** (manta): la tela de lectura, el fondo de las etiquetas y la versión clara del parche.
 - **Papel de ejemplo** (ejemplo): fondo exclusivo de lo que es dato de prueba (etiqueta de ejemplo y marcador de testimonio). Funciona como señal de honestidad, no como decoración.
-- **Azul Gloz** (gloz): solo en la portada de la propuesta, en la pastilla y las notas de Gloz y en la firma del pie.
+- **Azul Gloz** (gloz): solo en la etiqueta de la firma del pie.
 
 ### Named Rules
-**The Tinta Marina Rule.** El texto sobre toda tela clara es azul marino (ink) o tinta suave. El coral solo puede ser texto en su versión `coral-texto`. Solo la mezclilla invierte a manta.
+**The Tinta Marina Rule.** El texto sobre toda tela clara es azul marino (ink) o tinta suave. El coral solo puede ser texto en su versión `coral-texto`. Ninguna tela invierte el texto a claro.
 
 **The Manta para Leer Rule.** Los párrafos largos van sobre manta. Si una tela con estampado lleva texto, el estampado baja de intensidad (en el cuadrillé, del 62% al 34%).
 
@@ -208,7 +213,7 @@ Los colores del logo convertidos en telas, cosidos sobre mezclilla azul marino.
 
 ## Layout
 
-Mobile first. Cada sección es un bloque de colcha: una cuadrícula de 6 columnas (12 desde 760px) con `gap: 0`, un ancho máximo de 1320px, un radio de 6px y `overflow: clip`. Los retazos internos pierden su radio para que el bloque se lea como una sola pieza. Entre bloques queda un margen de una costura (9px; 12px desde 1024px), y por esa separación asoma la mezclilla. La página tiene un relleno lateral del mismo ancho de costura.
+Mobile first. Cada sección es un bloque de colcha: una cuadrícula de 6 columnas (12 desde 760px) con `gap: 0`, un ancho máximo de 1320px, un radio de 6px y `overflow: clip`. Los retazos internos pierden su radio para que el bloque se lea como una sola pieza. Entre bloques queda un margen de una costura (9px; 12px desde 1024px), y por esa separación asoma el respaldo con sus hilos. La página tiene un relleno lateral del mismo ancho de costura.
 
 Cortes: 640px (garantías y fotos del día a media fila, horas a 3 columnas), 760px (12 columnas, pasos a 3), 1024px (costura de 12px, navegación completa, se oculta la barra fija del celular, composiciones asimétricas 5/7 y 4/8 por sección) y 1200px (aparece el lema en la barra).
 
@@ -216,7 +221,7 @@ En escritorio cada bloque compone su propia asimetría: en la portada, la etique
 
 ## Elevation & Depth
 
-La colcha es plana. La profundidad aparece solo como el relieve de una tela: un grano de ruido SVG multiplicado sobre cada tela (`--grano`; en pantalla sobre la mezclilla), tramas de tejido hechas con gradientes y sombras pequeñas y difusas bajo lo que se cose encima (parches, etiquetas, globos).
+La colcha es plana. La profundidad aparece solo como el relieve de una tela: un grano de ruido SVG multiplicado sobre cada tela (`--grano`), tramas de tejido hechas con gradientes y sombras pequeñas y difusas bajo lo que se cose encima (parches, etiquetas, globos).
 
 ### Shadow Vocabulary
 - **Relieve de parche** (`0 0 0 3px var(--coral-deep), 0 calc(6px + var(--lift)) 18px -10px rgb(13 26 60 / 55%)`): el parche bordado. Al pasar el cursor, `--lift` sube 3px.
@@ -236,8 +241,8 @@ Las esquinas son las de una tela cortada: 6px en el bloque de colcha, 3px en las
 ### Buttons
 - **Shape:** parche bordado de esquinas suaves (16px), con una altura mínima de 56px (48px en la versión chica).
 - **Primary:** tela coral, tinta azul marino, Shantell 700 a 1.0625rem, borde exterior de 3px en coral oscuro, pespunte interior punteado y un icono de trazo de 1.3em. Es la única acción principal: abre WhatsApp con un mensaje ya escrito.
-- **Hover / Focus:** se eleva 3px y se aclara a `#E99D92` (0.35s, `--ease`). Al presionarlo baja a escala 0.97. El foco es un anillo mostaza de 3px con 3px de separación.
-- **Manta:** el mismo parche en manta, con borde azul marino, para fondos coral o chambray.
+- **Hover / Focus:** se eleva 3px y se aclara a `#E99D92` (0.35s, `--ease`). Al presionarlo baja a escala 0.97. El foco es un anillo de tinta de 3px con 3px de separación y un halo mostaza de 6px: la tinta asegura más de 3:1 sobre cualquier tela (el mostaza solo no llegaba a 2:1 sobre la manta).
+- **Manta:** el mismo parche en manta, con borde azul marino, para fondos coral o lavanda.
 - **Enlace a mano:** la acción secundaria. Va en Shantell 600 con subrayado punteado coral, que se vuelve continuo al pasar el cursor, y tiene una altura mínima de 44px.
 
 ### Chips (etiquetas de tela)
@@ -246,7 +251,7 @@ Las esquinas son las de una tela cortada: 6px en el bloque de colcha, 3px en las
 
 ### Cards / Containers (retazos)
 - **Corner Style:** 0 dentro del bloque; el bloque tiene 6px.
-- **Background:** una tela por retazo. La manta lleva la lectura; el cuadrillé, la raya, el chambray, el fieltro, los lunares y la mezclilla llevan datos, imágenes de marca y cierres.
+- **Background:** una tela por retazo. La manta lleva la lectura; el cuadrillé, la raya, la pana lavanda, el fieltro y los lunares llevan datos, imágenes de marca y cierres. Los lunares no llevan texto.
 - **Shadow Strategy:** ninguna (ver Elevation & Depth).
 - **Border:** la costura dibujada.
 - **Internal Padding:** de 18 a 30px en el celular y fluido en escritorio.
@@ -258,7 +263,7 @@ Las esquinas son las de una tela cortada: 6px en el bloque de colcha, 3px en las
 
 ### Navigation
 - Una barra fija (sticky) de retazos: un retazo con el logo y, en escritorio, un retazo de navegación con el lema y enlaces Shantell 600 (fondo de 8% azul marino al pasar el cursor) que terminan en un parche chico. Al bajar se esconde y al subir vuelve.
-- En el celular hay un botón «Menú» que abre una colcha a pantalla completa: retazos de dos columnas con distintas telas, que llegan con rebote, y un parche ancho sobre mezclilla. También hay una barra fija inferior con parches que aparece después de la portada.
+- En el celular hay un botón «Menú» que abre una colcha a pantalla completa: retazos de dos columnas con distintas telas, que llegan con rebote, sobre el respaldo azul, y un parche ancho sobre fieltro. Solo el último enlace ocupa el ancho completo, para que las filas de dos queden llenas. También hay una barra fija inferior con parches que aparece después de la portada.
 
 ### Costura e hilo firma (componente insignia)
 Cada `[data-retazo]` recibe una costura SVG que se cose sola, con una máscara `strokeDashoffset` de 1.1s, cuando el retazo entra en pantalla. En la portada, un hilo coral sigue las costuras reales entre la foto y los datos, sube por la costura de la huella y termina pespunteando el contorno del parche principal. En «Un día», un hilo mostaza recorre las horas; en «Inscripción», un hilo azul marino une los pasos. Ambos se cosen al ritmo del desplazamiento.
@@ -269,7 +274,7 @@ Los tokens son `M = { ease: power2.out, easeIO: power2.inOut, pop: back.out(1.4)
 ## Do's and Don'ts
 
 ### Do:
-- **Do** colocar los retazos borde con borde dentro de cada bloque (`gap: 0`) y separar los bloques con una costura (9px/12px) por la que asome la mezclilla.
+- **Do** colocar los retazos borde con borde dentro de cada bloque (`gap: 0`) y separar los bloques con una costura (9px/12px) por la que asome el respaldo.
 - **Do** dar a cada retazo nuevo `data-retazo` para que reciba su costura dibujada, con el `outline` punteado como respaldo sin JS.
 - **Do** escribir con tinta azul marino sobre toda tela clara y poner los párrafos largos sobre manta.
 - **Do** marcar cada dato no confirmado con la etiqueta de ejemplo, y cada foto de banco con «foto ilustrativa».
@@ -280,6 +285,7 @@ Los tokens son `M = { ease: power2.out, easeIO: power2.inOut, pop: back.out(1.4)
 - **Don't** separar los retazos con huecos de fondo, como si fueran una fila de tarjetas redondeadas del mismo tamaño.
 - **Don't** usar coral claro, mostaza, salvia o chambray como color de texto. Para texto coral está `coral-texto`.
 - **Don't** usar el amarillo `ejemplo` para resaltar algo que no sea un dato de prueba.
-- **Don't** llevar el azul Gloz, Montserrat ni Yeseva One dentro de la colcha. Son solo de la portada de la propuesta, las notas y la firma.
+- **Don't** llevar el azul Gloz, su tinta, Montserrat ni Yeseva One dentro de la colcha. Gloz solo firma, con su etiqueta tejida en el pie.
+- **Don't** usar el azul marino como superficie (respaldo, retazos, barras): es la tinta del texto.
 - **Don't** agregar sombras de elevación a los retazos. La profundidad es grano, trama y el relieve de lo que va cosido encima.
 - **Don't** reemplazar la puntada dibujada por bordes continuos.

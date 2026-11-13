@@ -1,0 +1,10 @@
+{
+  "titulo": "Un lugar para crecer, jugar y sentirse en casa",
+  "parrafos": [
+    "Somos un centro infantil que abrió sus puertas en septiembre de 2026, enfocado en el aprendizaje, el cuidado y el desarrollo integral de niñas y niños.",
+    "Nacimos para crear un espacio donde cada niño pueda crecer, divertirse y sentirse amado, seguro y acompañado durante sus primeros años.",
+    "Creemos en el potencial único de cada niño: respetamos su ritmo y lo acompañamos a descubrir sus capacidades, con paciencia, entrega y verdadero amor por lo que hacemos."
+  ],
+  "valores": ["Educación para la vida", "Amor y respeto", "Experiencias significativas"],
+  "foto": { "nombre": "maestra-abrazo", "alt": "Maestra abrazando con cariño a dos niñas en el salón" }
+}

@@ -1,0 +1,54 @@
+<section class="colcha-seccion" id="espacios" aria-labelledby="t-espacios">
+  <div class="r-cabeza tela t-manta" appRetazo>
+    <h2 class="titular" id="t-espacios" appTitularAnimado>{{ g.titulo }}</h2>
+    <p class="bajada">{{ g.bajada }}</p>
+    <span class="etiqueta etiqueta--real">Fotos reales del centro</span>
+  </div>
+  @for (foto of g.fotos; track foto.nombre; let i = $index) {
+    <div
+      class="r-espacio tela t-manta"
+      [class.r-espacio--grande]="i === 0"
+      appRetazo
+      appAparecer
+      [orden]="i % 3"
+    >
+      <figure class="foto">
+        <button class="ampliar" type="button" (click)="abrir(foto)">
+          <app-foto
+            [foto]="foto"
+            [sizes]="i === 0 ? '(min-width: 1024px) 66vw, 100vw' : '(min-width: 1024px) 33vw, 50vw'"
+          />
+          <span class="lupa" aria-hidden="true"><svg appIcono="ampliar"></svg></span>
+          <span class="vh">Ver en grande: {{ foto.pie }}</span>
+        </button>
+        <figcaption class="etiqueta">{{ foto.pie }}</figcaption>
+      </figure>
+    </div>
+  }
+</section>
+
+<!-- Clic en el fondo: atajo de ratón. Con teclado se cierra con Esc (nativo) o con el botón «Cerrar». -->
+<!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
+<dialog
+  #visor
+  class="visor"
+  aria-labelledby="visor-pie"
+  (click)="alClicVisor($event)"
+  (close)="alCerrar()"
+>
+  @if (seleccionada(); as foto) {
+    @if (medidas(); as m) {
+      <img
+        [ngSrc]="foto.nombre"
+        [width]="m.ancho"
+        [height]="m.alto"
+        [alt]="foto.alt"
+        sizes="94vw"
+      />
+    }
+    <div class="visor__pie">
+      <span id="visor-pie">{{ foto.pie }}</span>
+      <button type="button" (click)="cerrar()"><svg appIcono="cerrar"></svg>Cerrar</button>
+    </div>
+  }
+</dialog>

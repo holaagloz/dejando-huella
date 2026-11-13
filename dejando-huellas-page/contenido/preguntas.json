@@ -1,0 +1,42 @@
+{
+  "titulo": "Preguntas frecuentes",
+  "bajada": "¿Tienes otra duda? Escríbenos y te respondemos.",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué edades reciben?",
+      "respuesta": "Recibimos niñas y niños de 3 meses a 4 años, en tres grupos: Semillitas (3 meses a 2 años), Pasitos (2 a 3 años) y Huellitas (3 a 4 años)."
+    },
+    {
+      "pregunta": "¿Cuál es el horario?",
+      "respuesta": "De lunes a viernes, de 7:00 a. m. a 5:00 p. m. También hay medio tiempo de mañana (7:00 a. m. a 1:00 p. m.) y de tarde (12:00 m. a 5:00 p. m.), de 2 a 5 días por semana."
+    },
+    {
+      "pregunta": "¿Cuánto cuesta la mensualidad?",
+      "respuesta": "Depende de la modalidad y de los días por semana. Encuentras todos los montos en la tabla de horarios y mensualidades, y hay un 10 % de descuento para hermanos."
+    },
+    {
+      "pregunta": "¿Incluye alimentación?",
+      "respuesta": "Sí. Ofrecemos desayuno, merienda de la mañana, almuerzo y merienda de la tarde, según el horario de tu hijo. Los menús los elabora y supervisa una nutricionista en pediatría."
+    },
+    {
+      "pregunta": "¿Quiénes cuidan a los niños?",
+      "respuesta": "Un equipo con formación en Educación Preescolar (licenciatura), Educación Musical y Terapia del Lenguaje (bachillerato), que acompaña a cada niño con cariño y vocación."
+    },
+    {
+      "pregunta": "¿Cómo es el proceso de matrícula?",
+      "respuesta": "Nos escribes, agendamos una entrevista familiar y una visita, y luego completas los documentos y reservas el espacio con el pago de la matrícula 2027. Los requisitos están en la sección de matrícula."
+    },
+    {
+      "pregunta": "¿Qué es la póliza estudiantil?",
+      "respuesta": "Es un seguro para estudiantes que se adquiere en el Instituto Nacional de Seguros (INS). Pedimos una copia vigente al matricular."
+    },
+    {
+      "pregunta": "¿Usan uniforme?",
+      "respuesta": "Sí: camisa tipo polo o camiseta blanca con verde salvia y el logo del centro, short, enagua short o pantalón beige, medias beige y tenis o zapatos café."
+    },
+    {
+      "pregunta": "¿Puedo conocer el centro antes de matricular?",
+      "respuesta": "¡Claro! Agenda una visita por WhatsApp y te mostramos los espacios y te presentamos a las maestras."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+.r-form {
+  padding: 26px 20px 28px;
+}
+.formulario {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+.campo {
+  display: grid;
+  gap: 6px;
+}
+.campo label {
+  font: 700 1rem/1.2 var(--font-mano);
+  font-variation-settings: 'INFM' 60;
+}
+.ayuda {
+  font: 400 0.8125rem var(--font-texto);
+  color: var(--ink-soft);
+}
+.campo :is(input, select, textarea) {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 14px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.4;
+  transition:
+    border-color var(--t-hover),
+    box-shadow var(--t-hover);
+}
+.campo textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+.campo select {
+  appearance: none;
+  background: #fff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' fill='none' stroke='%230D1A3C' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M1.5 1.5 7 7l5.5-5.5'/%3E%3C/svg%3E")
+    right 14px center no-repeat;
+  padding-right: 40px;
+}
+.campo :is(input, textarea)::placeholder {
+  color: #6b7490;
+}
+.campo :is(input, select, textarea):focus-visible {
+  outline: none;
+  border-color: var(--coral-deep);
+  box-shadow: 0 0 0 4px rgb(227 143 131 / 40%);
+}
+.campo [aria-invalid='true'] {
+  border-color: #b3261e;
+  box-shadow: 0 0 0 3px rgb(179 38 30 / 18%);
+}
+.aviso:empty {
+  display: none;
+}
+.aviso {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #fde8e6;
+  color: #8c1d18;
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+.nota {
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+}
+
+.r-info {
+  padding: 24px 20px 26px;
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+.contacto {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+.contacto li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+.contacto .icono {
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+}
+.contacto strong {
+  display: block;
+  font: 800 1.2rem/1.1 var(--font-sello);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.contacto a {
+  word-break: break-word;
+  display: inline-block;
+  padding: 6px 0;
+}
+
+.r-mapa {
+  padding: var(--costura);
+  min-height: 340px;
+}
+.r-cierre {
+  padding: 26px 22px;
+  font: 700 clamp(1.15rem, 3.6vw, 1.5rem) / 1.3 var(--font-mano);
+  font-variation-settings:
+    'INFM' 100,
+    'BNCE' 30;
+  text-wrap: balance;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .r-form {
+    grid-column: 1 / 7;
+    padding: clamp(30px, 3vw, 44px);
+  }
+  .r-info {
+    grid-column: 7 / 13;
+    padding: 34px;
+  }
+  .r-mapa {
+    min-height: 380px;
+  }
+  .r-cierre {
+    padding: 34px clamp(40px, 10vw, 160px);
+  }
+}

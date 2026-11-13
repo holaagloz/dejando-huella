@@ -1,0 +1,34 @@
+{
+  "titulo": "Un grupo para cada etapa",
+  "bajada": "Cada edad tiene su ritmo. Por eso los niños se agrupan por etapa, con experiencias pensadas para lo que están descubriendo.",
+  "nota": {
+    "titulo": "¿No sabes en qué grupo va tu hijo?",
+    "texto": "Escríbenos su edad y te recomendamos el grupo y el horario que mejor le quedan."
+  },
+  "grupos": [
+    {
+      "id": "semillitas",
+      "nombre": "Semillitas",
+      "edades": "3 meses a 2 años",
+      "puntos": ["Estimulación temprana y sensorial", "Rutinas de comida y descanso a su ritmo", "Mucho cariño y contacto cercano"],
+      "foto": { "nombre": "nina-camino-sensorial", "alt": "Niña pequeña dando sus primeros pasos sobre un camino sensorial, tomada de la mano de una maestra" },
+      "mensajeWhatsapp": "Hola, quisiera información sobre el grupo Semillitas (3 meses a 2 años)."
+    },
+    {
+      "id": "pasitos",
+      "nombre": "Pasitos",
+      "edades": "2 a 3 años",
+      "puntos": ["Música, movimiento y juego al aire libre", "Autonomía en la vida diaria", "Primeras palabras en inglés"],
+      "foto": { "nombre": "musica-xilofono", "alt": "Niña tocando un xilófono de colores en el salón" },
+      "mensajeWhatsapp": "Hola, quisiera información sobre el grupo Pasitos (2 a 3 años)."
+    },
+    {
+      "id": "huellitas",
+      "nombre": "Huellitas",
+      "edades": "3 a 4 años",
+      "puntos": ["Lectoescritura inicial con juego", "Ciencia y experimentos (STEAM)", "Huerta y cuidado de las plantas"],
+      "foto": { "nombre": "steam-microscopio", "alt": "Niño con lentes de seguridad sonriendo junto a un microscopio" },
+      "mensajeWhatsapp": "Hola, quisiera información sobre el grupo Huellitas (3 a 4 años)."
+    }
+  ]
+}

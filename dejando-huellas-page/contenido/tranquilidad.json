@@ -1,0 +1,32 @@
+{
+  "titulo": "Lo que te da tranquilidad",
+  "bajada": "Dejar a tu hijo en manos de otras personas es una decisión grande. Por eso te contamos, sin letra pequeña, cómo lo cuidamos cada día.",
+  "foto": { "nombre": "bebe-con-maestra", "alt": "Maestra sonriendo junto a una bebé en el centro" },
+  "seguridad": {
+    "titulo": "Solo con quien tú autorizas",
+    "texto": "Antes de que tu hijo empiece, conocemos a tu familia y registramos a las personas que pueden entregarlo y recogerlo.",
+    "puntos": [
+      "Entrevista con cada familia",
+      "Personas autorizadas con copia de cédula",
+      "Póliza estudiantil del INS para cada niño"
+    ]
+  },
+  "cifra": {
+    "numero": "4",
+    "titulo": "Tiempos de comida",
+    "texto": "Desayuno, merienda, almuerzo y merienda, con menús de una nutricionista en pediatría."
+  },
+  "equipo": {
+    "titulo": "Un equipo con formación",
+    "texto": "Profesionales que acompañan cada etapa con sensibilidad, cariño y vocación.",
+    "formaciones": [
+      "Licenciatura en Educación Preescolar",
+      "Educación Musical",
+      "Bachillerato en Terapia del Lenguaje"
+    ]
+  },
+  "ritmo": {
+    "titulo": "A su propio ritmo",
+    "texto": "Cada grupo trabaja según su etapa, respetando los procesos de cada niño, desde los 3 meses hasta los 4 años."
+  }
+}

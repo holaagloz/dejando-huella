@@ -1,0 +1,106 @@
+.r-dia-foto {
+  grid-column: span 3;
+  padding: var(--costura);
+  min-height: 190px;
+}
+.horas {
+  position: relative;
+}
+.horas__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+/* Si el último momento queda solo en su fila, ocupa la fila completa */
+.r-hora:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+.r-hora {
+  padding: 18px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 150px;
+}
+.r-hora__hora {
+  font: 800 2rem/1 var(--font-sello);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+.r-hora .icono {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.8;
+}
+.r-hora strong {
+  font: 700 1.0625rem/1.15 var(--font-mano);
+}
+.r-hora p {
+  font-size: 0.9063rem;
+  line-height: 1.4;
+}
+.hilo {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .horas__lista {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .r-hora:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+  .r-hora:last-child:nth-child(3n + 1) {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 760px) {
+  .r-dia-foto {
+    grid-column: span 6;
+  }
+}
+@media (min-width: 1024px) {
+  .r-cabeza {
+    grid-column: 1 / 6;
+  }
+  .r-dia-foto {
+    grid-column: span 3;
+    min-height: 300px;
+  }
+  .r-dia-foto + .r-dia-foto {
+    grid-column: span 4;
+  }
+  .horas__lista {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+  .r-hora:last-child:nth-child(3n + 1) {
+    grid-column: auto;
+  }
+  .r-hora {
+    min-height: 220px;
+    padding: 22px 16px;
+  }
+  .hilo {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -6px;
+    height: 12px;
+    width: 100%;
+    max-width: none;
+    pointer-events: none;
+    z-index: 3;
+    overflow: visible;
+  }
+  .hilo > path {
+    fill: none;
+    stroke: var(--mostaza);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 7 8;
+  }
+}

@@ -1,0 +1,80 @@
+<div class="mapa" [class.mapa--cargado]="cargado()">
+  @if (cargado()) {
+    <iframe
+      [src]="fuente()"
+      [title]="'Mapa: ubicación de ' + nombre() + ' en Ciudad Quesada'"
+      referrerpolicy="no-referrer-when-downgrade"
+      data-lenis-prevent
+    ></iframe>
+  } @else {
+    <svg
+      class="mapa__dibujo"
+      viewBox="0 0 800 340"
+      preserveAspectRatio="xMidYMid slice"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <rect width="800" height="340" fill="#DCE3DA" />
+      <g fill="#C9D3C6">
+        <rect x="40" y="30" width="170" height="110" rx="10" />
+        <rect x="250" y="30" width="200" height="110" rx="10" />
+        <rect x="490" y="30" width="270" height="110" rx="10" />
+        <rect x="40" y="190" width="170" height="120" rx="10" />
+        <rect x="250" y="190" width="200" height="120" rx="10" />
+        <rect x="490" y="190" width="120" height="120" rx="10" />
+        <rect x="650" y="190" width="110" height="120" rx="10" />
+      </g>
+      <g stroke="#FBF7EF" stroke-width="26" stroke-linecap="round" fill="none">
+        <path d="M0 165H800" />
+        <path d="M230 0V340" />
+        <path d="M470 0V340" />
+        <path d="M630 165V340" />
+      </g>
+      <g stroke="#0D1A3C" stroke-width="2" stroke-dasharray="8 10" fill="none" opacity=".35">
+        <path d="M0 165H800" />
+        <path d="M230 0V340" />
+        <path d="M470 0V340" />
+      </g>
+      <rect x="250" y="30" width="200" height="110" rx="10" fill="#91A8CB" opacity=".55" />
+      <text
+        x="350"
+        y="92"
+        text-anchor="middle"
+        font-family="Shantell Sans, sans-serif"
+        font-size="20"
+        font-weight="700"
+        fill="#0D1A3C"
+      >
+        U. de San José
+      </text>
+      <path
+        d="M350 140 V165 H545 V230"
+        fill="none"
+        stroke="#C96F62"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-dasharray="2 10"
+      />
+      <svg appHuella x="518" y="196" width="56" height="58" color="#C96F62" corazon></svg>
+    </svg>
+    <div class="mapa__texto tela t-manta">
+      <strong>{{ nombre() }}</strong>
+      <span>{{ senas() }}</span>
+      <div class="mapa__acciones">
+        <button class="parche parche--chico" type="button" (click)="cargado.set(true)">
+          Ver mapa interactivo
+        </button>
+        <a
+          class="enlace-mano"
+          [href]="enlaceExterno()"
+          target="_blank"
+          rel="noopener"
+          appRegistrarEvento="clic_mapa"
+          ubicacion="mapa"
+        >
+          Abrir en Google Maps<span class="vh"> (abre en otra pestaña)</span>
+        </a>
+      </div>
+    </div>
+  }
+</div>

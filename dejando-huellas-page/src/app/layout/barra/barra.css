@@ -1,0 +1,101 @@
+:host {
+  display: contents;
+}
+.barra {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: var(--costura) 0;
+  display: flex;
+  gap: var(--costura);
+  align-items: stretch;
+  /* Se funde con el lino al bajar, para que la barra no corte la colcha */
+  background: linear-gradient(var(--respaldo) 70%, rgb(138 160 195 / 0));
+  transition: transform 0.45s var(--ease);
+}
+.barra--oculta {
+  transform: translateY(-110%);
+}
+.barra__logo {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  min-height: 64px;
+  flex: none;
+}
+.barra__logo img {
+  width: 124px;
+  height: auto;
+}
+.barra__nav {
+  display: none;
+}
+.barra__menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 64px;
+  padding: 0 18px;
+  border: 0;
+  cursor: pointer;
+  font: 700 1rem var(--font-mano);
+  color: var(--ink);
+}
+.barra__menu .icono {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 1024px) {
+  .barra__logo {
+    padding: 10px 22px;
+    min-height: 84px;
+  }
+  .barra__logo img {
+    width: 146px;
+  }
+  .barra__nav {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2px;
+    /* La costura va a 9px del borde: el parche necesita aire para no tocarla */
+    padding: 0 22px 0 10px;
+    min-height: 84px;
+  }
+  .barra__lema {
+    margin-right: auto;
+    padding-left: 18px;
+    font: 500 1.0625rem/1.2 var(--font-mano);
+    font-variation-settings:
+      'INFM' 100,
+      'BNCE' 50;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  .barra__nav > a {
+    padding: 10px 11px;
+    font: 600 1rem var(--font-mano);
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  .barra__nav > a:hover {
+    background: rgb(13 26 60 / 8%);
+  }
+  .barra__cta {
+    display: inline-flex;
+    padding-left: 8px;
+  }
+  .barra__menu {
+    display: none;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1319px) {
+  .barra__lema {
+    display: none;
+  }
+}

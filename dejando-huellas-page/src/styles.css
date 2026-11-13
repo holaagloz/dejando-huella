@@ -1,0 +1,6 @@
+/* Sistema de diseño global de Dejando Huella. Cada componente solo agrega su propia composición. */
+@import './styles/tokens.css';
+@import './styles/base.css';
+@import './styles/telas.css';
+@import './styles/colcha.css';
+@import './styles/movimiento.css';

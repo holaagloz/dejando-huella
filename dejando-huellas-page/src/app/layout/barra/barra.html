@@ -1,0 +1,29 @@
+<header class="barra" [class.barra--oculta]="oculta()" (focusin)="oculta.set(false)">
+  <a
+    class="barra__logo tela t-manta"
+    appRetazo
+    href="#inicio"
+    aria-label="Dejando Huella, ir al inicio"
+  >
+    <img ngSrc="logo-dejando-huella" width="146" height="69" priority alt="" />
+  </a>
+  <nav class="barra__nav tela t-manta" appRetazo aria-label="Principal">
+    <span class="barra__lema">Centro infantil · Ciudad Quesada</span>
+    @for (s of secciones; track s.ancla) {
+      <a [href]="'#' + s.ancla">{{ s.textoCorto ?? s.texto }}</a>
+    }
+    <span class="barra__cta"><app-boton-whatsapp variante="chico" ubicacion="barra" /></span>
+  </nav>
+  <button
+    class="barra__menu tela t-cuadrille"
+    appRetazo
+    type="button"
+    aria-haspopup="dialog"
+    aria-controls="menu"
+    [attr.aria-expanded]="menuAbierto()"
+    (click)="abrirMenu()"
+  >
+    <svg appIcono="menu"></svg>Menú
+  </button>
+</header>
+<app-menu-movil (cerrado)="menuAbierto.set(false)" />

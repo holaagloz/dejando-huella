@@ -1,0 +1,58 @@
+.exp {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.exp__media {
+  margin: var(--costura) var(--costura) 0;
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+.exp--video .exp__media {
+  aspect-ratio: 4 / 5;
+}
+.exp__texto {
+  padding: 16px 18px 22px;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+.exp__texto .titular-chico {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.45rem;
+}
+.exp__texto .icono {
+  width: 26px;
+  height: 26px;
+  stroke-width: 1.8;
+}
+.exp__texto p {
+  font-size: 0.9688rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 640px) {
+  .exp {
+    grid-column: span 3;
+  }
+}
+@media (min-width: 760px) {
+  .exp {
+    grid-column: span 6;
+  }
+}
+@media (min-width: 1024px) {
+  .r-cabeza {
+    grid-column: 1 / 5;
+    grid-row: 1;
+    justify-content: center;
+  }
+  .exp--video {
+    grid-row: 1;
+    grid-column: span 4;
+  }
+  .exp:not(.exp--video) {
+    grid-column: span 4;
+  }
+}

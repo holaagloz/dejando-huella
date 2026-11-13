@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es-CR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Centro Infantil Dejando Huella</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#8AA0C3" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="/fonts/shantell-sans-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="/fonts/nunito-var.woff2" as="font" type="font/woff2" crossorigin />
+    <!--
+      La firma de la portada esconde sus piezas mientras se carga la animación (y solo si hay JS y
+      movimiento). Si algo falla, se muestran solas a los 3 segundos: nunca queda contenido oculto.
+    -->
+    <script>
+      (function (h) {
+        if (window.matchMedia && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          h.classList.add('firma-pendiente');
+          setTimeout(function () {
+            h.classList.remove('firma-pendiente');
+          }, 3000);
+        }
+      })(document.documentElement);
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>

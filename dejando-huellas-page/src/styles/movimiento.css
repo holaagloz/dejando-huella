@@ -1,0 +1,57 @@
+/* Menos movimiento: nada se mueve solo */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Lenis (desplazamiento suave) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+/* Huella que deja el toque */
+.huella-toque {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 48px;
+  pointer-events: none;
+  z-index: 50;
+  translate: -50% -55%;
+}
+
+/* Hilos dibujados sobre las costuras (portada, un día, matrícula) */
+.hilo-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 3;
+}
+.hilo-svg > path {
+  fill: none;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

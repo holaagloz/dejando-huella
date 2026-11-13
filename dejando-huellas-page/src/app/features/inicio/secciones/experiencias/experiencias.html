@@ -1,0 +1,37 @@
+<section class="colcha-seccion" id="experiencias" aria-labelledby="t-experiencias">
+  <div class="r-cabeza tela t-manta" appRetazo>
+    <h2 class="titular" id="t-experiencias" appTitularAnimado>{{ e.titulo }}</h2>
+    <p class="bajada">{{ e.bajada }}</p>
+  </div>
+
+  @for (x of conVideo; track x.nombre) {
+    @if (x.video; as video) {
+      <article class="exp exp--video tela {{ x.tela }}" appRetazo appAparecer>
+        <figure class="foto exp__media">
+          <app-video-clip [video]="video" />
+        </figure>
+        <div class="exp__texto">
+          <h3 class="titular-chico"><svg [appIcono]="x.icono"></svg>{{ x.nombre }}</h3>
+          <p>{{ x.texto }}</p>
+        </div>
+      </article>
+    }
+  }
+
+  @for (x of conFoto; track x.nombre; let i = $index) {
+    <article class="exp tela {{ x.tela }}" appRetazo appAparecer [orden]="i % 3">
+      @if (x.foto; as foto) {
+        <figure class="foto exp__media">
+          <app-foto
+            [foto]="foto"
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          />
+        </figure>
+      }
+      <div class="exp__texto">
+        <h3 class="titular-chico"><svg [appIcono]="x.icono"></svg>{{ x.nombre }}</h3>
+        <p>{{ x.texto }}</p>
+      </div>
+    </article>
+  }
+</section>

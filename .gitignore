@@ -1,0 +1,8 @@
+# Dependencias y sistema
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Originales del cliente tal como llegaron (63 MB, fotos de 4160 px y videos completos).
+# Las versiones de trabajo, reducidas y sin metadatos, viven en dejando-huellas-page/media/.
+materiales/cliente/media-original/

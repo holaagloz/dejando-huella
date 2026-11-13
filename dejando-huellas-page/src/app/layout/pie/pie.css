@@ -1,0 +1,147 @@
+.pie {
+  max-width: var(--maxw);
+  margin: 0 auto calc(var(--costura) * 2);
+  display: grid;
+  gap: 0;
+  border-radius: var(--r-retazo);
+  overflow: clip;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.pie > * {
+  grid-column: 1 / -1;
+  border-radius: 0;
+}
+.r-pie-marca {
+  padding: 26px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+.r-pie-marca img {
+  width: 180px;
+  height: auto;
+}
+.pie__lema {
+  font: 700 1.5rem/1.1 var(--font-mano);
+  font-variation-settings: 'INFM' 100;
+}
+.r-pie-links {
+  padding: 22px 20px 24px;
+  display: grid;
+  gap: 18px;
+  align-content: space-between;
+}
+.r-pie-links ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 16px;
+}
+.r-pie-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  text-decoration: none;
+}
+.r-pie-links a:hover {
+  text-decoration: underline dashed;
+}
+.pie__cierre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.pie__instagram {
+  font: 700 1rem var(--font-mano);
+}
+.huellitas {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.huellitas span {
+  display: block;
+  width: 26px;
+}
+.r-pie-legal {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 0.8125rem;
+}
+
+/* Firma: etiqueta tejida de Studio Gloz, cosida al borde de la colcha */
+.firma {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 10px 16px 10px 14px;
+  border-radius: 3px;
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 6%) 0 1px, transparent 1px 3px), var(--gloz);
+  color: #fff;
+  text-decoration: none;
+  rotate: -1.5deg;
+  box-shadow: 0 6px 14px -8px rgb(2 74 169 / 70%);
+  transition:
+    rotate var(--t-hover) var(--ease),
+    translate var(--t-hover) var(--ease);
+}
+.firma::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1.5px dashed rgb(255 255 255 / 70%);
+  border-radius: 2px;
+  pointer-events: none;
+}
+.firma:hover {
+  rotate: 0deg;
+  translate: 0 -2px;
+}
+.firma__texto {
+  font: 800 0.6875rem/1 var(--font-texto);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.firma__logo {
+  height: 16px;
+  width: calc(16px * 211 / 73);
+  fill: currentColor;
+}
+
+@media (min-width: 640px) {
+  .r-pie-links ul {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media (min-width: 760px) {
+  .pie {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .r-pie-marca {
+    grid-column: 1 / 6;
+  }
+  .r-pie-links {
+    grid-column: 6 / 13;
+  }
+}
+@media (min-width: 1024px) {
+  .r-pie-marca {
+    grid-column: 1 / 5;
+  }
+  .r-pie-links {
+    grid-column: 5 / 13;
+    padding: 28px 30px;
+  }
+}

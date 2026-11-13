@@ -1,0 +1,128 @@
+.r-pasos {
+  padding: 26px 18px 28px;
+  position: relative;
+}
+.r-pasos__titulo {
+  display: inline-block;
+  padding: 16px 20px 18px;
+  border-radius: 6px;
+}
+.pasos {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 26px;
+  display: grid;
+  gap: var(--costura);
+  position: relative;
+  z-index: 1;
+}
+.paso {
+  padding: 22px 20px;
+  display: grid;
+  gap: 8px;
+  border-radius: 6px;
+}
+.paso__num {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  color: var(--manta);
+  font: 800 1.35rem/1 var(--font-mano);
+}
+.paso h3 {
+  font: 800 1.7rem/1 var(--font-sello);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+.paso p {
+  font-size: 0.9688rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.hilo-pasos {
+  z-index: 2;
+}
+.hilo-pasos > path {
+  stroke: var(--ink);
+  stroke-dasharray: 6 7;
+  opacity: 0.75;
+}
+
+.r-requisitos {
+  padding: 8px 20px;
+}
+summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 12px 0;
+  cursor: pointer;
+  font: 700 1.125rem/1.25 var(--font-mano);
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary > span:not(.mas) {
+  flex: 1;
+}
+.r-requisitos__conteo {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+summary .icono {
+  width: 26px;
+  height: 26px;
+}
+.mas {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--coral-soft);
+  transition:
+    transform var(--t-hover) var(--ease),
+    background-color var(--t-hover);
+}
+.mas .icono {
+  width: 18px;
+  height: 18px;
+}
+details[open] .mas {
+  transform: rotate(45deg);
+  background: var(--coral);
+}
+summary:hover .mas {
+  background: var(--coral);
+}
+details > p {
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+details > ul {
+  padding-bottom: 20px;
+}
+
+@media (min-width: 760px) {
+  .pasos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  details > ul {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .r-pasos {
+    padding: clamp(34px, 3.6vw, 52px) clamp(28px, 3vw, 44px);
+  }
+  .r-requisitos {
+    padding: 10px 34px;
+  }
+}

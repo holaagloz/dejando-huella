@@ -44,6 +44,42 @@
         ],
         "createdAt": "2026-11-11T22:36:45.146Z",
         "reason": "Claude: same display-headline leading (0.98-1.0 on Shantell Sans 800 titles) evaluated through index.html; body text is 1.6"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "dejando-huellas-page/src/app/layout/menu-movil/menu-movil.html"
+        ],
+        "createdAt": "2026-11-13T16:58:40.153Z",
+        "reason": "Claude: NgOptimizedImage usa ngSrc; el src/srcset real se genera en el prerender (verificable en dist/…/index.html)"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "dejando-huellas-page/src/app/layout/barra/barra.html"
+        ],
+        "createdAt": "2026-11-13T16:59:15.020Z",
+        "reason": "Claude: NgOptimizedImage usa ngSrc; el src/srcset real se genera en el prerender"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "dejando-huellas-page/src/app/layout/pie/pie.html"
+        ],
+        "createdAt": "2026-11-13T17:00:12.186Z",
+        "reason": "Claude: NgOptimizedImage usa ngSrc; el src/srcset real se genera en el prerender"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "dejando-huellas-page/src/app/features/inicio/secciones/espacios/espacios.html"
+        ],
+        "createdAt": "2026-11-13T17:05:42.706Z",
+        "reason": "Claude: NgOptimizedImage usa [ngSrc]; el src real lo genera Angular"
       }
     ]
   }

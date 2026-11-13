@@ -1,0 +1,49 @@
+<section class="colcha-seccion" id="un-dia" aria-labelledby="t-dia">
+  <div class="r-cabeza tela t-manta" appRetazo>
+    <h2 class="titular" id="t-dia" appTitularAnimado>{{ d.titulo }}</h2>
+    <p class="bajada">{{ d.bajada }}</p>
+  </div>
+  @for (foto of d.fotos; track foto.nombre) {
+    <div class="r-dia-foto tela t-manta" appRetazo appAparecer>
+      <figure class="foto">
+        <app-foto [foto]="foto" sizes="(min-width: 1024px) 30vw, 50vw" />
+      </figure>
+    </div>
+  }
+  <div class="horas">
+    <svg
+      #hilo
+      class="hilo"
+      viewBox="0 0 1000 12"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <mask id="mascara-hilo-dia" maskUnits="userSpaceOnUse">
+          <path
+            d="M0 6 Q 125 0 250 6 T 500 6 T 750 6 T 1000 6"
+            fill="none"
+            stroke="#fff"
+            stroke-width="14"
+            pathLength="1"
+            stroke-dasharray="1 1"
+          />
+        </mask>
+      </defs>
+      <path d="M0 6 Q 125 0 250 6 T 500 6 T 750 6 T 1000 6" />
+    </svg>
+    <ol class="horas__lista">
+      @for (m of momentos; track m.titulo; let i = $index) {
+        <li class="r-hora tela {{ m.tela }}" appRetazo appAparecer="avanzar" [orden]="i">
+          @if (m.hora) {
+            <span class="r-hora__hora">{{ m.hora }}</span>
+          }
+          <svg [appIcono]="m.icono"></svg>
+          <strong>{{ m.titulo }}</strong>
+          <p>{{ m.texto }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

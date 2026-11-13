@@ -1,0 +1,43 @@
+{
+  "titulo": "Horarios y mensualidades",
+  "bajada": "Elige tiempo completo o medio tiempo, de 2 a 5 días por semana, de lunes a viernes.",
+  "modalidades": [
+    {
+      "nombre": "Tiempo completo",
+      "desde": "07:00",
+      "hasta": "17:00",
+      "precios": [
+        { "dias": 5, "monto": 185000 },
+        { "dias": 3, "monto": 125000 },
+        { "dias": 2, "monto": 85000 }
+      ]
+    },
+    {
+      "nombre": "Medio tiempo de mañana",
+      "desde": "07:00",
+      "hasta": "13:00",
+      "precios": [
+        { "dias": 5, "monto": 120000 },
+        { "dias": 3, "monto": 95000 },
+        { "dias": 2, "monto": 70000 }
+      ]
+    },
+    {
+      "nombre": "Medio tiempo de tarde",
+      "desde": "12:00",
+      "hasta": "17:00",
+      "precios": [
+        { "dias": 5, "monto": 100000 },
+        { "dias": 3, "monto": 80000 },
+        { "dias": 2, "monto": 60000 }
+      ]
+    }
+  ],
+  "nota": "Montos mensuales en colones. La alimentación está incluida según el horario. ¿Buscas otra combinación de días? Escríbenos y lo vemos juntos.",
+  "descuentos": [{ "titulo": "Plan de hermanos", "texto": "10 % de descuento" }],
+  "matricula": {
+    "titulo": "Matrícula 2027",
+    "monto": 80000,
+    "texto": "Reserva el espacio de tu hijo para 2027. Los materiales y el uniforme se pagan por separado."
+  }
+}

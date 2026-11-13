@@ -1,0 +1,82 @@
+.r-tq-seguridad,
+.r-tq-cifra,
+.r-tq-equipo,
+.r-tq-ritmo {
+  padding: 24px 22px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.r-tq-seguridad p,
+.r-tq-equipo p {
+  max-width: 42ch;
+}
+:is(.r-tq-seguridad, .r-tq-equipo) .icono--grande {
+  width: 52px;
+  height: 52px;
+  stroke-width: 1.6;
+}
+.cifra {
+  font: 800 clamp(4.5rem, 18vw, 7rem) / 0.9 var(--font-mano);
+  font-variation-settings:
+    'INFM' 100,
+    'BNCE' 40;
+  letter-spacing: -0.03em;
+}
+.formaciones {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.formaciones .etiqueta {
+  white-space: normal;
+}
+.formaciones .etiqueta:nth-child(odd) {
+  rotate: -1deg;
+}
+.formaciones .etiqueta:nth-child(even) {
+  rotate: 1.2deg;
+}
+
+@media (min-width: 760px) {
+  .r-tq-cifra,
+  .r-tq-equipo {
+    grid-column: span 6;
+  }
+}
+@media (min-width: 1024px) {
+  .r-cabeza {
+    grid-column: 1 / 6;
+    grid-row: 1;
+  }
+  .r-tq-foto {
+    grid-column: 6 / 13;
+    grid-row: 1;
+    min-height: 380px;
+  }
+  .r-tq-seguridad {
+    grid-column: 1 / 6;
+    grid-row: 2;
+    padding: 34px 34px 36px;
+  }
+  .r-tq-cifra {
+    grid-column: 6 / 9;
+    grid-row: 2;
+    justify-content: center;
+  }
+  .r-tq-equipo {
+    grid-column: 9 / 13;
+    grid-row: 2;
+  }
+  .r-tq-ritmo {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 24px;
+    padding: 24px 34px;
+  }
+}

@@ -1,0 +1,21 @@
+<dialog #dialogo id="menu" class="menu" aria-label="Menú" data-lenis-prevent (close)="alCerrar()">
+  <div class="menu__in">
+    <div class="menu__cerrar tela t-manta" appRetazo>
+      <img ngSrc="logo-dejando-huella" width="118" height="56" alt="Dejando Huella" />
+      <button type="button" (click)="cerrar()"><svg appIcono="cerrar"></svg>Cerrar</button>
+    </div>
+    @for (s of secciones; track s.ancla) {
+      <a
+        class="menu__item tela {{ s.tela }}"
+        [class.menu__item--ancho]="s.ancho"
+        appRetazo
+        [href]="'#' + s.ancla"
+        (click)="cerrar()"
+        >{{ s.texto }}</a
+      >
+    }
+    <div class="menu__cta tela t-fieltro" appRetazo>
+      <app-boton-whatsapp variante="ancho" ubicacion="menu" />
+    </div>
+  </div>
+</dialog>

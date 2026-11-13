@@ -1,0 +1,37 @@
+{
+  "nombre": "Centro Infantil Dejando Huella",
+  "nombreCorto": "Dejando Huella",
+  "lema": "Donde cada pequeño paso cuenta",
+  "frase": "Creciendo con amor, aprendiendo con alegría y dejando huella para toda la vida",
+  "url": "https://dejandohuellacr.com",
+  "fundacion": "2026-09",
+  "contacto": {
+    "whatsapp": "50664781319",
+    "telefonoVisible": "6478-1319",
+    "correo": "dejandohuellacentroinfantil@gmail.com",
+    "instagram": "dejandohuella.centroinfantil",
+    "mensajeGeneral": "Hola, quisiera agendar una visita al Centro Infantil Dejando Huella."
+  },
+  "direccion": {
+    "barrio": "Barrio San Martín",
+    "ciudad": "Ciudad Quesada",
+    "canton": "San Carlos",
+    "provincia": "Alajuela",
+    "pais": "CR",
+    "senas": "50 m este y 75 m sur de la Universidad de San José",
+    "plusCode": "762Q8HCF+4M6",
+    "latitud": 10.320287,
+    "longitud": -84.425859
+  },
+  "horario": {
+    "dias": "Lunes a viernes",
+    "diasSchema": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "apertura": "07:00",
+    "cierre": "17:00"
+  },
+  "seo": {
+    "titulo": "Guardería y centro infantil en Ciudad Quesada · Dejando Huella",
+    "descripcion": "Centro infantil en Barrio San Martín, Ciudad Quesada, San Carlos. Grupos de 3 meses a 4 años, de 7:00 a. m. a 5:00 p. m., con alimentación incluida, inglés, música y STEAM. Matrícula 2027 abierta.",
+    "imagen": "og-dejando-huella.jpg"
+  }
+}

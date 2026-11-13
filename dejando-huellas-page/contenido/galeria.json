@@ -1,0 +1,13 @@
+{
+  "titulo": "Así son nuestros espacios",
+  "bajada": "Paredes pintadas a mano, muebles a la medida de los niños y espacios pensados para jugar con seguridad. Toca una foto para verla en grande.",
+  "fotos": [
+    { "nombre": "aula-cohete", "alt": "Aula con mural de cohetes y planetas, y mesas y sillas de colores para niños", "pie": "Aula del espacio" },
+    { "nombre": "patio-domo-mural", "alt": "Patio con césped, un domo de juegos de colores y el mural del arcoíris", "pie": "Patio de juegos" },
+    { "nombre": "comedor-mural", "alt": "Comedor con mural de frutas y verduras y mesas pequeñas con sillas amarillas y rojas", "pie": "Comedor" },
+    { "nombre": "pasillo-jirafa", "alt": "Pasillo con mural de árboles, flores y una jirafa", "pie": "Pasillo del árbol" },
+    { "nombre": "letreros-grupos", "alt": "Niña pequeña sonriendo junto a los letreros de los grupos Semillitas y Pasitos", "pie": "Entrada de los grupos" },
+    { "nombre": "traje-tipico", "alt": "Niñas y niños vestidos con trajes típicos costarricenses trabajando en una mesa", "pie": "Tradiciones costarricenses" },
+    { "nombre": "navidad", "alt": "Niña vestida de Navidad haciendo una manualidad junto al árbol de Navidad", "pie": "Navidad en el centro" }
+  ]
+}

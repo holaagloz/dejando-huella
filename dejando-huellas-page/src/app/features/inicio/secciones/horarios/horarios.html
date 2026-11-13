@@ -1,0 +1,52 @@
+<section class="colcha-seccion" id="horarios" aria-labelledby="t-horarios">
+  <div class="r-cabeza tela t-manta" appRetazo>
+    <h2 class="titular" id="t-horarios" appTitularAnimado>{{ h.titulo }}</h2>
+    <p class="bajada">{{ h.bajada }}</p>
+  </div>
+  @for (d of h.descuentos; track d.titulo) {
+    <div class="r-descuento tela t-mostaza-suave" appRetazo appAparecer="caer">
+      <h3 class="titular-chico">{{ d.titulo }}</h3>
+      <p class="r-descuento__valor">{{ d.texto }}</p>
+    </div>
+  }
+  <div class="r-matricula tela t-lavanda" appRetazo appAparecer="caer" [orden]="1">
+    <h3 class="titular-chico">{{ h.matricula.titulo }}</h3>
+    <p class="r-matricula__monto">{{ matricula }}</p>
+    <p class="bajada">{{ h.matricula.texto }}</p>
+  </div>
+
+  @for (m of modalidades; track m.nombre; let i = $index) {
+    <div class="r-modalidad tela {{ m.tela }}" appRetazo appAparecer [orden]="i">
+      <table>
+        <caption>
+          <span class="titular-chico">{{ m.nombre }}</span>
+          <span class="r-modalidad__horario">{{ m.horario }}</span>
+        </caption>
+        <thead class="vh">
+          <tr>
+            <th scope="col">Días por semana</th>
+            <th scope="col">Mensualidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (p of m.precios; track p.dias) {
+            <tr>
+              <th scope="row">{{ p.dias }} días</th>
+              <td>{{ p.monto }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+
+  <div class="r-nota tela t-manta" appRetazo>
+    <p>{{ h.nota }}</p>
+    <app-boton-whatsapp
+      variante="chico"
+      ubicacion="horarios"
+      texto="Consultar espacios"
+      mensaje="Hola, quisiera consultar los espacios disponibles y los horarios para mi hijo."
+    />
+  </div>
+</section>

@@ -1,0 +1,60 @@
+<section #seccion class="portada" id="inicio" aria-labelledby="t-portada">
+  <div class="r-titulo tela t-manta" appRetazo coserManual>
+    <h1 id="t-portada">
+      <span class="antetitulo sello">{{ p.antetitulo }}</span>
+      <span class="titular-portada"
+        >{{ p.titular }} <span class="acento">{{ p.titularAcento }}</span></span
+      >
+    </h1>
+    <p class="bajada">{{ p.bajada }}</p>
+    <div class="acciones">
+      <a
+        #boton
+        class="parche"
+        appRetazo
+        coserManual
+        [costuraInset]="6"
+        [costuraRadio]="10"
+        [href]="enlace"
+        target="_blank"
+        rel="noopener"
+        appRegistrarEvento="clic_whatsapp"
+        ubicacion="portada"
+      >
+        <svg appIcono="whatsapp"></svg>Agenda una visita<span class="vh"> (se abre WhatsApp)</span>
+      </a>
+      <a class="enlace-mano" href="#un-dia">Así es un día aquí</a>
+    </div>
+  </div>
+
+  <div class="r-foto tela t-manta" appRetazo coserManual>
+    <figure class="foto">
+      <app-foto [foto]="p.foto" prioridad sizes="(min-width: 1024px) 56vw, 66vw" />
+    </figure>
+  </div>
+
+  <div #huella #pieza class="r-huella tela t-cuadrille" appRetazo coserManual data-pieza>
+    <span #sello class="r-huella__sello"><svg appHuella corazon></svg></span>
+  </div>
+  <div #dato #pieza class="r-dato r-horario tela t-rayas" appRetazo coserManual data-pieza>
+    <strong>{{ horario }}</strong>
+    <span>{{ c.sitio.horario.dias }}</span>
+  </div>
+  <div #dato #pieza class="r-dato r-lugar tela t-fieltro" appRetazo coserManual data-pieza>
+    <strong>{{ c.sitio.direccion.barrio }}</strong>
+    <span>{{ c.sitio.direccion.senas }}, {{ c.sitio.direccion.ciudad }}</span>
+  </div>
+  <div #dato #pieza class="r-dato r-edades tela t-lavanda" appRetazo coserManual data-pieza>
+    <strong>{{ edades }}</strong>
+    <span>{{ c.grupos.grupos.length }} grupos por edad</span>
+  </div>
+
+  <svg #hilo class="hilo-svg hilo-firma" aria-hidden="true" focusable="false">
+    <defs>
+      <mask id="mascara-hilo-firma" maskUnits="userSpaceOnUse">
+        <path fill="none" stroke="#fff" stroke-width="14" pathLength="1" stroke-dasharray="1 1" />
+      </mask>
+    </defs>
+    <path />
+  </svg>
+</section>

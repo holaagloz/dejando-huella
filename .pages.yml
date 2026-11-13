@@ -1,0 +1,234 @@
+# Configuración de Pages CMS (https://pagescms.org): el editor visual con el que el centro edita su página.
+# Cada cambio se guarda como un commit en GitHub; GitHub Actions valida el contenido y publica el sitio.
+# Si un dato no pasa la validación (precio negativo, foto inexistente…), el sitio publicado no cambia.
+# Guía para el cliente: dejando-huellas-page/docs/como-editar-tu-pagina.md
+
+media:
+  input: dejando-huellas-page/media/fotos
+  output: media/fotos
+  extensions: [jpg, jpeg, png]
+
+content:
+  # ---------- Datos del centro ----------
+  - name: sitio
+    label: Datos del centro
+    type: file
+    path: dejando-huellas-page/contenido/sitio.json
+    format: json
+    fields:
+      - { name: nombre, label: Nombre del centro, type: string, required: true }
+      - { name: lema, label: Lema, type: string, required: true }
+      - { name: frase, label: Frase del mural, type: text, required: true }
+      - name: contacto
+        label: Contacto
+        type: object
+        fields:
+          - { name: whatsapp, label: "WhatsApp (con 506, solo números, ej. 50664781319)", type: string, required: true }
+          - { name: telefonoVisible, label: "Teléfono como se muestra (ej. 6478-1319)", type: string, required: true }
+          - { name: correo, label: Correo, type: string, required: true }
+          - { name: instagram, label: "Usuario de Instagram (sin @)", type: string }
+          - { name: mensajeGeneral, label: Mensaje de WhatsApp por defecto, type: text, required: true }
+      - name: horario
+        label: Horario de atención
+        type: object
+        fields:
+          - { name: dias, label: "Días (ej. Lunes a viernes)", type: string, required: true }
+          - { name: apertura, label: "Abre (24 h, ej. 07:00)", type: string, required: true }
+          - { name: cierre, label: "Cierra (24 h, ej. 17:00)", type: string, required: true }
+      - name: seo
+        label: Google y redes sociales
+        type: object
+        fields:
+          - { name: titulo, label: Título en Google, type: string, required: true }
+          - { name: descripcion, label: "Descripción en Google (máx. 160 letras)", type: text, required: true }
+
+  # ---------- Portada ----------
+  - name: portada
+    label: Portada
+    type: file
+    path: dejando-huellas-page/contenido/portada.json
+    format: json
+    fields:
+      - { name: antetitulo, label: Texto sobre el titular, type: string, required: true }
+      - { name: titular, label: Titular (primera parte), type: string, required: true }
+      - { name: titularAcento, label: Titular (parte en color), type: string, required: true }
+      - { name: bajada, label: Texto bajo el titular, type: text, required: true }
+      - name: foto
+        label: Foto principal
+        type: object
+        fields:
+          - { name: nombre, label: Foto, type: image, required: true }
+          - { name: alt, label: Describe la foto, type: string, required: true }
+      - { name: mensajeWhatsapp, label: Mensaje del botón de WhatsApp, type: text, required: true }
+
+  # ---------- Horarios y mensualidades ----------
+  - name: horarios
+    label: Horarios y mensualidades
+    type: file
+    path: dejando-huellas-page/contenido/horarios.json
+    format: json
+    fields:
+      - { name: titulo, label: Título, type: string, required: true }
+      - { name: bajada, label: Texto, type: text, required: true }
+      - name: modalidades
+        label: Modalidades
+        type: object
+        list: true
+        fields:
+          - { name: nombre, label: Nombre, type: string, required: true }
+          - { name: desde, label: "Desde (24 h, ej. 07:00)", type: string, required: true }
+          - { name: hasta, label: "Hasta (24 h, ej. 13:00)", type: string, required: true }
+          - name: precios
+            label: Precios
+            type: object
+            list: true
+            fields:
+              - { name: dias, label: Días por semana, type: number, required: true }
+              - { name: monto, label: "Mensualidad en colones (sin puntos, ej. 185000)", type: number, required: true }
+      - { name: nota, label: Nota bajo la tabla, type: text, required: true }
+      - name: descuentos
+        label: Descuentos
+        type: object
+        list: true
+        fields:
+          - { name: titulo, label: Nombre, type: string, required: true }
+          - { name: texto, label: Descuento, type: string, required: true }
+      - name: matricula
+        label: Matrícula
+        type: object
+        fields:
+          - { name: titulo, label: "Título (ej. Matrícula 2027)", type: string, required: true }
+          - { name: monto, label: "Monto en colones (sin puntos)", type: number, required: true }
+          - { name: texto, label: Texto, type: text, required: true }
+
+  # ---------- Grupos ----------
+  - name: grupos
+    label: Grupos por edad
+    type: file
+    path: dejando-huellas-page/contenido/grupos.json
+    format: json
+    fields:
+      - { name: titulo, label: Título, type: string, required: true }
+      - { name: bajada, label: Texto, type: text, required: true }
+      - name: grupos
+        label: Grupos
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "Identificador (minúsculas y guiones, ej. semillitas)", type: string, required: true }
+          - { name: nombre, label: Nombre, type: string, required: true }
+          - { name: edades, label: "Edades (ej. 2 a 3 años)", type: string, required: true }
+          - { name: puntos, label: Lo que hacen, type: string, list: true }
+          - name: foto
+            label: Foto
+            type: object
+            fields:
+              - { name: nombre, label: Foto, type: image, required: true }
+              - { name: alt, label: Describe la foto, type: string, required: true }
+          - { name: mensajeWhatsapp, label: Mensaje de WhatsApp, type: text, required: true }
+
+  # ---------- Preguntas frecuentes ----------
+  - name: preguntas
+    label: Preguntas frecuentes
+    type: file
+    path: dejando-huellas-page/contenido/preguntas.json
+    format: json
+    fields:
+      - { name: titulo, label: Título, type: string, required: true }
+      - { name: bajada, label: Texto, type: text, required: true }
+      - name: preguntas
+        label: Preguntas
+        type: object
+        list: true
+        fields:
+          - { name: pregunta, label: Pregunta, type: string, required: true }
+          - { name: respuesta, label: Respuesta, type: text, required: true }
+
+  # ---------- Galería ----------
+  - name: galeria
+    label: Fotos de los espacios
+    type: file
+    path: dejando-huellas-page/contenido/galeria.json
+    format: json
+    fields:
+      - { name: titulo, label: Título, type: string, required: true }
+      - { name: bajada, label: Texto, type: text, required: true }
+      - name: fotos
+        label: "Fotos (la primera sale en grande)"
+        type: object
+        list: true
+        fields:
+          - { name: nombre, label: Foto, type: image, required: true }
+          - { name: alt, label: Describe la foto, type: string, required: true }
+          - { name: pie, label: Nombre del espacio, type: string, required: true }
+
+  # ---------- Testimonios ----------
+  - name: testimonios
+    label: Testimonios de familias
+    type: file
+    path: dejando-huellas-page/contenido/testimonios.json
+    format: json
+    fields:
+      - { name: activo, label: Mostrar la sección, type: boolean }
+      - { name: titulo, label: Título, type: string, required: true }
+      - name: testimonios
+        label: "Testimonios (solo reales, con permiso de la familia)"
+        type: object
+        list: true
+        fields:
+          - { name: texto, label: Testimonio, type: text, required: true }
+          - { name: autor, label: "Quién lo dice (ej. Ana, mamá de Sofía)", type: string, required: true }
+          - { name: detalle, label: "Detalle (ej. Grupo Pasitos)", type: string, required: true }
+
+  # ---------- Matrícula ----------
+  - name: matricula
+    label: Matrícula y requisitos
+    type: file
+    path: dejando-huellas-page/contenido/matricula.json
+    format: json
+    fields:
+      - { name: titulo, label: Título, type: string, required: true }
+      - name: pasos
+        label: Pasos
+        type: object
+        list: true
+        fields:
+          - { name: titulo, label: Paso, type: string, required: true }
+          - { name: texto, label: Texto, type: text, required: true }
+      - name: requisitos
+        label: Requisitos
+        type: object
+        fields:
+          - { name: titulo, label: Título, type: string, required: true }
+          - { name: intro, label: Introducción, type: string, required: true }
+          - { name: items, label: Requisitos, type: string, list: true }
+      - { name: mensajeWhatsapp, label: Mensaje de WhatsApp, type: text, required: true }
+
+  # ---------- Un día ----------
+  - name: un-dia
+    label: Un día en el centro
+    type: file
+    path: dejando-huellas-page/contenido/un-dia.json
+    format: json
+    fields:
+      - { name: titulo, label: Título, type: string, required: true }
+      - { name: bajada, label: Texto, type: text, required: true }
+      - name: momentos
+        label: Momentos del día
+        type: object
+        list: true
+        fields:
+          - { name: hora, label: "Hora (opcional, ej. 7:00)", type: string }
+          - { name: titulo, label: Momento, type: string, required: true }
+          - { name: texto, label: Texto, type: string, required: true }
+          - name: icono
+            label: Ícono
+            type: select
+            options: { values: [sol, cubiertos, paleta, manzana, luna, brote, casa, musica, libro, corazon] }
+      - name: fotos
+        label: Fotos
+        type: object
+        list: true
+        fields:
+          - { name: nombre, label: Foto, type: image, required: true }
+          - { name: alt, label: Describe la foto, type: string, required: true }

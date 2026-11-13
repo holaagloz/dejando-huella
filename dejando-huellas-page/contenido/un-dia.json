@@ -1,0 +1,17 @@
+{
+  "titulo": "Un día en Dejando Huella",
+  "bajada": "Rutinas claras y mucho juego. Así se ve un día de tiempo completo, de la llegada a la salida.",
+  "momentos": [
+    { "hora": "7:00", "titulo": "Llegada", "texto": "Bienvenida y juego tranquilo.", "icono": "sol" },
+    { "titulo": "Desayuno", "texto": "Empezamos el día con energía.", "icono": "cubiertos" },
+    { "titulo": "Experiencias", "texto": "Inglés, música, ciencia, arte o huerta, según el día.", "icono": "paleta" },
+    { "titulo": "Merienda", "texto": "Una pausa para recargar.", "icono": "manzana" },
+    { "titulo": "Almuerzo y descanso", "texto": "Comemos juntos y descansamos.", "icono": "luna" },
+    { "titulo": "Merienda de la tarde", "texto": "Juego, patio y la última merienda.", "icono": "brote" },
+    { "hora": "5:00", "titulo": "Salida", "texto": "De vuelta a casa. Medio tiempo de mañana: 1:00 p. m.", "icono": "casa" }
+  ],
+  "fotos": [
+    { "nombre": "huerta-amigas", "alt": "Tres niñas sonriendo mientras siembran juntas en la huerta" },
+    { "nombre": "pintura-caballetes", "alt": "Niños con delantal pintando en caballetes bajo el techo del patio" }
+  ]
+}

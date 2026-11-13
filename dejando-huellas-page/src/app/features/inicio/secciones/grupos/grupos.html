@@ -1,0 +1,43 @@
+<section class="colcha-seccion" id="grupos" aria-labelledby="t-grupos">
+  <div class="r-cabeza tela t-manta" appRetazo>
+    <h2 class="titular" id="t-grupos" appTitularAnimado>{{ g.titulo }}</h2>
+    <p class="bajada">{{ g.bajada }}</p>
+  </div>
+  <div class="r-nota tela t-cuadrille t-cuadrille--suave" appRetazo appAparecer>
+    <p class="titular-chico">{{ g.nota.titulo }}</p>
+    <p class="bajada">{{ g.nota.texto }}</p>
+  </div>
+
+  @for (grupo of grupos; track grupo.id; let i = $index) {
+    <article
+      class="grupo"
+      [id]="'grupo-' + grupo.id"
+      [attr.aria-labelledby]="'t-grupo-' + grupo.id"
+    >
+      <div class="grupo__foto tela t-manta" appRetazo>
+        <figure class="foto" appAparecer="desplegar">
+          <app-foto [foto]="grupo.foto" sizes="(min-width: 760px) 33vw, 100vw" />
+        </figure>
+      </div>
+      <div class="grupo__texto tela {{ grupo.tela }}" appRetazo>
+        <span class="etiqueta">{{ grupo.edades }}</span>
+        <h3 class="titular-chico" [id]="'t-grupo-' + grupo.id">{{ grupo.nombre }}</h3>
+        <ul>
+          @for (punto of grupo.puntos; track punto) {
+            <li>{{ punto }}</li>
+          }
+        </ul>
+        <a
+          class="enlace-mano"
+          [href]="grupo.enlace"
+          target="_blank"
+          rel="noopener"
+          appRegistrarEvento="clic_whatsapp"
+          [ubicacion]="'grupo-' + grupo.id"
+        >
+          Pregunta por {{ grupo.nombre }}<span class="vh"> (se abre WhatsApp)</span>
+        </a>
+      </div>
+    </article>
+  }
+</section>

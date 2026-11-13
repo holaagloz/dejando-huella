@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="600" viewBox="0 0 520 600">
+  <!-- Trama fina de lino y dos hilos sueltos (manta y mostaza) de las líneas onduladas del material
+       del centro. Se superpone con hilos.svg, que tiene otro tamaño: juntos casi no se repiten. -->
+  <defs>
+    <pattern id="trama" width="4" height="3" patternUnits="userSpaceOnUse">
+      <path d="M0 .5H4" stroke="#0D1A3C" stroke-opacity=".09" />
+      <path d="M.5 0V3" stroke="#FFFFFF" stroke-opacity=".08" />
+    </pattern>
+  </defs>
+  <rect width="520" height="600" fill="url(#trama)" />
+  <g fill="none" stroke-width="3.6" stroke-linecap="round" opacity=".85">
+    <path stroke="#FBF7EF" d="M70 0C70 70 124 126 96 214S24 382 74 470S70 556 70 600" />
+    <path stroke="#DCA74C" d="M340 0C340 96 386 160 352 268S306 450 360 516S340 574 340 600" />
+  </g>
+</svg>
