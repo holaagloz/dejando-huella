@@ -33,28 +33,19 @@
     </figure>
   </div>
 
-  <div #huella #pieza class="r-huella tela t-cuadrille" appRetazo coserManual data-pieza>
+  <div #pieza class="r-huella tela t-cuadrille" appRetazo coserManual data-pieza>
     <span #sello class="r-huella__sello"><svg appHuella corazon></svg></span>
   </div>
-  <div #dato #pieza class="r-dato r-horario tela t-rayas" appRetazo coserManual data-pieza>
+  <div #pieza class="r-dato r-horario tela t-rayas" appRetazo coserManual data-pieza>
     <strong>{{ horario }}</strong>
     <span>{{ c.sitio.horario.dias }}</span>
   </div>
-  <div #dato #pieza class="r-dato r-lugar tela t-fieltro" appRetazo coserManual data-pieza>
+  <div #pieza class="r-dato r-lugar tela t-fieltro" appRetazo coserManual data-pieza>
     <strong>{{ c.sitio.direccion.barrio }}</strong>
     <span>{{ c.sitio.direccion.senas }}, {{ c.sitio.direccion.ciudad }}</span>
   </div>
-  <div #dato #pieza class="r-dato r-edades tela t-lavanda" appRetazo coserManual data-pieza>
+  <div #pieza class="r-dato r-edades tela t-lavanda" appRetazo coserManual data-pieza>
     <strong>{{ edades }}</strong>
     <span>{{ c.grupos.grupos.length }} grupos por edad</span>
   </div>
-
-  <svg #hilo class="hilo-svg hilo-firma" aria-hidden="true" focusable="false">
-    <defs>
-      <mask id="mascara-hilo-firma" maskUnits="userSpaceOnUse">
-        <path fill="none" stroke="#fff" stroke-width="14" pathLength="1" stroke-dasharray="1 1" />
-      </mask>
-    </defs>
-    <path />
-  </svg>
 </section>

@@ -85,11 +85,6 @@ h1 {
   display: none;
 }
 
-.hilo-firma > path {
-  stroke: var(--puntada);
-  stroke-dasharray: 4.5 5.5;
-}
-
 /* Mientras arranca la firma, las piezas que caen esperan escondidas (solo con JS y movimiento). */
 :host-context(.firma-pendiente) [data-pieza] {
   opacity: 0;
