@@ -44,7 +44,7 @@ for (const archivo of readdirSync(fotos).sort()) {
   if (!['.jpg', '.jpeg', '.png'].includes(ext.toLowerCase())) continue;
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(nombre)) {
     throw new Error(
-      `Nombre de foto inválido «${archivo}»: usa minúsculas, números y guiones (ej. huerta-sembrando.jpg).`,
+      `Nombre de foto inválido «${archivo}»: usa minúsculas, números y guiones (ej. agricultura-sembrando.jpg).`,
     );
   }
   const fuente = join(fotos, archivo);

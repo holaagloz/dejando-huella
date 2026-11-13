@@ -33,8 +33,8 @@ import type {
 } from './modelo';
 
 /**
- * El editor (Pages CMS) guarda las fotos como ruta («media/fotos/huerta.jpg»); el sitio las
- * identifica por nombre («huerta»). Acepta las dos formas.
+ * El editor (Pages CMS) guarda las fotos como ruta («media/fotos/agricultura.jpg»); el sitio las
+ * identifica por nombre («agricultura»). Acepta las dos formas.
  */
 export function normalizarNombreMedia(valor: string): string {
   return valor.replace(/^.*\//, '').replace(/\.(jpe?g|png|webp|mp4)$/i, '');

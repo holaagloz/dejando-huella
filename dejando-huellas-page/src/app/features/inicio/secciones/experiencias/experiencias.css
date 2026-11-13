@@ -1,11 +1,17 @@
+/* La foto absorbe la altura sobrante: si comparte fila con un video (más alto), crece en vez de dejar
+   tela vacía bajo el texto. Sola en su fila conserva su 4:3.
+   `justify-self: stretch` es obligatorio: sin él, el alto estirado más el aspect-ratio agrandan el ANCHO
+   y la foto se sale del retazo (se veía recortada y con zoom). */
 .exp {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 1fr auto;
 }
 .exp__media {
   margin: var(--costura) var(--costura) 0;
   height: auto;
   aspect-ratio: 4 / 3;
+  align-self: stretch;
+  justify-self: stretch;
 }
 .exp--video .exp__media {
   aspect-ratio: 4 / 5;
@@ -48,11 +54,8 @@
     grid-row: 1;
     justify-content: center;
   }
-  .exp--video {
-    grid-row: 1;
-    grid-column: span 4;
-  }
-  .exp:not(.exp--video) {
+  /* Cabecera y dos videos en la primera fila; el resto fluye en filas de tres. */
+  .exp {
     grid-column: span 4;
   }
 }

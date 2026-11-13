@@ -14,14 +14,13 @@
     >
       <figure class="foto">
         <button class="ampliar" type="button" (click)="abrir(foto)">
+          <span class="vh">Ver en grande:</span>
           <app-foto
             [foto]="foto"
             [sizes]="i === 0 ? '(min-width: 1024px) 66vw, 100vw' : '(min-width: 1024px) 33vw, 50vw'"
           />
           <span class="lupa" aria-hidden="true"><svg appIcono="ampliar"></svg></span>
-          <span class="vh">Ver en grande: {{ foto.pie }}</span>
         </button>
-        <figcaption class="etiqueta">{{ foto.pie }}</figcaption>
       </figure>
     </div>
   }
@@ -32,7 +31,7 @@
 <dialog
   #visor
   class="visor"
-  aria-labelledby="visor-pie"
+  aria-label="Foto ampliada"
   (click)="alClicVisor($event)"
   (close)="alCerrar()"
 >
@@ -47,7 +46,6 @@
       />
     }
     <div class="visor__pie">
-      <span id="visor-pie">{{ foto.pie }}</span>
       <button type="button" (click)="cerrar()"><svg appIcono="cerrar"></svg>Cerrar</button>
     </div>
   }

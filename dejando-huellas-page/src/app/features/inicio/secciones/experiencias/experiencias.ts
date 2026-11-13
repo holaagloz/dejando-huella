@@ -16,10 +16,12 @@ const TELAS = [
   't-fieltro',
   't-rayas',
 ];
+// La raya (tercera) no repite la tela de ningún vecino en 1, 2 ni 3 columnas.
+const TELAS_VIDEO = ['t-lavanda', 't-fieltro', 't-rayas'];
 
 /**
- * Las experiencias académicas del centro, con sus fotos y videos reales. Las que tienen video
- * son los retazos grandes; el resto, una fila de retazos con foto.
+ * Las experiencias académicas del centro, con sus fotos y videos reales. Las que tienen video van
+ * primero (retazos altos, 4:5); el resto sigue con foto.
  */
 @Component({
   selector: 'app-experiencias',
@@ -31,7 +33,7 @@ export class Experiencias {
   protected readonly e = inject(Contenido).experiencias;
   protected readonly conVideo = this.e.experiencias
     .filter((x) => x.video)
-    .map((x, i) => ({ ...x, tela: i % 2 === 0 ? 't-lavanda' : 't-fieltro' }));
+    .map((x, i) => ({ ...x, tela: TELAS_VIDEO[i % TELAS_VIDEO.length] }));
   protected readonly conFoto = this.e.experiencias
     .filter((x) => !x.video)
     .map((x, i) => ({ ...x, tela: TELAS[i % TELAS.length] }));

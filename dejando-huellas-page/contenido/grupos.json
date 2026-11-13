@@ -10,24 +10,56 @@
       "id": "semillitas",
       "nombre": "Semillitas",
       "edades": "3 meses a 2 años",
-      "puntos": ["Estimulación temprana y sensorial", "Rutinas de comida y descanso a su ritmo", "Mucho cariño y contacto cercano"],
-      "foto": { "nombre": "nina-camino-sensorial", "alt": "Niña pequeña dando sus primeros pasos sobre un camino sensorial, tomada de la mano de una maestra" },
+      "puntos": [
+        "Estimulación temprana",
+        "Estimulación sensorial",
+        "Arte",
+        "Música",
+        "Educación física",
+        "Clase educativa en inglés",
+        "Rutina de alimentación y descanso respetando su ritmo",
+        "Amor, empatía y contacto cercano",
+        "Atención, cuidado y acompañamiento"
+      ],
+      "foto": { "nombre": "semillitas-pintando", "alt": "Niño pequeño sentado en el césped, pintando con pincel junto a una paleta de colores", "enfoque": "50% 30%" },
       "mensajeWhatsapp": "Hola, quisiera información sobre el grupo Semillitas (3 meses a 2 años)."
     },
     {
       "id": "pasitos",
       "nombre": "Pasitos",
       "edades": "2 a 3 años",
-      "puntos": ["Música, movimiento y juego al aire libre", "Autonomía en la vida diaria", "Primeras palabras en inglés"],
-      "foto": { "nombre": "musica-xilofono", "alt": "Niña tocando un xilófono de colores en el salón" },
+      "puntos": [
+        "Estimulación temprana",
+        "Estimulación sensorial",
+        "STEAM",
+        "Música",
+        "Educación física",
+        "Clase educativa en inglés",
+        "Preescritura",
+        "Rutina de alimentación y descanso respetando su ritmo",
+        "Amor, empatía y contacto cercano",
+        "Atención, cuidado y acompañamiento"
+      ],
+      "foto": { "nombre": "pasitos-pies", "alt": "Pies descalzos de una niña caminando sobre un camino sensorial azul en el césped", "enfoque": "35% 60%" },
       "mensajeWhatsapp": "Hola, quisiera información sobre el grupo Pasitos (2 a 3 años)."
     },
     {
       "id": "huellitas",
       "nombre": "Huellitas",
       "edades": "3 a 4 años",
-      "puntos": ["Lectoescritura inicial con juego", "Ciencia y experimentos (STEAM)", "Huerta y cuidado de las plantas"],
-      "foto": { "nombre": "steam-microscopio", "alt": "Niño con lentes de seguridad sonriendo junto a un microscopio" },
+      "puntos": [
+        "Estimulación temprana",
+        "Estimulación sensorial",
+        "STEAM",
+        "Música",
+        "Educación física",
+        "Clase educativa en inglés",
+        "Lectoescritura",
+        "Rutina de alimentación y descanso respetando su ritmo",
+        "Amor, empatía y contacto cercano",
+        "Atención, cuidado y acompañamiento"
+      ],
+      "foto": { "nombre": "lectoescritura-trazos", "alt": "Dos niñas trazando líneas con lápiz en una hoja de trabajo, guiadas por la mano de una maestra" },
       "mensajeWhatsapp": "Hola, quisiera información sobre el grupo Huellitas (3 a 4 años)."
     }
   ]

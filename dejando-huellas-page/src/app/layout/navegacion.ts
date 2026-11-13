@@ -10,7 +10,7 @@ export const SECCIONES: readonly Enlace[] = [
   { ancla: 'experiencias', texto: 'Experiencias' },
   { ancla: 'un-dia', texto: 'Un día aquí' },
   { ancla: 'alimentacion', texto: 'Alimentación' },
-  { ancla: 'espacios', texto: 'Nuestros espacios' },
+  { ancla: 'espacios', texto: 'Nuestras instalaciones', textoCorto: 'Instalaciones' },
   { ancla: 'horarios', texto: 'Horarios y mensualidades', textoCorto: 'Horarios' },
   { ancla: 'matricula', texto: 'Matrícula' },
   { ancla: 'preguntas', texto: 'Preguntas' },

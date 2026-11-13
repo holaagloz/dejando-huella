@@ -43,10 +43,6 @@
   width: 20px;
   height: 20px;
 }
-.foto > figcaption {
-  pointer-events: none;
-}
-
 .visor {
   width: min(1100px, 94vw);
   max-height: 92vh;
@@ -70,7 +66,7 @@
 .visor__pie {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 12px;
   padding: 12px 16px;
   font: 600 1rem var(--font-mano);
@@ -88,6 +84,15 @@
   font: 700 0.9375rem var(--font-mano);
 }
 
+/*
+  La composición cuenta con 6 fotos: la grande y cinco más. Hijos: cabecera (1), grande (2), fotos (3–7).
+  En el celular, dos por fila: si la última queda sola (índice impar), ocupa el ancho completo.
+*/
+@media (max-width: 759px) {
+  .r-espacio:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
 @media (min-width: 760px) {
   .r-espacio {
     grid-column: span 4;
@@ -95,6 +100,12 @@
   }
   .r-espacio--grande {
     grid-column: 1 / -1;
+  }
+}
+/* Tableta, tres por fila: las dos últimas se reparten la fila para no dejar hueco. */
+@media (min-width: 760px) and (max-width: 1023px) {
+  .r-espacio:nth-last-child(-n + 2) {
+    grid-column: span 6;
   }
 }
 @media (min-width: 1024px) {
@@ -109,6 +120,11 @@
   }
   .r-espacio {
     min-height: 320px;
+  }
+  /* Segunda fila: dos fotos anchas a medias. */
+  .r-espacio:nth-last-child(5),
+  .r-espacio:nth-last-child(4) {
+    grid-column: span 6;
   }
   /* Última fila: un retrato angosto y dos más anchos, para romper la repetición */
   .r-espacio:nth-last-child(3) {

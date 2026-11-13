@@ -176,14 +176,22 @@ test.describe('Navegación', () => {
 
   test('el visor de fotos abre en grande y cierra con Esc', async ({ page }) => {
     await page.goto('/#espacios');
-    const primera = page.getByRole('button', { name: /Ver en grande: Aula del espacio/ });
+    // Sin nombre visible en las fotos (feedback v1): el botón se nombra con la descripción de la foto.
+    const primera = page.getByRole('button', { name: /Ver en grande: Aula con mural de cohetes/ });
     await primera.scrollIntoViewIfNeeded();
     await primera.click();
-    const visor = page.locator('dialog.visor');
+    const visor = page.getByRole('dialog', { name: 'Foto ampliada' });
     await expect(visor).toBeVisible();
     await expect(visor.locator('img')).toHaveAttribute('alt', /cohetes y planetas/);
     await page.keyboard.press('Escape');
     await expect(visor).toBeHidden();
+  });
+
+  test('los testimonios de las familias se muestran', async ({ page }) => {
+    await page.goto('/#familias');
+    const seccion = page.locator('#familias');
+    await expect(seccion.getByRole('heading', { level: 2 })).toBeVisible();
+    expect(await seccion.locator('blockquote').count()).toBeGreaterThan(0);
   });
 
   test('sin errores de consola', async ({ page }) => {

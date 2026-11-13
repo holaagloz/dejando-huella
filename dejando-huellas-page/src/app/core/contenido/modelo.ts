@@ -210,14 +210,11 @@ export interface UnDia {
   readonly fotos: readonly Foto[];
 }
 
-export interface FotoGaleria extends Foto {
-  readonly pie: string;
-}
-
+/** Fotos sin nombre visible: el centro prefiere que las instalaciones hablen solas (feedback v1). */
 export interface Galeria {
   readonly titulo: string;
   readonly bajada: string;
-  readonly fotos: readonly FotoGaleria[];
+  readonly fotos: readonly Foto[];
 }
 
 export interface Precio {

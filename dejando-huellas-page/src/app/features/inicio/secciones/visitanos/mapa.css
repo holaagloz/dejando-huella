@@ -50,7 +50,8 @@ iframe {
   height: 100%;
   border: 0;
 }
-@media (max-width: 759px) {
+/* Hasta tableta la nota va debajo del dibujo: encima taparía la universidad y la ruta. */
+@media (max-width: 1023px) {
   .mapa {
     display: block;
     min-height: 0;
@@ -67,5 +68,16 @@ iframe {
   }
   .mapa--cargado {
     min-height: 320px;
+  }
+}
+@media (min-width: 760px) and (max-width: 1023px) {
+  .mapa__dibujo {
+    height: 240px;
+  }
+}
+/* En escritorio la nota se apoya sobre el dibujo, a la izquierda de la universidad (x < 304). */
+@media (min-width: 1024px) {
+  .mapa__texto {
+    max-width: 380px;
   }
 }

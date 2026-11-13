@@ -4,7 +4,7 @@
   "experiencias": [
     {
       "nombre": "STEAM",
-      "texto": "Ciencia, tecnología, arte y matemática con experimentos que se hacen con las manos.",
+      "texto": "Ciencia, arte y matemática con experimentos que se hacen con las manos.",
       "icono": "matraz",
       "video": { "nombre": "clase-cientifica", "descripcion": "Niñas y niños con lentes de seguridad haciendo un experimento en la clase científica" }
     },
@@ -12,19 +12,19 @@
       "nombre": "Estimulación sensorial",
       "texto": "Texturas, colores y luz para explorar el mundo con todos los sentidos.",
       "icono": "mano",
-      "video": { "nombre": "estimulacion-sensorial", "descripcion": "Manos de niños jugando con espuma de colores bajo luz neón" }
+      "video": { "nombre": "estimulacion-sensorial", "descripcion": "Niñas jugando con espuma y pintura de colores bajo luz neón" }
     },
     {
       "nombre": "Música",
       "texto": "Cantamos, tocamos instrumentos y seguimos el ritmo con todo el cuerpo.",
       "icono": "musica",
-      "foto": { "nombre": "musica-ukelele", "alt": "Maestra tocando el ukelele y cantando en el salón" }
+      "foto": { "nombre": "musica-ukelele", "alt": "Maestra tocando el ukelele y cantando en el salón", "enfoque": "40% 24%" }
     },
     {
       "nombre": "Agricultura",
-      "texto": "Sembramos, regamos y vemos crecer nuestra propia huerta.",
+      "texto": "Sembramos, regamos y vemos crecer lo que cultivamos con nuestras manos.",
       "icono": "brote",
-      "foto": { "nombre": "huerta-sembrando", "alt": "Niñas sembrando en la huerta del centro con palitas de colores" }
+      "foto": { "nombre": "agricultura-sembrando", "alt": "Niñas sembrando con palitas de colores en la clase de agricultura" }
     },
     {
       "nombre": "Inglés",
@@ -48,7 +48,7 @@
       "nombre": "Estimulación temprana",
       "texto": "Experiencias que acompañan el desarrollo de los más pequeños, paso a paso.",
       "icono": "sonaja",
-      "foto": { "nombre": "nina-cesped", "alt": "Niña pequeña sonriendo, sentada en el césped del patio" }
+      "video": { "nombre": "estimulacion-temprana", "descripcion": "Bebé subiendo por una rampa de madera, agarrándose de los apoyos de colores" }
     }
   ]
 }

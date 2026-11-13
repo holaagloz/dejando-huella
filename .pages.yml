@@ -125,6 +125,7 @@ content:
             fields:
               - { name: nombre, label: Foto, type: image, required: true }
               - { name: alt, label: Describe la foto, type: string, required: true }
+              - { name: enfoque, label: "Punto que no se recorta (opcional, ej. 50% 30%)", type: string }
           - { name: mensajeWhatsapp, label: Mensaje de WhatsApp, type: text, required: true }
 
   # ---------- Preguntas frecuentes ----------
@@ -146,7 +147,7 @@ content:
 
   # ---------- Galería ----------
   - name: galeria
-    label: Fotos de los espacios
+    label: Fotos de las instalaciones
     type: file
     path: dejando-huellas-page/contenido/galeria.json
     format: json
@@ -160,7 +161,6 @@ content:
         fields:
           - { name: nombre, label: Foto, type: image, required: true }
           - { name: alt, label: Describe la foto, type: string, required: true }
-          - { name: pie, label: Nombre del espacio, type: string, required: true }
 
   # ---------- Testimonios ----------
   - name: testimonios

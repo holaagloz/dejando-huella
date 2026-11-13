@@ -25,8 +25,8 @@ Puedes cambiar textos, precios, horarios, preguntas y fotos de tu página sin sa
 
 ## Fotos
 
-- Antes de subir una foto, cámbiale el nombre por uno corto en **minúsculas, sin tildes ni espacios**, con guiones: `huerta-nueva.jpg`, no `IMG_4521 (2).JPG`.
-- Llena siempre **«Describe la foto»** con lo que se ve (por ejemplo, «Niñas sembrando en la huerta»). Lo usan las personas con lectores de pantalla y lo lee Google.
+- Antes de subir una foto, cámbiale el nombre por uno corto en **minúsculas, sin tildes ni espacios**, con guiones: `agricultura-nueva.jpg`, no `IMG_4521 (2).JPG`.
+- Llena siempre **«Describe la foto»** con lo que se ve (por ejemplo, «Niñas sembrando en la clase de agricultura»). Lo usan las personas con lectores de pantalla y lo lee Google.
 - Sube solo fotos de niños con **autorización escrita** de sus familias.
 - La primera foto de *Fotos de los espacios* es la que sale en grande.
 

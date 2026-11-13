@@ -1,5 +1,16 @@
 {
-  "activo": false,
+  "activo": true,
   "titulo": "Lo que dicen las familias",
-  "testimonios": []
+  "testimonios": [
+    {
+      "texto": "Es increíble lo que Elena ha avanzado en este mes con la teacher Caro, Dani y Daya. De verdad, eternamente agradecidos por todo el amor y la paciencia con nuestra princesa.",
+      "autor": "Pau S.",
+      "detalle": "Familia de Elena"
+    },
+    {
+      "texto": "Qué bonito es coincidir con personas tan especiales. Gracias por tanto cariño y por todo el amor que le han brindado a nuestra Alannita. ¡Nos sentimos muy agradecidos de tenerlos en nuestro camino!",
+      "autor": "Yen C.",
+      "detalle": "Familia de Alannita"
+    }
+  ]
 }

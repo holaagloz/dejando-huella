@@ -26,23 +26,21 @@ const FOTOS = {
   '0fb8e92e': 'pintura-caballetes',
   '11f15921': 'nina-mural-logo',
   '14462d60': 'manualidad-personas-que-amo',
-  '24527f22': 'huerta-sembrando',
+  '24527f22': 'agricultura-sembrando',
   '28ca24b0': 'nino-rana-cesped',
   '2a16e739': 'bebe-con-maestra',
   '2abd4011': 'dibujo-arbol-familia',
   '39baa585': 'nina-estimulacion-sensorial',
   '4278ed6d': 'lectoescritura-trazos',
   '49cce255': 'patio-domo-mural',
-  '4e753b90': 'nina-camino-sensorial',
-  '5ba10676': 'huerta-regando',
+  '5ba10676': 'agricultura-regando',
   '6abfc386': 'steam-microscopio',
   '6e719816': 'steam-tubo-ensayo',
-  '6ec95a29': 'nina-cesped',
   '74ed9d02': 'manualidad-clima',
   '83a8ddfc': 'steam-pipeta',
   '87b8f744': 'dibujo-al-aire-libre',
   '98f96d45': 'navidad',
-  '9e1944bb': 'huerta-amigas',
+  '9e1944bb': 'agricultura-amigas',
   a96b1309: 'musica-ukelele',
   c6404faa: 'pintura-paleta',
   c88b9dda: 'musica-xilofono',
@@ -52,13 +50,20 @@ const FOTOS = {
   e723a233: 'nino-sonriente',
   eebd5f42: 'pintura-cesped',
   f0f3b4c8: 'juego-vasos',
-  f21356ba: 'letreros-grupos',
   f2e9f88c: 'maestra-abrazo',
   f3ab50bf: 'sensorial-neon',
   f5dfe1f4: 'nino-sonriente-mesa',
+  // Llegó con el feedback v1: la foto que el centro eligió para Semillitas.
+  'feedback-v1-semillitas': 'semillitas-pintando',
 };
 // Captura de pantalla con franjas negras: se recortan.
 const RECORTAR_BORDES = new Set(['f2e9f88c']);
+
+// Fotos que se publican recortadas: el original completo no sale del disco.
+// Pasitos: el centro pidió mostrar solo los pies de la niña (feedback v1).
+const RECORTES = {
+  '4e753b90': { nombre: 'pasitos-pies', zona: { left: 0, top: 848, width: 1086, height: 600 } },
+};
 
 // Fotos de instalaciones y logo, que ya estaban en el sitio actual.
 const SUELTAS = {
@@ -68,11 +73,33 @@ const SUELTAS = {
 };
 
 // Tramos sin el texto que el video trae incrustado; `poster` = segundo del tramo usado como portada.
+// Los `feedback-v1-*` llegaron con el feedback del 13-11-2026: más resolución que los primeros envíos.
 const VIDEOS = [
-  { prefijo: '498ce4a5', nombre: 'cocina', desde: 15, duracion: 9, poster: 3 },
-  { prefijo: '4c2c530f', nombre: 'clase-cientifica', desde: 6, duracion: 9, poster: 4 },
-  { prefijo: 'fb34db01', nombre: 'estimulacion-sensorial', desde: 6, duracion: 9, poster: 4 },
+  { archivo: 'feedback-v1-cocina.mov', nombre: 'cocina', desde: 15, duracion: 9, poster: 3 },
+  {
+    archivo: 'feedback-v1-clase-cientifica.mov',
+    nombre: 'clase-cientifica',
+    desde: 6,
+    duracion: 9,
+    poster: 4,
+  },
+  {
+    archivo: 'feedback-v1-estimulacion-sensorial.mov',
+    nombre: 'estimulacion-sensorial',
+    desde: 7.5,
+    duracion: 9,
+    poster: 4,
+  },
+  {
+    archivo: 'feedback-v1-estimulacion-temprana.mp4',
+    nombre: 'estimulacion-temprana',
+    desde: 0,
+    duracion: 7.5,
+    poster: 1,
+  },
 ];
+// Lado largo máximo del video: basta para el retazo más grande en una pantalla 2x.
+const LADO_MAXIMO_VIDEO = 1280;
 
 mkdirSync(destinoFotos, { recursive: true });
 mkdirSync(destinoVideos, { recursive: true });
@@ -86,9 +113,10 @@ const buscar = (prefijo, ext) => {
   return join(originales, f);
 };
 
-async function importarFoto(ruta, nombre, recortar = false) {
+async function importarFoto(ruta, nombre, { recortar = false, zona } = {}) {
   let img = sharp(ruta).rotate(); // aplica la orientación EXIF; la salida no lleva metadatos
   if (recortar) img = sharp(await img.toBuffer()).trim({ background: '#000000', threshold: 24 });
+  if (zona) img = sharp(await img.toBuffer()).extract(zona);
   await img
     .resize({ width: LADO_MAXIMO, height: LADO_MAXIMO, fit: 'inside', withoutEnlargement: true })
     .jpeg({ quality: 84, mozjpeg: true })
@@ -97,7 +125,10 @@ async function importarFoto(ruta, nombre, recortar = false) {
 }
 
 for (const [prefijo, nombre] of Object.entries(FOTOS)) {
-  await importarFoto(buscar(prefijo, '.jpg'), nombre, RECORTAR_BORDES.has(prefijo));
+  await importarFoto(buscar(prefijo, '.jpg'), nombre, { recortar: RECORTAR_BORDES.has(prefijo) });
+}
+for (const [prefijo, { nombre, zona }] of Object.entries(RECORTES)) {
+  await importarFoto(buscar(prefijo, '.jpg'), nombre, { zona });
 }
 for (const [archivo, nombre] of Object.entries(SUELTAS)) {
   await importarFoto(join(origen, archivo), nombre);
@@ -109,7 +140,8 @@ await sharp(join(raiz, '..', 'propuesta', 'img', 'logo-dejando-huella.png'))
 console.log('foto  logo-dejando-huella');
 
 for (const v of VIDEOS) {
-  const entrada = buscar(v.prefijo, '.mp4');
+  const entrada = join(originales, v.archivo);
+  if (!existsSync(entrada)) throw new Error(`No se encontró el video original ${v.archivo}`);
   const salida = join(destinoVideos, `${v.nombre}.mp4`);
   const poster = join(destinoFotos, `video-${v.nombre}.jpg`);
   execFileSync(ffmpeg, [
@@ -123,6 +155,8 @@ for (const v of VIDEOS) {
     '-i',
     entrada,
     '-an',
+    '-vf',
+    `scale=w='min(iw,${LADO_MAXIMO_VIDEO})':h='min(ih,${LADO_MAXIMO_VIDEO})':force_original_aspect_ratio=decrease:force_divisible_by=2`,
     '-c:v',
     'libx264',
     '-preset',

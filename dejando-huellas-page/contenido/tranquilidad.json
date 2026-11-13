@@ -22,11 +22,12 @@
   },
   "equipo": {
     "titulo": "Un equipo con formación",
-    "texto": "Profesionales que acompañan cada etapa con sensibilidad, cariño y vocación.",
+    "texto": "Profesionales que acompañan cada etapa con sensibilidad, cariño, vocación, amor y empatía.",
     "formaciones": [
       "Licenciatura en Educación Preescolar",
-      "Educación Musical",
-      "Bachillerato en Terapia del Lenguaje"
+      "Licenciatura en Educación Musical",
+      "Licenciatura en Educación Física",
+      "Licenciatura en Terapia del Lenguaje"
     ]
   },
   "ritmo": {
