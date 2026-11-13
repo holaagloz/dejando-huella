@@ -1,8 +1,18 @@
-# Dependencias y sistema
-node_modules/
+# El repositorio es del sitio del centro: solo se versiona dejando-huellas-page/.
+# Lo demás (propuesta, auditoría, plan, dirección de arte, material original del cliente y archivos del
+# estudio) es el espacio de trabajo de Studio Gloz: queda en el disco, fuera de git.
+/*
+!/.gitignore
+
+# El sitio
+!/dejando-huellas-page/
+
+# GitHub exige estas dos cosas en la raíz del repositorio:
+# los workflows de Actions (validación y publicación) y la configuración del editor Pages CMS.
+!/.github/
+!/.pages.yml
+
+# Sistema
 .DS_Store
 Thumbs.db
-
-# Originales del cliente tal como llegaron (63 MB, fotos de 4160 px y videos completos).
-# Las versiones de trabajo, reducidas y sin metadatos, viven en dejando-huellas-page/media/.
-materiales/cliente/media-original/
+node_modules/

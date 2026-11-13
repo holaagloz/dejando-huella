@@ -1,18 +1,19 @@
 # Centro Infantil Dejando Huella · sitio web
 
-Landing del centro infantil en Ciudad Quesada (dejandohuellacr.com). Angular 22 con **prerender estático** (SSG) publicado en GitHub Pages. Diseño: dirección de arte «Colcha de retazos» (`../DESIGN.md`), por Studio Gloz.
+Landing del centro infantil en Ciudad Quesada (dejandohuellacr.com). Angular 22 con **prerender estático** (SSG) publicado en GitHub Pages. Diseño: dirección de arte «Colcha de retazos», por Studio Gloz (su documentación vive en el espacio de trabajo del estudio, fuera de este repositorio).
 
 ## Comandos
 
 | Comando | Qué hace |
 |---|---|
 | `npm start` | Servidor de desarrollo en http://localhost:4200 |
+| `npm run build:vista-previa` | Build para revisar en GitHub Pages (`/dejando-huella/`): sin indexar, sin analítica y sin `CNAME` |
 | `npm run build` | Procesa la media, compila, prerenderiza y prepara la salida para GitHub Pages (`dist/dejando-huellas-page/browser`) |
 | `npm test -- --watch=false` | Pruebas unitarias y **validación del contenido editable** |
 | `npm run lint` | ESLint (incluye reglas de accesibilidad de plantillas) |
 | `npm run e2e` | Playwright + axe contra el build (requiere `npm run build` y `npx playwright install chromium`) |
-| `npm run importar-media` | Importa fotos y videos nuevos desde `../materiales/cliente/media-original/` (manual) |
-| `npm run fuentes` | Regenera las fuentes reducidas (manual, rara vez) |
+| `npm run importar-media` | Importa fotos y videos nuevos desde `../materiales/cliente/media-original/` (manual; esa carpeta solo existe en el equipo del estudio) |
+| `npm run fuentes` | Regenera las fuentes reducidas desde `../propuesta/fonts/` (manual, rara vez; solo en el equipo del estudio) |
 
 ## Estructura
 
@@ -43,4 +44,9 @@ Dependencias: `features → shared, core`; `shared` no conoce el contenido; `cor
 
 ## Publicación
 
-`../.github/workflows/sitio.yml` valida y construye en cada push. La publicación se activa en el lanzamiento con la variable de repositorio `PUBLICAR_SITIO=true` (ver `../docs/02-plan-sitio-angular.md`, sección 9).
+`../.github/workflows/sitio.yml` valida y construye en cada push, y publica en GitHub Pages cuando el cambio llega a `main`.
+
+- **Vista previa** (por defecto): `https://<usuario>.github.io/dejando-huella/`, con `noindex` en todas las páginas. La subcarpeta se define en `baseHref` de la configuración `vista-previa` (`angular.json`); si el repositorio cambia de nombre, hay que actualizarla.
+- **Producción**: crear la variable de repositorio `MODO_PUBLICACION=produccion` y configurar el dominio `dejandohuellacr.com` en Settings → Pages (DNS en GoDaddy: registros A/AAAA de GitHub Pages y CNAME de `www`).
+
+Las fuentes y las texturas del fondo se declaran en `src/index.html` con rutas relativas al `<base href>`, para que el mismo código funcione en los dos destinos.

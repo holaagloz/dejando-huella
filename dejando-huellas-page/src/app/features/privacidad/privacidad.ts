@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import { Contenido } from '../../core/contenido/contenido';
 import { Seo } from '../../core/seo/seo';
@@ -7,7 +8,7 @@ import { Retazo } from '../../shared/ui/retazo/retazo';
 /** Aviso de privacidad en lenguaje simple: qué se mide y qué no se guarda. */
 @Component({
   selector: 'app-privacidad',
-  imports: [Retazo],
+  imports: [RouterLink, Retazo],
   template: `
     <article class="colcha-seccion" aria-labelledby="t-privacidad">
       <div class="r-cabeza tela t-manta" appRetazo>
@@ -41,7 +42,7 @@ import { Retazo } from '../../shared/ui/retazo/retazo';
           Si tienes preguntas sobre esta información, escríbenos a
           <a [href]="'mailto:' + c.sitio.contacto.correo">{{ c.sitio.contacto.correo }}</a>.
         </p>
-        <p><a class="enlace-mano" href="/">Volver al inicio</a></p>
+        <p><a class="enlace-mano" routerLink="/">Volver al inicio</a></p>
       </div>
     </article>
   `,

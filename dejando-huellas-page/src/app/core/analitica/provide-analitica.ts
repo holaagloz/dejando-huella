@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
+import { ENTORNO } from '../../../environments/entorno';
 import { Analitica, AnaliticaInactiva } from './analitica';
 import { AnaliticaUmami } from './analitica-umami';
 
@@ -26,7 +27,7 @@ export function provideAnalitica(): EnvironmentProviders {
       provide: Analitica,
       useFactory: () => {
         const enNavegador = isPlatformBrowser(inject(PLATFORM_ID));
-        return enNavegador && UMAMI_ID_SITIO
+        return enNavegador && ENTORNO.analitica && UMAMI_ID_SITIO
           ? new AnaliticaUmami(inject(DOCUMENT), UMAMI_ID_SITIO, DOMINIO_PRODUCCION)
           : new AnaliticaInactiva();
       },

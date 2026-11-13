@@ -2,24 +2,8 @@
    Tokens de Dejando Huella · Dirección de arte «Colcha de retazos» (ver DESIGN.md)
    ========================================================================== */
 
-@font-face {
-  font-family: 'Shantell Sans';
-  src: url('/fonts/shantell-sans-var.woff2') format('woff2');
-  font-weight: 500 800;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/nunito-var.woff2') format('woff2');
-  font-weight: 400 800;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Big Shoulders Display';
-  src: url('/fonts/big-shoulders-display-var.woff2') format('woff2');
-  font-weight: 700 900;
-  font-display: swap;
-}
+/* Las @font-face y las texturas del fondo (--fondo-lino) están en src/index.html: sus rutas son relativas
+   al <base href>, así el mismo código funciona en el dominio y en la vista previa de GitHub Pages. */
 
 :root {
   /* Color: identidad de Dejando Huella (leída del logo) */
@@ -46,11 +30,6 @@
   /* Lavanda de la paleta del centro: la tela que reemplaza al chambray, que ahora sería igual al fondo */
   --lavanda: #bdb3da;
   --lavanda-deep: #9a8fc4;
-  /* Dos mosaicos de tamaños distintos superpuestos: el patrón casi no vuelve a alinearse */
-  --fondo-lino:
-    url('/textura/hilos.svg') center top / 740px 820px,
-    url('/textura/lino.svg') 0 0 / 520px 600px,
-    var(--respaldo);
   --cta: var(--coral);
   --cta-ink: var(--ink);
   --puntada: var(--coral-deep);

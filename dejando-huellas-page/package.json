@@ -9,6 +9,8 @@
     "prebuild": "npm run media",
     "build": "ng build",
     "postbuild": "node scripts/postbuild.mjs",
+    "prebuild:vista-previa": "npm run media",
+    "build:vista-previa": "ng build --configuration vista-previa && node scripts/postbuild.mjs --vista-previa",
     "watch": "ng build --watch --configuration development",
     "pretest": "npm run media",
     "test": "ng test",

@@ -1,6 +1,7 @@
 import { DOCUMENT, Service, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
+import { ENTORNO } from '../../../environments/entorno';
 import { serializarJsonLd } from './datos-estructurados';
 
 export interface PaginaSeo {
@@ -39,7 +40,12 @@ export class Seo {
       [
         'name',
         'robots',
-        pagina.indexar === false ? 'noindex, follow' : 'index, follow, max-image-preview:large',
+        // La vista previa nunca se indexa; en producción, solo las páginas que lo piden (404).
+        !ENTORNO.indexable
+          ? 'noindex, nofollow'
+          : pagina.indexar === false
+            ? 'noindex, follow'
+            : 'index, follow, max-image-preview:large',
       ],
       ['property', 'og:type', 'website'],
       ['property', 'og:locale', 'es_CR'],

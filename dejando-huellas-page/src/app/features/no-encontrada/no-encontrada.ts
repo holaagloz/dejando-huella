@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import { Contenido } from '../../core/contenido/contenido';
 import { Seo } from '../../core/seo/seo';
@@ -9,7 +10,7 @@ import { Retazo } from '../../shared/ui/retazo/retazo';
 /** Página 404. Se publica como `404.html`, que GitHub Pages sirve para cualquier ruta inexistente. */
 @Component({
   selector: 'app-no-encontrada',
-  imports: [BotonWhatsapp, Huella, Retazo],
+  imports: [RouterLink, BotonWhatsapp, Huella, Retazo],
   template: `
     <section class="colcha-seccion" aria-labelledby="t-404">
       <div class="r-cabeza tela t-manta" appRetazo>
@@ -19,7 +20,7 @@ import { Retazo } from '../../shared/ui/retazo/retazo';
           lo que buscas.
         </p>
         <div class="acciones">
-          <a class="parche parche--manta" href="/">Ir al inicio</a>
+          <a class="parche parche--manta" routerLink="/">Ir al inicio</a>
           <app-boton-whatsapp ubicacion="404" texto="Escríbenos" variante="normal" />
         </div>
       </div>

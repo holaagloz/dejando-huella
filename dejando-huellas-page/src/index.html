@@ -12,12 +12,42 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link
       rel="preload"
-      href="/fonts/shantell-sans-var.woff2"
+      href="fonts/shantell-sans-var.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
-    <link rel="preload" href="/fonts/nunito-var.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/nunito-var.woff2" as="font" type="font/woff2" crossorigin />
+    <!--
+      Fuentes y texturas con rutas relativas al <base href>: funcionan igual en dejandohuellacr.com
+      y en la vista previa de GitHub Pages (que vive en una subcarpeta).
+    -->
+    <style>
+      @font-face {
+        font-family: 'Shantell Sans';
+        src: url('fonts/shantell-sans-var.woff2') format('woff2');
+        font-weight: 500 800;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Nunito';
+        src: url('fonts/nunito-var.woff2') format('woff2');
+        font-weight: 400 800;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Big Shoulders Display';
+        src: url('fonts/big-shoulders-display-var.woff2') format('woff2');
+        font-weight: 700 900;
+        font-display: swap;
+      }
+      :root {
+        /* Dos mosaicos de tamaños distintos superpuestos: el patrón casi no vuelve a alinearse */
+        --fondo-lino:
+          url('textura/hilos.svg') center top / 740px 820px,
+          url('textura/lino.svg') 0 0 / 520px 600px, var(--respaldo);
+      }
+    </style>
     <!--
       La firma de la portada esconde sus piezas mientras se carga la animación (y solo si hay JS y
       movimiento). Si algo falla, se muestran solas a los 3 segundos: nunca queda contenido oculto.
