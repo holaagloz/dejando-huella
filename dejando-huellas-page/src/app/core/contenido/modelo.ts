@@ -61,6 +61,11 @@ export interface Foto {
   readonly nombre: string;
   /** Describe lo que se ve; lo leen los lectores de pantalla y Google. */
   readonly alt: string;
+  /**
+   * Punto de la foto que no debe recortarse, como `object-position` de CSS (ej. `"50% 20%"`:
+   * centrado en horizontal, al 20 % desde arriba). Sin él, el recorte es centrado.
+   */
+  readonly enfoque?: string;
 }
 
 /** Un video de `media/videos/`. Su póster es la foto `video-<nombre>`. */

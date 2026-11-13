@@ -1,7 +1,11 @@
 {
   "titulo": "Lo que te da tranquilidad",
   "bajada": "Dejar a tu hijo en manos de otras personas es una decisión grande. Por eso te contamos, sin letra pequeña, cómo lo cuidamos cada día.",
-  "foto": { "nombre": "bebe-con-maestra", "alt": "Maestra sonriendo junto a una bebé en el centro" },
+  "foto": {
+    "nombre": "pintura-cesped",
+    "alt": "Niño pintando sobre el césped, con pintura morada en la cara y las manos",
+    "enfoque": "50% 22%"
+  },
   "seguridad": {
     "titulo": "Solo con quien tú autorizas",
     "texto": "Antes de que tu hijo empiece, conocemos a tu familia y registramos a las personas que pueden entregarlo y recogerlo.",

@@ -18,6 +18,7 @@ import type { Foto as DatosFoto } from '../../../core/contenido/modelo';
     fill
     [sizes]="sizes()"
     [priority]="prioridad()"
+    [style.object-position]="foto().enfoque"
   />`,
 })
 export class Foto {

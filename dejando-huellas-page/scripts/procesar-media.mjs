@@ -21,7 +21,7 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
 export const ANCHOS = [480, 800, 1200, 1600];
-const FOTO_OG = 'nina-mural-logo';
+const FOTO_OG = 'dibujo-al-aire-libre';
 
 const raiz = join(dirname(fileURLToPath(import.meta.url)), '..');
 const fotos = join(raiz, 'media', 'fotos');
