@@ -23,7 +23,6 @@ export interface Motor {
 }
 
 const ESPERA_MAX_FUENTES = 1200;
-const DESFASE_ANCLAS = -96;
 
 /**
  * Carga perezosa del movimiento. GSAP y Lenis viven en chunks aparte que se piden después del
@@ -95,9 +94,12 @@ export class Movimiento {
     const destino = this.documento.getElementById(hash.slice(1));
     if (!destino) return;
     evento.preventDefault();
+    // Sin offset: Lenis ya respeta el `scroll-padding-top` de <html> (base.css), el mismo margen
+    // bajo la barra que usa el salto nativo cuando no hay movimiento. Una sola fuente de verdad.
     this.lenis.scrollTo(destino, {
-      offset: hash === '#inicio' ? 0 : DESFASE_ANCLAS,
       duration: 1.4,
+      // El salto nativo ya se canceló (preventDefault): debe ocurrir aunque Lenis esté detenido.
+      force: true,
     });
     this.documento.defaultView?.history.replaceState(null, '', hash);
     destino.setAttribute('tabindex', '-1');

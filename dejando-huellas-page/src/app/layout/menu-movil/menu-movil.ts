@@ -56,6 +56,9 @@ export class MenuMovil {
 
   /** También al tocar un enlace: se cierra para que el ancla haga su trabajo. */
   protected cerrar(): void {
+    // Se reactiva el desplazamiento ya, no en el evento «close» (que llega después): si se espera,
+    // el salto al ancla que se tocó ocurre con Lenis detenido y la página no se mueve.
+    this.movimiento.reanudar();
     this.dialogo().nativeElement.close();
   }
 

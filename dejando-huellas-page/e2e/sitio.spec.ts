@@ -155,6 +155,25 @@ test.describe('Navegación', () => {
     await expect(boton).toBeFocused();
   });
 
+  // Regresión: con el desplazamiento suave activo, tocar un enlace del menú cerraba el menú
+  // pero la página no se movía (Lenis seguía detenido cuando se pedía el salto).
+  test('menú del celular: tocar un enlace lleva a su sección', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'El menú es solo para celular');
+    await page.goto('/');
+    await page.waitForTimeout(1500); // que cargue el movimiento (Lenis)
+    await page.getByRole('button', { name: 'Menú' }).tap();
+    await page.locator('dialog#menu a[href="#horarios"]').tap();
+    await expect(page.getByRole('dialog', { name: 'Menú' })).toBeHidden();
+    await expect
+      .poll(
+        () => page.evaluate(() => document.getElementById('horarios')!.getBoundingClientRect().top),
+        {
+          timeout: 5000,
+        },
+      )
+      .toBeLessThan(200);
+  });
+
   test('el visor de fotos abre en grande y cierra con Esc', async ({ page }) => {
     await page.goto('/#espacios');
     const primera = page.getByRole('button', { name: /Ver en grande: Aula del espacio/ });
