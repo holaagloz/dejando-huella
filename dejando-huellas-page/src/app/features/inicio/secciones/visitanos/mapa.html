@@ -9,37 +9,38 @@
   } @else {
     <svg
       class="mapa__dibujo"
-      viewBox="0 0 800 340"
+      viewBox="0 30 800 340"
       preserveAspectRatio="xMidYMid slice"
       aria-hidden="true"
       focusable="false"
     >
       <!--
         Zona segura del dibujo (se recorta con «slice»): en celulares de 360 px se ve x 94–706; en
-        escritorio, y 59–281, y la tarjeta tapa x < 304 abajo a la izquierda. La ruta va dentro de esa zona.
+        escritorio, y 89–311, y la tarjeta tapa x < 304 abajo a la izquierda. La ruta va dentro de esa zona.
+        El encuadre arranca en y 30 para que la huella (y 262–306) entre también en escritorio.
       -->
-      <rect width="800" height="340" fill="#DCE3DA" />
+      <rect y="0" width="800" height="400" fill="#DCE3DA" />
       <g fill="#C9D3C6">
         <rect x="20" y="16" width="297" height="80" rx="10" />
         <rect x="343" y="16" width="174" height="80" rx="10" />
         <rect x="543" y="16" width="237" height="80" rx="10" />
-        <rect x="20" y="124" width="297" height="200" rx="10" />
-        <rect x="543" y="124" width="104" height="200" rx="10" />
-        <rect x="673" y="124" width="107" height="200" rx="10" />
+        <rect x="20" y="124" width="297" height="240" rx="10" />
+        <rect x="543" y="124" width="104" height="240" rx="10" />
+        <rect x="673" y="124" width="107" height="240" rx="10" />
       </g>
       <g stroke="#FBF7EF" stroke-width="26" stroke-linecap="round" fill="none">
         <path d="M0 110H800" />
-        <path d="M330 0V340" />
-        <path d="M530 0V340" />
-        <path d="M660 110V340" />
+        <path d="M330 0V400" />
+        <path d="M530 0V400" />
+        <path d="M660 110V400" />
       </g>
       <g stroke="#0D1A3C" stroke-width="2" stroke-dasharray="8 10" fill="none" opacity=".35">
         <path d="M0 110H800" />
-        <path d="M330 0V340" />
-        <path d="M530 0V340" />
+        <path d="M330 0V400" />
+        <path d="M530 0V400" />
       </g>
       <!-- La universidad queda del mismo lado de la calle principal que el centro. -->
-      <rect x="343" y="124" width="174" height="200" rx="10" fill="#91A8CB" opacity=".55" />
+      <rect x="343" y="124" width="174" height="240" rx="10" fill="#91A8CB" opacity=".55" />
       <text
         x="430"
         y="192"
@@ -54,7 +55,7 @@
       <!-- 50 m al este por la calle principal y 75 m al sur por la calle del este: la puerta da a esa calle,
            más al sur que el kinder de la esquina (como en Google Maps). Posición marcada por el centro. -->
       <path
-        d="M430 124 V110 H660 V219 H650"
+        d="M430 124 V110 H660 V284 H650"
         fill="none"
         stroke="#C96F62"
         stroke-width="4"
@@ -62,7 +63,7 @@
         stroke-linejoin="round"
         stroke-dasharray="2 10"
       />
-      <svg appHuella x="605" y="197" width="42" height="44" color="#C96F62" corazon></svg>
+      <svg appHuella x="605" y="262" width="42" height="44" color="#C96F62" corazon></svg>
     </svg>
     <div class="mapa__texto tela t-manta">
       <strong>{{ nombre() }}</strong>
