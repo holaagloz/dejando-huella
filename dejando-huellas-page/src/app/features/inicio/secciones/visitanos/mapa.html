@@ -38,14 +38,6 @@
         <path d="M330 0V340" />
         <path d="M530 0V340" />
       </g>
-      <!-- Caminito interno: la entrada es por aquí, no por la calle principal (hay otro kinder en esa cuadra). -->
-      <path
-        d="M660 236H600"
-        stroke="#FBF7EF"
-        stroke-width="14"
-        stroke-linecap="round"
-        fill="none"
-      />
       <!-- La universidad queda del mismo lado de la calle principal que el centro. -->
       <rect x="343" y="124" width="174" height="200" rx="10" fill="#91A8CB" opacity=".55" />
       <text
@@ -59,10 +51,10 @@
       >
         U. de San José
       </text>
-      <!-- 50 m al este por la calle principal, 75 m al sur y luego el caminito hasta la puerta, que queda
-           a la derecha de la cuadra, junto a la calle (feedback v2). -->
+      <!-- 50 m al este por la calle principal y 75 m al sur por la calle del este: la puerta da a esa calle,
+           más al sur que el kinder de la esquina (como en Google Maps). Posición marcada por el centro. -->
       <path
-        d="M430 124 V110 H660 V236 H628"
+        d="M430 124 V110 H660 V219 H650"
         fill="none"
         stroke="#C96F62"
         stroke-width="4"
@@ -70,7 +62,7 @@
         stroke-linejoin="round"
         stroke-dasharray="2 10"
       />
-      <svg appHuella x="590" y="171" width="56" height="58" color="#C96F62" corazon></svg>
+      <svg appHuella x="605" y="197" width="42" height="44" color="#C96F62" corazon></svg>
     </svg>
     <div class="mapa__texto tela t-manta">
       <strong>{{ nombre() }}</strong>

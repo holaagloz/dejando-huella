@@ -60,18 +60,21 @@
 @media (min-width: 760px) {
   .r-dia-foto {
     grid-column: span 6;
+    min-height: 320px;
   }
 }
 @media (min-width: 1024px) {
   .r-cabeza {
     grid-column: 1 / 6;
   }
+  /* La primera foto (llegada) va ancha y la segunda (desayuno) casi cuadrada: el desayuno necesita
+     alto para que entren la cara de la niña y el plato. */
   .r-dia-foto {
-    grid-column: span 3;
+    grid-column: span 4;
     min-height: 300px;
   }
   .r-dia-foto + .r-dia-foto {
-    grid-column: span 4;
+    grid-column: span 3;
   }
   .horas__lista {
     grid-template-columns: repeat(7, minmax(0, 1fr));
