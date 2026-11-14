@@ -11,7 +11,7 @@
     { "hora": "5:00", "titulo": "Salida", "texto": "De vuelta a casa. Medio tiempo de mañana: 1:00 p. m.", "icono": "casa" }
   ],
   "fotos": [
-    { "nombre": "agricultura-amigas", "alt": "Tres niñas sonriendo mientras siembran juntas en la clase de agricultura" },
-    { "nombre": "pintura-caballetes", "alt": "Niños con delantal pintando en caballetes bajo el techo del patio" }
+    { "nombre": "llegada-abrazo", "alt": "Maestra abrazando a una niña con mochila de conejo al llegar al centro", "enfoque": "50% 30%" },
+    { "nombre": "desayuno", "alt": "Niña sonriendo frente a su desayuno de gallo pinto, huevo y fruta", "enfoque": "50% 52%" }
   ]
 }

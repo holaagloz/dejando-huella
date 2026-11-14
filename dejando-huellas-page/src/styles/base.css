@@ -10,6 +10,12 @@ html {
   scroll-padding-top: 96px;
   scrollbar-color: var(--ink-soft) var(--respaldo);
 }
+/* Con el menú del celular abierto la página de atrás no se desplaza: en iOS, arrastrar sobre el menú
+   movía la página, escondía la barra de Safari y el menú cambiaba de tamaño. */
+html:has(dialog#menu[open]),
+html:has(dialog#menu[open]) body {
+  overflow: hidden;
+}
 body {
   margin: 0;
   /* Lino crudo con hilos: mosaicos SVG que se pintan una vez (livianos al hacer scroll) */

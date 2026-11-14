@@ -55,6 +55,10 @@ const FOTOS = {
   f5dfe1f4: 'nino-sonriente-mesa',
   // Llegó con el feedback v1: la foto que el centro eligió para Semillitas.
   'feedback-v1-semillitas': 'semillitas-pintando',
+  // Feedback v2: fotos de la rutina diaria y la de Huellitas (para no repetir la de lectoescritura).
+  'feedback-v2-llegada': 'llegada-abrazo',
+  'feedback-v2-desayuno': 'desayuno',
+  'feedback-v2-huellitas': 'huellitas-experimento',
 };
 // Captura de pantalla con franjas negras: se recortan.
 const RECORTAR_BORDES = new Set(['f2e9f88c']);

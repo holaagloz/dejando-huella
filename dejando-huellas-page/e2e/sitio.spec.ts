@@ -155,6 +155,28 @@ test.describe('Navegación', () => {
     await expect(boton).toBeFocused();
   });
 
+  // Regresión: en iPhone el menú se podía arrastrar de lado (una palabra larga lo ensanchaba) y al
+  // arrastrar se movía la página de atrás.
+  test('menú del celular: no se desborda ni deja mover la página', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'El menú es solo para celular');
+    await page.setViewportSize({ width: 360, height: 640 });
+    await page.goto('/');
+    await page.getByRole('button', { name: 'Menú' }).click();
+    const menu = page.getByRole('dialog', { name: 'Menú' });
+    await expect(menu).toBeVisible();
+    const medidas = await menu.evaluate((d) => ({
+      sobra: d.scrollWidth - d.clientWidth,
+      pagina: getComputedStyle(document.documentElement).overflowY,
+    }));
+    expect(medidas.sobra, 'el menú es más ancho que la pantalla').toBeLessThanOrEqual(0);
+    expect(medidas.pagina, 'la página de atrás sigue desplazable').toBe('hidden');
+    await page.keyboard.press('Escape');
+    await expect(menu).toBeHidden();
+    expect(await page.evaluate(() => getComputedStyle(document.documentElement).overflowY)).not.toBe(
+      'hidden',
+    );
+  });
+
   // Regresión: con el desplazamiento suave activo, tocar un enlace del menú cerraba el menú
   // pero la página no se movía (Lenis seguía detenido cuando se pedía el salto).
   test('menú del celular: tocar un enlace lleva a su sección', async ({ page, isMobile }) => {
