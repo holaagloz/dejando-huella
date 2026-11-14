@@ -7,6 +7,6 @@
     { "nombre": "comedor-mural", "alt": "Comedor con mural de frutas y verduras y mesas pequeñas con sillas amarillas y rojas" },
     { "nombre": "pasillo-jirafa", "alt": "Pasillo con mural de árboles, flores y una jirafa" },
     { "nombre": "traje-tipico", "alt": "Niñas y niños vestidos con trajes típicos costarricenses trabajando en una mesa" },
-    { "nombre": "navidad", "alt": "Niña vestida de Navidad haciendo una manualidad junto al árbol de Navidad" }
+    { "nombre": "navidad", "alt": "Niña vestida de Navidad haciendo una manualidad junto al árbol de Navidad", "enfoque": "50% 25%" }
   ]
 }

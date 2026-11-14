@@ -33,6 +33,13 @@
   flex-direction: column;
   gap: 14px;
   align-items: flex-start;
+  container-type: inline-size;
+}
+/* El titular nunca es más ancho que su retazo: en las cabeceras angostas de escritorio la palabra
+   más larga del sitio («mensualidades», ~8.35em con el aire de la animación) se salía. 11.8cqi deja
+   caber 8.47em; en cabeceras anchas y en el celular manda el clamp de siempre. */
+.r-cabeza > .titular {
+  font-size: min(clamp(2rem, 7.4vw, 3.5rem), 11.8cqi);
 }
 @media (min-width: 1024px) {
   .r-cabeza {

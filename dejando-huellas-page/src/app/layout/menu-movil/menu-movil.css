@@ -20,7 +20,9 @@
   min-height: 100%;
   display: grid;
   gap: var(--costura);
-  grid-template-columns: 1fr 1fr;
+  /* minmax(0, 1fr): con `1fr` una palabra larga («mensualidades», «instalaciones») ensanchaba su
+     columna y el menú se salía de la pantalla. */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-rows: minmax(84px, auto);
 }
 .menu__cerrar {
@@ -49,10 +51,14 @@
 .menu__item {
   display: flex;
   align-items: flex-end;
-  padding: 16px 18px 18px;
+  padding: 16px 12px 18px 14px;
   text-decoration: none;
-  font: 800 1.3rem/1.05 var(--font-mano);
+  /* La letra sigue el ancho del teléfono para que «mensualidades» quepa en media pantalla desde
+     320 px; partir la palabra queda solo como último recurso. */
+  font: 800 clamp(0.9rem, 4.6vw, 1.3rem) / 1.05 var(--font-mano);
   font-variation-settings: 'INFM' 100;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 .menu__item--ancho {
   grid-column: 1 / -1;

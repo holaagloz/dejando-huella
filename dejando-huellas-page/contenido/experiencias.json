@@ -24,7 +24,7 @@
       "nombre": "Agricultura",
       "texto": "Sembramos, regamos y vemos crecer lo que cultivamos con nuestras manos.",
       "icono": "brote",
-      "foto": { "nombre": "agricultura-sembrando", "alt": "Niñas sembrando con palitas de colores en la clase de agricultura" }
+      "foto": { "nombre": "agricultura-sembrando", "alt": "Niñas sembrando con palitas de colores en la clase de agricultura", "enfoque": "35% 18%" }
     },
     {
       "nombre": "Inglés",
